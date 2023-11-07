@@ -35,3 +35,16 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExp
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Pdf.v23.1.Drawing.xml
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.csproj.CopyComplete
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Images.v23.1.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraGrid.v23.1.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraLayout.v23.1.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraPrinting.v23.1.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.RichEdit.v23.1.Core.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraTreeList.v23.1.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Office.v23.1.Core.dll
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraGrid.v23.1.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraLayout.v23.1.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraPrinting.v23.1.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Office.v23.1.Core.xml

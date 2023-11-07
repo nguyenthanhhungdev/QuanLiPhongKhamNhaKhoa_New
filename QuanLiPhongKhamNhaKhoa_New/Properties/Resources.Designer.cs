@@ -133,9 +133,29 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_manager_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-manager-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_pen_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-pen-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_personal_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-personal-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,26 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         internal static System.Drawing.Bitmap icons8_search_person_53 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-person-53", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_suspicious_transactions_detection_78 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-suspicious-transactions-detection-78", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_system_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-system-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
