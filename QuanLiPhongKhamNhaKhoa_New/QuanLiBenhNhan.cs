@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLiPhongKhamNhaKhoa_New
 {
-    public partial class TraCuuBenhNhan : Form
+    public partial class QuanLiBenhNhan : Form
     {
-        public TraCuuBenhNhan()
+        public QuanLiBenhNhan()
         {
             InitializeComponent();
+        }
+
+        private void gioiTinhRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

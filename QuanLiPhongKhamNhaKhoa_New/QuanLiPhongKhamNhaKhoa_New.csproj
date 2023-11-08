@@ -68,6 +68,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home_Origin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Origin.Designer.cs">
+      <DependentUpon>Home_Origin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiBacSi.Designer.cs">
+      <DependentUpon>QuanLiBacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiBenhNhan.Designer.cs">
+      <DependentUpon>QuanLiBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiNhanVien.Designer.cs">
+      <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiPhongKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiPhongKham.Designer.cs">
+      <DependentUpon>QuanLiPhongKham.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyNhaKhoaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -106,6 +136,9 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home_Origin.resx">
+      <DependentUpon>Home_Origin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +147,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiBacSi.resx">
+      <DependentUpon>QuanLiBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiBenhNhan.resx">
+      <DependentUpon>QuanLiBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiNhanVien.resx">
+      <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiPhongKham.resx">
+      <DependentUpon>QuanLiPhongKham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemBenhNhan.resx">
       <DependentUpon>ThemBenhNhan.cs</DependentUpon>
@@ -209,6 +254,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-suspicious-transactions-detection-78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-list-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-personal-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-patient-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-doctor-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-patient-room-67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-service-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

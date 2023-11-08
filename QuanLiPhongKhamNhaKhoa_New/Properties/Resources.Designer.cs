@@ -133,9 +133,59 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_doctor_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-doctor-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_list_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-list-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_manager_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-manager-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_patient_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-patient-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_patient_room_67 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-patient-room-67", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,16 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         internal static System.Drawing.Bitmap icons8_personal_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-personal-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_personal_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-personal-64 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +256,26 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         internal static System.Drawing.Bitmap icons8_search_person_53 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-person-53", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_service_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-service-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_staff_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-staff-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

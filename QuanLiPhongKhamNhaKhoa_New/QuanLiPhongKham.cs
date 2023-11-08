@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLiPhongKhamNhaKhoa_New
 {
-    public partial class TraCuuBenhNhan : Form
+    public partial class QuanLiPhongKham : Form
     {
-        public TraCuuBenhNhan()
+        public QuanLiPhongKham()
         {
             InitializeComponent();
         }

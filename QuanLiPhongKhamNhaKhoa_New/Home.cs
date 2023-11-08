@@ -17,5 +17,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             InitializeComponent();
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(new TraCuuBenhNhan());
+        }
     }
 }

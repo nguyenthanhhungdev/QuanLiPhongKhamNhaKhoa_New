@@ -48,3 +48,8 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExp
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\DevExpress.Office.v23.1.Core.xml
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.Home_Origin.resources
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiBenhNhan.resources
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiBacSi.resources
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiNhanVien.resources
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiPhongKham.resources
