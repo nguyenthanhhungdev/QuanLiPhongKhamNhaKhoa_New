@@ -62,6 +62,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS\BacSiBUS.cs" />
+    <Compile Include="BUS\BUS\BenhNhanBUS.cs" />
+    <Compile Include="BUS\BUS\CT_DichVuBUS.cs" />
+    <Compile Include="BUS\BUS\DichVuBUS.cs" />
+    <Compile Include="BUS\BUS\LoaiDichVuBUS.cs" />
+    <Compile Include="BUS\BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\BUS\PhieuDichVuBUS.cs" />
+    <Compile Include="BUS\BUS\PhieuKetQuaBUS.cs" />
+    <Compile Include="BUS\BUS\PhongKhamBUS.cs" />
+    <Compile Include="BUS\BUS\TaiKhamBUS.cs" />
+    <Compile Include="BUS\BUS\TiepDonBNBUS.cs" />
+    <Compile Include="DAO\DAO\BacSiDAO.cs" />
+    <Compile Include="DAO\DAO\BenhNhanDAO.cs" />
+    <Compile Include="DAO\DAO\CT_DichVuDAO.cs" />
+    <Compile Include="DAO\DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\DAO\LoaiDichVuDAO.cs" />
+    <Compile Include="DAO\DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\DAO\PhieuDichVuDAO.cs" />
+    <Compile Include="DAO\DAO\PhieuKetQuaDAO.cs" />
+    <Compile Include="DAO\DAO\PhongKhamDAO.cs" />
+    <Compile Include="DAO\DAO\TaiKhamDAO.cs" />
+    <Compile Include="DAO\DAO\TiepDonBNDAO.cs" />
+    <Compile Include="DTO\DTO\BacSiDTO.cs" />
+    <Compile Include="DTO\DTO\BenhNhanDTO.cs" />
+    <Compile Include="DTO\DTO\CT_DichVuDTO.cs" />
+    <Compile Include="DTO\DTO\DichVuDTO.cs" />
+    <Compile Include="DTO\DTO\LoaiDichVuDTO.cs" />
+    <Compile Include="DTO\DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\DTO\PhieuDichVuDTO.cs" />
+    <Compile Include="DTO\DTO\PhieuKetQuaDTO.cs" />
+    <Compile Include="DTO\DTO\PhongKhamDTO.cs" />
+    <Compile Include="DTO\DTO\TaiKhamDTO.cs" />
+    <Compile Include="DTO\DTO\TiepDonBNDTO.cs" />
+    <Compile Include="GUI\GUI\BacSiGUI.cs" />
+    <Compile Include="GUI\GUI\BenhNhanGUI.cs" />
+    <Compile Include="GUI\GUI\CT_DichVuGUI.cs" />
+    <Compile Include="GUI\GUI\DichVuGUI.cs" />
+    <Compile Include="GUI\GUI\LoaiDichVuGUI.cs" />
+    <Compile Include="GUI\GUI\LoginGUI.cs" />
+    <Compile Include="GUI\GUI\NhanVienGUI.cs" />
+    <Compile Include="GUI\GUI\PhieuDichVuGUI.cs" />
+    <Compile Include="GUI\GUI\PhieuKetQuaGUI.cs" />
+    <Compile Include="GUI\GUI\PhongKhamGUI.cs" />
+    <Compile Include="GUI\GUI\TaiKhamGUI.cs" />
+    <Compile Include="GUI\GUI\TiepDonBNGUI.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
