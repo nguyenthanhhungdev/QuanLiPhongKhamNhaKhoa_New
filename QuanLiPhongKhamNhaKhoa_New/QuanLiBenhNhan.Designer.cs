@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label maBNLabel;
-            System.Windows.Forms.Label tenBNLabel;
-            System.Windows.Forms.Label cMNDLabel;
-            System.Windows.Forms.Label diaChiLabel;
-            System.Windows.Forms.Label ngSinhLabel;
-            System.Windows.Forms.Label sDTLabel;
-            System.Windows.Forms.Label benhLyLabel;
-            System.Windows.Forms.Label gioiTinhLabel;
             System.Windows.Forms.Label soPhieuDVLabel;
+            System.Windows.Forms.Label gioiTinhLabel;
+            System.Windows.Forms.Label benhLyLabel;
+            System.Windows.Forms.Label sDTLabel;
+            System.Windows.Forms.Label ngSinhLabel;
+            System.Windows.Forms.Label diaChiLabel;
+            System.Windows.Forms.Label cMNDLabel;
+            System.Windows.Forms.Label tenBNLabel;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.gioiTinhRadioButton = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -49,21 +48,22 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             maBNLabel = new System.Windows.Forms.Label();
-            tenBNLabel = new System.Windows.Forms.Label();
-            cMNDLabel = new System.Windows.Forms.Label();
-            diaChiLabel = new System.Windows.Forms.Label();
-            ngSinhLabel = new System.Windows.Forms.Label();
-            sDTLabel = new System.Windows.Forms.Label();
-            benhLyLabel = new System.Windows.Forms.Label();
-            gioiTinhLabel = new System.Windows.Forms.Label();
             soPhieuDVLabel = new System.Windows.Forms.Label();
+            gioiTinhLabel = new System.Windows.Forms.Label();
+            benhLyLabel = new System.Windows.Forms.Label();
+            sDTLabel = new System.Windows.Forms.Label();
+            ngSinhLabel = new System.Windows.Forms.Label();
+            diaChiLabel = new System.Windows.Forms.Label();
+            cMNDLabel = new System.Windows.Forms.Label();
+            tenBNLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,78 +79,6 @@
             maBNLabel.Size = new System.Drawing.Size(61, 20);
             maBNLabel.TabIndex = 0;
             maBNLabel.Text = "Ma BN:";
-            // 
-            // tenBNLabel
-            // 
-            tenBNLabel.AutoSize = true;
-            tenBNLabel.Location = new System.Drawing.Point(12, 67);
-            tenBNLabel.Name = "tenBNLabel";
-            tenBNLabel.Size = new System.Drawing.Size(66, 20);
-            tenBNLabel.TabIndex = 2;
-            tenBNLabel.Text = "Ten BN:";
-            // 
-            // cMNDLabel
-            // 
-            cMNDLabel.AutoSize = true;
-            cMNDLabel.Location = new System.Drawing.Point(12, 99);
-            cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(60, 20);
-            cMNDLabel.TabIndex = 4;
-            cMNDLabel.Text = "CMND:";
-            // 
-            // diaChiLabel
-            // 
-            diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(12, 131);
-            diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new System.Drawing.Size(64, 20);
-            diaChiLabel.TabIndex = 6;
-            diaChiLabel.Text = "Dia Chi:";
-            // 
-            // ngSinhLabel
-            // 
-            ngSinhLabel.AutoSize = true;
-            ngSinhLabel.Location = new System.Drawing.Point(12, 163);
-            ngSinhLabel.Name = "ngSinhLabel";
-            ngSinhLabel.Size = new System.Drawing.Size(69, 20);
-            ngSinhLabel.TabIndex = 8;
-            ngSinhLabel.Text = "Ng Sinh:";
-            // 
-            // sDTLabel
-            // 
-            sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(12, 195);
-            sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(45, 20);
-            sDTLabel.TabIndex = 10;
-            sDTLabel.Text = "SDT:";
-            // 
-            // benhLyLabel
-            // 
-            benhLyLabel.AutoSize = true;
-            benhLyLabel.Location = new System.Drawing.Point(12, 227);
-            benhLyLabel.Name = "benhLyLabel";
-            benhLyLabel.Size = new System.Drawing.Size(71, 20);
-            benhLyLabel.TabIndex = 12;
-            benhLyLabel.Text = "Benh Ly:";
-            // 
-            // gioiTinhLabel
-            // 
-            gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Location = new System.Drawing.Point(12, 265);
-            gioiTinhLabel.Name = "gioiTinhLabel";
-            gioiTinhLabel.Size = new System.Drawing.Size(75, 20);
-            gioiTinhLabel.TabIndex = 14;
-            gioiTinhLabel.Text = "Gioi Tinh:";
-            // 
-            // soPhieuDVLabel
-            // 
-            soPhieuDVLabel.AutoSize = true;
-            soPhieuDVLabel.Location = new System.Drawing.Point(12, 291);
-            soPhieuDVLabel.Name = "soPhieuDVLabel";
-            soPhieuDVLabel.Size = new System.Drawing.Size(104, 20);
-            soPhieuDVLabel.TabIndex = 16;
-            soPhieuDVLabel.Text = "So Phieu DV:";
             // 
             // splitContainer1
             // 
@@ -194,15 +122,14 @@
             this.splitContainer1.SplitterDistance = 317;
             this.splitContainer1.TabIndex = 0;
             // 
-            // radioButton1
+            // soPhieuDVLabel
             // 
-            this.radioButton1.Location = new System.Drawing.Point(209, 258);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 24);
-            this.radioButton1.TabIndex = 18;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nu";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            soPhieuDVLabel.AutoSize = true;
+            soPhieuDVLabel.Location = new System.Drawing.Point(12, 291);
+            soPhieuDVLabel.Name = "soPhieuDVLabel";
+            soPhieuDVLabel.Size = new System.Drawing.Size(104, 20);
+            soPhieuDVLabel.TabIndex = 16;
+            soPhieuDVLabel.Text = "So Phieu DV:";
             // 
             // gioiTinhRadioButton
             // 
@@ -215,18 +142,78 @@
             this.gioiTinhRadioButton.UseVisualStyleBackColor = true;
             this.gioiTinhRadioButton.CheckedChanged += new System.EventHandler(this.gioiTinhRadioButton_CheckedChanged);
             // 
-            // dataGridView1
+            // gioiTinhLabel
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 272);
-            this.dataGridView1.TabIndex = 0;
+            gioiTinhLabel.AutoSize = true;
+            gioiTinhLabel.Location = new System.Drawing.Point(12, 265);
+            gioiTinhLabel.Name = "gioiTinhLabel";
+            gioiTinhLabel.Size = new System.Drawing.Size(75, 20);
+            gioiTinhLabel.TabIndex = 14;
+            gioiTinhLabel.Text = "Gioi Tinh:";
+            // 
+            // benhLyLabel
+            // 
+            benhLyLabel.AutoSize = true;
+            benhLyLabel.Location = new System.Drawing.Point(12, 227);
+            benhLyLabel.Name = "benhLyLabel";
+            benhLyLabel.Size = new System.Drawing.Size(71, 20);
+            benhLyLabel.TabIndex = 12;
+            benhLyLabel.Text = "Benh Ly:";
+            // 
+            // sDTLabel
+            // 
+            sDTLabel.AutoSize = true;
+            sDTLabel.Location = new System.Drawing.Point(12, 195);
+            sDTLabel.Name = "sDTLabel";
+            sDTLabel.Size = new System.Drawing.Size(45, 20);
+            sDTLabel.TabIndex = 10;
+            sDTLabel.Text = "SDT:";
+            // 
+            // ngSinhLabel
+            // 
+            ngSinhLabel.AutoSize = true;
+            ngSinhLabel.Location = new System.Drawing.Point(12, 163);
+            ngSinhLabel.Name = "ngSinhLabel";
+            ngSinhLabel.Size = new System.Drawing.Size(69, 20);
+            ngSinhLabel.TabIndex = 8;
+            ngSinhLabel.Text = "Ng Sinh:";
+            // 
+            // diaChiLabel
+            // 
+            diaChiLabel.AutoSize = true;
+            diaChiLabel.Location = new System.Drawing.Point(12, 131);
+            diaChiLabel.Name = "diaChiLabel";
+            diaChiLabel.Size = new System.Drawing.Size(64, 20);
+            diaChiLabel.TabIndex = 6;
+            diaChiLabel.Text = "Dia Chi:";
+            // 
+            // cMNDLabel
+            // 
+            cMNDLabel.AutoSize = true;
+            cMNDLabel.Location = new System.Drawing.Point(12, 99);
+            cMNDLabel.Name = "cMNDLabel";
+            cMNDLabel.Size = new System.Drawing.Size(60, 20);
+            cMNDLabel.TabIndex = 4;
+            cMNDLabel.Text = "CMND:";
+            // 
+            // tenBNLabel
+            // 
+            tenBNLabel.AutoSize = true;
+            tenBNLabel.Location = new System.Drawing.Point(12, 67);
+            tenBNLabel.Name = "tenBNLabel";
+            tenBNLabel.Size = new System.Drawing.Size(66, 20);
+            tenBNLabel.TabIndex = 2;
+            tenBNLabel.Text = "Ten BN:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Location = new System.Drawing.Point(209, 258);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(89, 24);
+            this.radioButton1.TabIndex = 18;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Nu";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -285,23 +272,23 @@
             this.textBox6.Size = new System.Drawing.Size(100, 26);
             this.textBox6.TabIndex = 26;
             // 
-            // button6
+            // button3
             // 
-            this.button6.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_cancel_48;
-            this.button6.Location = new System.Drawing.Point(356, 376);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 49);
-            this.button6.TabIndex = 32;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button3.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete_48;
+            this.button3.Location = new System.Drawing.Point(356, 300);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 49);
+            this.button3.TabIndex = 29;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button1
             // 
-            this.button5.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_save_16;
-            this.button5.Location = new System.Drawing.Point(196, 376);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 49);
-            this.button5.TabIndex = 31;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button1.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_48;
+            this.button1.Location = new System.Drawing.Point(17, 300);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 49);
+            this.button1.TabIndex = 27;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -312,15 +299,6 @@
             this.button4.TabIndex = 30;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete_48;
-            this.button3.Location = new System.Drawing.Point(356, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 49);
-            this.button3.TabIndex = 29;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_pen_48;
@@ -330,14 +308,33 @@
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button5
             // 
-            this.button1.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_48;
-            this.button1.Location = new System.Drawing.Point(17, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 49);
-            this.button1.TabIndex = 27;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button5.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_save_16;
+            this.button5.Location = new System.Drawing.Point(196, 376);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(95, 49);
+            this.button5.TabIndex = 31;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_cancel_48;
+            this.button6.Location = new System.Drawing.Point(356, 376);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(95, 49);
+            this.button6.TabIndex = 32;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(462, 272);
+            this.dataGridView1.TabIndex = 0;
             // 
             // QuanLiBenhNhan
             // 
@@ -363,18 +360,18 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.RadioButton gioiTinhRadioButton;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton gioiTinhRadioButton;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
