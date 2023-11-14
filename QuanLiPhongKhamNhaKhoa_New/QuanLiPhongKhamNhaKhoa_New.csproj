@@ -84,6 +84,8 @@
     <Compile Include="DAO\DAO\PhongKhamDAO.cs" />
     <Compile Include="DAO\DAO\TaiKhamDAO.cs" />
     <Compile Include="DAO\DAO\TiepDonBNDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DTO\DTO\BacSiDTO.cs" />
     <Compile Include="DTO\DTO\BenhNhanDTO.cs" />
     <Compile Include="DTO\DTO\CT_DichVuDTO.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="DTO\DTO\PhongKhamDTO.cs" />
     <Compile Include="DTO\DTO\TaiKhamDTO.cs" />
     <Compile Include="DTO\DTO\TiepDonBNDTO.cs" />
+    <Compile Include="DTO\DTO\UserDTO.cs" />
     <Compile Include="GUI\GUI\BacSiGUI.cs" />
     <Compile Include="GUI\GUI\BenhNhanGUI.cs" />
     <Compile Include="GUI\GUI\CT_DichVuGUI.cs" />

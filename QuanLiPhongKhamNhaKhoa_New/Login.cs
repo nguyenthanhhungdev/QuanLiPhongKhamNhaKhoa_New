@@ -22,6 +22,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             maskedTextBoxMatKhau.PasswordChar = checkBoxHienMatKhau.Checked ? '\0' : '*';
         }
+
         private void txtMa_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -37,48 +38,52 @@ namespace QuanLiPhongKhamNhaKhoa_New
             if (e.KeyCode == Keys.Enter)
             {
                 // Thực hiện sự kiện click cho nút login
-                
             }
         }
 
 
-        private SqlConnection conn =
-            new SqlConnection(
-                @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+        private SqlConnection conn;
 
-        private String sqlString;
-        private SqlCommand _command;
-        private SqlDataReader _reader1, _reader2;
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
             String ma, password;
             ma = textBoxMa.Text;
             password = maskedTextBoxMatKhau.Text;
 
-            try
-            {
-                sqlString = "SELECT * FROM NHANVIEN WHERE MaNV = @ma AND MatKhau = @matKhau";
-                _command = new SqlCommand(sqlString, conn);
-                _command.Parameters.AddWithValue("@ma", ma);
-                _command.Parameters.AddWithValue("@matKhau", password);
-                
-                conn.Open();
+            // try
+            // {
+            //     String sqlString = "SELECT * FROM NHANVIEN WHERE MaNV = @ma AND MatKhau = @matKhau";
+            //     SqlCommand _command = new SqlCommand(sqlString, conn);
+            //     // string getValue = _command.ExecuteScalar().ToString();
+            //     _command.Parameters.AddWithValue("@ma", ma);
+            //     _command.Parameters.AddWithValue("@matKhau", password);
+            //
+            //     conn.Open();
+            //
+            //     SqlDataReader _reader1 = _command.ExecuteReader();
+            //
+            //     if (_reader1.Read())
+            //     {
+            //         Application.Run(new Home_Origin());
+            //         this.Hide();
+            //     }
+            //     else
+            //     {
+                    conn.Close();
+                    string sqlString = "SELECT * FROM NHANVIEN WHERE MaNV = @ma AND MatKhau = @matKhau";
+                    SqlCommand _command2 = new SqlCommand(sqlString, conn);
+                    var maP = new SqlParameter("@ma", ma);
+                    var passP = new SqlParameter("@matKhau", password);
 
-                _reader1 = _command.ExecuteReader();
+                    _command2.Parameters.Add(maP);
+                    _command2.Parameters.Add(passP);
+            
+                    // _command2.Parameters.AddWithValue("@ma", ma);
+                    // _command2.Parameters.AddWithValue("@matKhau", password);
 
-                if (_reader1.Read())
-                {
-                    Application.Run(new Home_Origin());
-                    this.Hide();
-                }
-                else
-                {
-                    sqlString = "SELECT * FROM BACSI WHERE MaBS = @ma AND MatKhau = @matKhau";
-                    _command = new SqlCommand(sqlString, conn);
-                    _command.Parameters.AddWithValue("@ma", ma);
-                    _command.Parameters.AddWithValue("@matKhau", password);
+                    conn.Open();
 
-                    _reader2 = _command.ExecuteReader();
+                    SqlDataReader _reader2 = _command2.ExecuteReader();
 
                     if (_reader2.Read())
                     {
@@ -90,13 +95,32 @@ namespace QuanLiPhongKhamNhaKhoa_New
                         MessageBox.Show("Mã hoặc tên đăng nhập sai");
                     }
                 }
+            // }
+            // catch
+            // {
+            //     MessageBox.Show("Lỗi không thể đăng nhập");
+            // }
+            // finally
+            // {
+            // }
+        // }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                conn =
+                    new SqlConnection(
+                        @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+                MessageBox.Show("Kết nối database thành công");
             }
             catch
             {
-            }
-            finally
-            {
-
+                MessageBox.Show("Có lỗi trong khi kết nối database");
             }
         }
     }

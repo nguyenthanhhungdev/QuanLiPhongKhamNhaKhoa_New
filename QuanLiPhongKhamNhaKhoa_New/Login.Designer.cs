@@ -43,6 +43,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMa = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -50,6 +51,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.maskedTextBoxMatKhau);
@@ -126,12 +128,12 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.maskedTextBoxMatKhau.PasswordChar = '*';
             this.maskedTextBoxMatKhau.Size = new System.Drawing.Size(238, 26);
             this.maskedTextBoxMatKhau.TabIndex = 14;
-            this.maskedTextBoxMatKhau.KeyDown += txtPassword_KeyDown;
+            this.maskedTextBoxMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // checkBoxHienMatKhau
             // 
             this.checkBoxHienMatKhau.AutoSize = true;
-            this.checkBoxHienMatKhau.Location = new System.Drawing.Point(18, 202);
+            this.checkBoxHienMatKhau.Location = new System.Drawing.Point(12, 179);
             this.checkBoxHienMatKhau.Name = "checkBoxHienMatKhau";
             this.checkBoxHienMatKhau.Size = new System.Drawing.Size(138, 24);
             this.checkBoxHienMatKhau.TabIndex = 13;
@@ -143,7 +145,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // 
             this.buttonDangNhap.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_login_50;
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(162, 227);
+            this.buttonDangNhap.Location = new System.Drawing.Point(190, 209);
             this.buttonDangNhap.Name = "buttonDangNhap";
             this.buttonDangNhap.Size = new System.Drawing.Size(188, 68);
             this.buttonDangNhap.TabIndex = 11;
@@ -176,6 +178,18 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.Name = "textBoxMa";
             this.textBoxMa.Size = new System.Drawing.Size(238, 26);
             this.textBoxMa.TabIndex = 7;
+            this.textBoxMa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMa_KeyDown);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(226, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(152, 24);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "Đăng nhập 1 lần";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Login
             // 
@@ -186,7 +200,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -210,5 +226,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonQuenMK;
+        private CheckBox checkBox1;
     }
 }
