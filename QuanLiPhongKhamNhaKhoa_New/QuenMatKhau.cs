@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
+using MimeKit;
 using QuanLiPhongKhamNhaKhoa_New.DAO;
 
 namespace QuanLiPhongKhamNhaKhoa_New
@@ -48,22 +49,45 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             try
             {
-                var smtpClient = new SmtpClient()
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential("cuahangthucannhanhhehe@gmail.com", "1405_Hung"),
-                    EnableSsl = true,
-                    UseDefaultCredentials = false
-                };
+                // var smtpClient = new SmtpClient()
+                // {
+                //     Host = "smtp.gmail.com",
+                //     Port = 587,
+                //     Credentials = new NetworkCredential("cuahangthucannhanhhehe@gmail.com", "1405_Hung"),
+                //     EnableSsl = true,
+                //     UseDefaultCredentials = false,
+                //     DeliveryMethod = SmtpDeliveryMethod.Network,
+                //     
+                // };
+                //
+                // var mailMessage = new MailMessage
+                // {
+                //     From = new MailAddress("cuahangthucannhanhhehe@gmail.com"),
+                //     Subject = "Email xác nhận thay đổi mật khẩu",
+                //     Body = maXacNhan.ToString(),
+                // };
+                // mailMessage.To.Add(email);
+                // smtpClient.Send(mailMessage);
+                
+                
+                
+                MimeMessage message = new MimeMessage();
+                MailboxAddress from = new MailboxAddress("Admin", 
+                    "cuahangthucannhanhhehe@gmail.com");
+                message.From.Add(from);
 
-                var mailMessage = new MailMessage
-                {
-                    From = new MailAddress("cuahangthucannhanhhehe@gmail.com"),
-                    Subject = "Email xác nhận thay đổi mật khẩu",
-                    Body = maXacNhan.ToString(),
-                };
-                mailMessage.To.Add(email);
-                smtpClient.Send(mailMessage);
+                MailboxAddress to = new MailboxAddress("User", 
+                    email);
+                message.To.Add(to);
+
+                message.Subject = "Xác nhận thay đổi mật khẩu tài khoản phòng khám nha khoa";
+                
+                BodyBuilder bodyBuilder = new BodyBuilder();
+                bodyBuilder.HtmlBody = "<h1>Mã xác nhận!</h1>";
+                bodyBuilder.TextBody = this.maXacNhan.ToString();
+
+                message.Body = bodyBuilder.ToMessageBody();
+                
             }
             catch (Exception exception)
             {
