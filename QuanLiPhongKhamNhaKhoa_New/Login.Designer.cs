@@ -95,7 +95,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.maskedTextBoxMatKhau.PasswordChar = '*';
             this.maskedTextBoxMatKhau.Size = new System.Drawing.Size(238, 27);
             this.maskedTextBoxMatKhau.TabIndex = 25;
-            this.KeyDown += txtPassword_KeyDown;
+            this.maskedTextBoxMatKhau.KeyDown += txtPassword_KeyDown;
             // 
             // checkBoxHienMatKhau
             // 
@@ -145,7 +145,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.Name = "textBoxMa";
             this.textBoxMa.Size = new System.Drawing.Size(238, 27);
             this.textBoxMa.TabIndex = 20;
-            this.KeyDown += txtMa_KeyDown;
+            this.textBoxMa.KeyDown += txtMa_KeyDown;
             // 
             // panel3
             // 
