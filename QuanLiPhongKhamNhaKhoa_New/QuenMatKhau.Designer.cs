@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxXacNhan = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonThayDoi = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonXacNhan = new System.Windows.Forms.Button();
+            this.textBoxXacNhan = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.buttonGuiMail = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.buttonThayDoi);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label3);
@@ -55,24 +59,57 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 524);
+            this.panel1.Size = new System.Drawing.Size(418, 572);
             this.panel1.TabIndex = 0;
             // 
-            // textBoxEmail
+            // buttonThayDoi
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(106, 55);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(239, 26);
-            this.textBoxEmail.TabIndex = 0;
+            this.buttonThayDoi.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_64;
+            this.buttonThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThayDoi.Location = new System.Drawing.Point(123, 409);
+            this.buttonThayDoi.Name = "buttonThayDoi";
+            this.buttonThayDoi.Size = new System.Drawing.Size(164, 109);
+            this.buttonThayDoi.TabIndex = 8;
+            this.buttonThayDoi.Text = "Thay đổi";
+            this.buttonThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThayDoi.UseVisualStyleBackColor = true;
+            this.buttonThayDoi.Click += new System.EventHandler(this.buttonThayDoi_Click);
             // 
-            // label1
+            // textBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Email";
+            this.textBox2.Location = new System.Drawing.Point(139, 377);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(205, 26);
+            this.textBox2.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 377);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Mật khẩu mới";
+            // 
+            // buttonXacNhan
+            // 
+            this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_64;
+            this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonXacNhan.Location = new System.Drawing.Point(123, 261);
+            this.buttonXacNhan.Name = "buttonXacNhan";
+            this.buttonXacNhan.Size = new System.Drawing.Size(164, 110);
+            this.buttonXacNhan.TabIndex = 5;
+            this.buttonXacNhan.Text = "Xác nhận";
+            this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonXacNhan.UseVisualStyleBackColor = true;
+            this.buttonXacNhan.Click += new System.EventHandler(this.buttonXacNhan_Click);
+            // 
+            // textBoxXacNhan
+            // 
+            this.textBoxXacNhan.Location = new System.Drawing.Point(123, 229);
+            this.textBoxXacNhan.Name = "textBoxXacNhan";
+            this.textBoxXacNhan.Size = new System.Drawing.Size(222, 26);
+            this.textBoxXacNhan.TabIndex = 4;
             // 
             // label2
             // 
@@ -83,73 +120,62 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã xác nhận";
             // 
-            // textBoxXacNhan
-            // 
-            this.textBoxXacNhan.Location = new System.Drawing.Point(123, 229);
-            this.textBoxXacNhan.Name = "textBoxXacNhan";
-            this.textBoxXacNhan.Size = new System.Drawing.Size(222, 26);
-            this.textBoxXacNhan.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 368);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Mật khẩu mới";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(140, 368);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 26);
-            this.textBox2.TabIndex = 7;
-            // 
-            // buttonThayDoi
-            // 
-            this.buttonThayDoi.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_64;
-            this.buttonThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThayDoi.Location = new System.Drawing.Point(123, 424);
-            this.buttonThayDoi.Name = "buttonThayDoi";
-            this.buttonThayDoi.Size = new System.Drawing.Size(164, 76);
-            this.buttonThayDoi.TabIndex = 8;
-            this.buttonThayDoi.Text = "Thay đổi";
-            this.buttonThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThayDoi.UseVisualStyleBackColor = true;
-            this.buttonThayDoi.Click += new System.EventHandler(this.buttonThayDoi_Click);
-            // 
-            // buttonXacNhan
-            // 
-            this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_64;
-            this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonXacNhan.Location = new System.Drawing.Point(123, 271);
-            this.buttonXacNhan.Name = "buttonXacNhan";
-            this.buttonXacNhan.Size = new System.Drawing.Size(164, 73);
-            this.buttonXacNhan.TabIndex = 5;
-            this.buttonXacNhan.Text = "Xác nhận";
-            this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonXacNhan.UseVisualStyleBackColor = true;
-            this.buttonXacNhan.Click += new System.EventHandler(this.buttonXacNhan_Click);
-            // 
             // buttonGuiMail
             // 
             this.buttonGuiMail.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_send_email_48;
             this.buttonGuiMail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuiMail.Location = new System.Drawing.Point(123, 127);
+            this.buttonGuiMail.Location = new System.Drawing.Point(123, 122);
             this.buttonGuiMail.Name = "buttonGuiMail";
-            this.buttonGuiMail.Size = new System.Drawing.Size(164, 61);
+            this.buttonGuiMail.Size = new System.Drawing.Size(164, 101);
             this.buttonGuiMail.TabIndex = 2;
             this.buttonGuiMail.Text = "Gửi email";
             this.buttonGuiMail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonGuiMail.UseVisualStyleBackColor = true;
             this.buttonGuiMail.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Email";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(106, 90);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(239, 26);
+            this.textBoxEmail.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(418, 84);
+            this.panel2.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(86, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(246, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Quên mật khẩu";
+            // 
             // QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 524);
+            this.ClientSize = new System.Drawing.Size(418, 572);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -157,6 +183,8 @@
             this.Text = "QuenMatKhau";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -173,5 +201,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonThayDoi;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
     }
 }
