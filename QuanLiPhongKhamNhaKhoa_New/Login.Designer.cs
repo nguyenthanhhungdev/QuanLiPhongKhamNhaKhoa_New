@@ -95,6 +95,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.maskedTextBoxMatKhau.PasswordChar = '*';
             this.maskedTextBoxMatKhau.Size = new System.Drawing.Size(238, 27);
             this.maskedTextBoxMatKhau.TabIndex = 25;
+            this.KeyDown += txtPassword_KeyDown;
             // 
             // checkBoxHienMatKhau
             // 
@@ -118,6 +119,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDangNhap.UseVisualStyleBackColor = true;
+            this.buttonDangNhap.Click += buttonDangNhap_Click;
             // 
             // label2
             // 
@@ -143,6 +145,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.Name = "textBoxMa";
             this.textBoxMa.Size = new System.Drawing.Size(238, 27);
             this.textBoxMa.TabIndex = 20;
+            this.KeyDown += txtMa_KeyDown;
             // 
             // panel3
             // 
@@ -207,7 +210,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
+            this.FormClosing += LoginForm_FormClosing;
         }
 
         #endregion
