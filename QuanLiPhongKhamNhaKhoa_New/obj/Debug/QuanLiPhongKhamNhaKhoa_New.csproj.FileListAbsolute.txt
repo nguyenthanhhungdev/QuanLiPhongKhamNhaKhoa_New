@@ -56,7 +56,6 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLi
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuenMatKhau.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\BouncyCastle.Cryptography.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\MailKit.dll
-D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\Microsoft.Office.Interop.Outlook.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\MimeKit.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System.Buffers.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System.Formats.Asn1.dll
@@ -65,7 +64,6 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\System.ValueTuple.dll
-D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\stdole.dll
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\BouncyCastle.Cryptography.xml
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\MailKit.pdb
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\MailKit.xml

@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.buttonThayDoi = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxThayDoiMK = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonXacNhan = new System.Windows.Forms.Button();
             this.textBoxXacNhan = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.buttonGuiMail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.buttonThayDoi);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBoxThayDoiMK);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.buttonXacNhan);
             this.panel1.Controls.Add(this.textBoxXacNhan);
@@ -61,6 +61,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(418, 572);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(418, 84);
+            this.panel2.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(86, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(246, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Quên mật khẩu";
             // 
             // buttonThayDoi
             // 
@@ -75,12 +97,13 @@
             this.buttonThayDoi.UseVisualStyleBackColor = true;
             this.buttonThayDoi.Click += new System.EventHandler(this.buttonThayDoi_Click);
             // 
-            // textBox2
+            // textBoxThayDoiMK
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 377);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 26);
-            this.textBox2.TabIndex = 7;
+            this.textBoxThayDoiMK.Location = new System.Drawing.Point(139, 377);
+            this.textBoxThayDoiMK.Name = "textBoxThayDoiMK";
+            this.textBoxThayDoiMK.Size = new System.Drawing.Size(205, 26);
+            this.textBoxThayDoiMK.TabIndex = 7;
+            this.textBoxThayDoiMK.KeyDown += txtThayDoiMK_KeyDown;
             // 
             // label3
             // 
@@ -110,6 +133,7 @@
             this.textBoxXacNhan.Name = "textBoxXacNhan";
             this.textBoxXacNhan.Size = new System.Drawing.Size(222, 26);
             this.textBoxXacNhan.TabIndex = 4;
+            this.textBoxXacNhan.KeyDown += txtMaXacNhan_KeyDown;
             // 
             // label2
             // 
@@ -148,28 +172,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(239, 26);
             this.textBoxEmail.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(418, 84);
-            this.panel2.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(86, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(246, 37);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Quên mật khẩu";
+            this.textBoxEmail.KeyDown += txtEmail_KeyDown;
             // 
             // QuenMatKhau
             // 
@@ -200,7 +203,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonThayDoi;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxThayDoiMK;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
     }

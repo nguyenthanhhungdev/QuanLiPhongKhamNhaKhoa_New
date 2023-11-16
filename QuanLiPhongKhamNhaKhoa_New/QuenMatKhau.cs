@@ -38,6 +38,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 else
                 {
                     sendEmail(maXacNhan, email);
+                    textBoxXacNhan.Focus();
                 }
             }
             catch (SqlException sqlException)
@@ -71,6 +72,8 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 smtpClient.Authenticate("casimir.stehr@ethereal.email", "6mEr7bWTBuEtk3C12Q");
                 smtpClient.Send(message);
                 smtpClient.Disconnect(true);
+
+                MessageBox.Show("Gửi Email Thành Công, Vui Lòng Kiểm Tra");
             }
             catch (Exception exception)
             {
@@ -91,6 +94,13 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             if (hasConfirm)
             {
+                if (textBoxThayDoiMK.Text.Length == 0)
+                {
+                    MessageBox.Show("Hãy nhập mật khẩu mới");
+                    return;
+                }
+                MessageBox.Show("Đã Thay Đổi Mật Khẩu");
+                this.Close();
             }
             else
             {
@@ -104,10 +114,35 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 MessageBox.Show("Mã xác nhận chính xác");
                 hasConfirm = true;
+                textBoxThayDoiMK.Focus();
             }
             else
             {
                 MessageBox.Show("Mã xác nhận sai, vui lòng nhập lại chính xác");
+            }
+        }
+
+        public void txtEmail_KeyDown(object sender, KeyEventArgs keyEventArgs)
+        {
+            if (keyEventArgs.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, new EventArgs());
+            }
+        }
+        
+        public void txtMaXacNhan_KeyDown(object sender, KeyEventArgs keyEventArgs)
+        {
+            if (keyEventArgs.KeyCode == Keys.Enter)
+            {
+                buttonXacNhan_Click(sender, new EventArgs());
+            }
+        }
+        
+        public void txtThayDoiMK_KeyDown(object sender, KeyEventArgs keyEventArgs)
+        {
+            if (keyEventArgs.KeyCode == Keys.Enter)
+            {
+                buttonThayDoi_Click(sender, new EventArgs());
             }
         }
     }
