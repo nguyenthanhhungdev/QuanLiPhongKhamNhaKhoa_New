@@ -71,13 +71,18 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             if (!hasLogin)
             {
-                var result = MessageBox.Show("Bạn có muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (result == DialogResult.No)
+                DialogResult result = MessageBox.Show("Bạn có muốn đóng không?", "Xác nhận", MessageBoxButtons.YesNo);
+
+                // Nếu người dùng chọn Yes, thì đóng form
+                if (result == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
                 {
                     e.Cancel = true;
                 }
             }
-            Application.Exit();
         }
 
         // private SqlConnection conn;
@@ -86,6 +91,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             try
             {
+                if (textBoxMa.Text.Length == 0)
+                {
+                    MessageBox.Show("Mã không được để trống");
+                    return;
+                } else if (maskedTextBoxMatKhau.Text.Length == 0)
+                {
+                    MessageBox.Show("Mật khẩu không được để trống");
+                    return;
+                }
+                
                 if (DataProvider
                         .ExecuteQuery(string.Format("SELECT * FROM BACSI WHERE MaNV = '{0}' AND MatKhau = '{1}'",
                             (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text)).Rows.Count == 0)
@@ -119,18 +134,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             catch
             {
                 MessageBox.Show("Có lỗi trong khi kết nối database");
-            }
-        }
-
-        private void Losing(object sender, EventArgs e)
-        {
-            if (!hasLogin)
-            {
-                var result = MessageBox.Show("Bạn có muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
             }
         }
     }

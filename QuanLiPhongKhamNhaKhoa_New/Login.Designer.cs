@@ -34,7 +34,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonQuenMK = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,7 +79,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.buttonThoat);
             this.panel3.Controls.Add(this.buttonQuenMK);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 350);
@@ -88,24 +86,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel3.Size = new System.Drawing.Size(390, 100);
             this.panel3.TabIndex = 18;
             // 
-            // buttonThoat
-            // 
-            this.buttonThoat.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_cancel_48;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(12, 3);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(177, 94);
-            this.buttonThoat.TabIndex = 18;
-            this.buttonThoat.Text = "Thoát";
-            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += Losing;
-            // 
             // buttonQuenMK
             // 
             this.buttonQuenMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_body_511;
             this.buttonQuenMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonQuenMK.Location = new System.Drawing.Point(195, 3);
+            this.buttonQuenMK.Location = new System.Drawing.Point(100, 3);
             this.buttonQuenMK.Name = "buttonQuenMK";
             this.buttonQuenMK.Size = new System.Drawing.Size(183, 94);
             this.buttonQuenMK.TabIndex = 17;
@@ -210,7 +195,8 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            FormClosing += LoginForm_FormClosing;
+            this.FormClosing += LoginForm_FormClosing;
+
         }
 
         #endregion
@@ -225,7 +211,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonQuenMK;
         private CheckBox checkBox1;
     }
