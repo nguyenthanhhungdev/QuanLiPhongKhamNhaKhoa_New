@@ -32,6 +32,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonQuenMK = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMa = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +65,17 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(390, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(226, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(152, 24);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "Đăng nhập 1 lần";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panel3
             // 
@@ -88,6 +99,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += Losing;
             // 
             // buttonQuenMK
             // 
@@ -180,17 +192,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.TabIndex = 7;
             this.textBoxMa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMa_KeyDown);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(226, 179);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(152, 24);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "Đăng nhập 1 lần";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -209,7 +210,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
+            FormClosing += LoginForm_FormClosing;
         }
 
         #endregion

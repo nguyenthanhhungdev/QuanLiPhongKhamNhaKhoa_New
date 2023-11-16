@@ -6,18 +6,29 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
 {
     public class DataProvider
     {
+        private static SqlConnection connection = new SqlConnection();
+
         public DataProvider()
         {
+        }
+
+        public static void Load()
+        {
+            try
+            {
+                connection = new SqlConnection(
+                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+            }
+            catch (SqlException e)
+            {
+                throw new Exception("Không truy cập được cơ sở dữ liệu");
+            }
         }
 
         public static DataTable ExecuteQuery(string query)
         {
             try
             {
-                // Tạo một đối tượng SqlConnection
-                SqlConnection connection = new SqlConnection(
-                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
-
                 // Mở kết nối với cơ sở dữ liệu
                 connection.Open();
                 if (connection == null)
@@ -37,7 +48,8 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
 
                 // Điền dữ liệu từ SqlCommand vào DataTable
                 adapter.Fill(dataTable);
-
+                // dataTable.Load(command.ExecuteReader());
+                
                 // Đóng kết nối với cơ sở dữ liệu
                 connection.Close();
 
