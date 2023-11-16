@@ -99,11 +99,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                     MessageBox.Show("Mật khẩu không được để trống");
                     return;
-                }
-                
-                if (DataProvider
-                        .ExecuteQuery(string.Format("SELECT * FROM BACSI WHERE MaNV = '{0}' AND MatKhau = '{1}'",
-                            (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text)).Rows.Count == 0)
+                } else if (DataProvider
+                          .ExecuteQuery(string.Format("SELECT * FROM BACSI WHERE MaNV = '{0}' AND MatKhau = '{1}'",
+                              (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text)).Rows.Count == 0)
                 {
                     int num1 = (int)MessageBox.Show("MÃ HOẶC PASSWORD KHÔNG ĐÚNG");
                 }
