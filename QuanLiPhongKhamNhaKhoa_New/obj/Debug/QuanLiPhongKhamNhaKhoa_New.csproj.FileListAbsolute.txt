@@ -53,3 +53,4 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLi
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiBacSi.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiNhanVien.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuanLiPhongKham.resources
+D:\CodeC#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.QuenMatKhau.resources

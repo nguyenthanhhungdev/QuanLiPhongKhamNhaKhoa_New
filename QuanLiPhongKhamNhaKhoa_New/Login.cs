@@ -134,5 +134,10 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Có lỗi trong khi kết nối database");
             }
         }
+
+        private void buttonQuenMK_Click(object sender, EventArgs e)
+        {
+            new QuenMatKhau().Show();
+        }
     }
 }
