@@ -13,6 +13,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
     {
         bool hasConfirm = false;
         public static int maXacNhan = RandomFrom1To1000();
+        public static string ma;
         public QuenMatKhau()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBoxEmail.Text;
-            string ma = textBoxMa.Text;
+            ma = textBoxMa.Text;
             if (email.Length == 0 || ma.Length == 0)
             {
                 MessageBox.Show("Email hoặc mã không được để trống");

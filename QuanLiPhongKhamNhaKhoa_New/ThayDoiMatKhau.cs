@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiPhongKhamNhaKhoa_New.DAO;
 
 namespace QuanLiPhongKhamNhaKhoa_New
 {
@@ -27,7 +28,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     MessageBox.Show("Hãy nhập mật khẩu mới");
                     return;
                 }
-                
+
+                string sqlBS = string.Format("UPDATE BACSI SET MatKhau = '{0}' WHERE MaBS = '{1}'", textBoxThayDoiMK.Text, QuenMatKhau.ma);
+                string sqlNV = string.Format("UPDATE NHANVIEN SET MatKhau = '{0}' WHERE MaNV = '{1}'", textBoxThayDoiMK.Text, QuenMatKhau.ma);
+                string sql = QuenMatKhau.ma.Contains("BS") ? sqlBS : sqlNV;
+                if (DataProvider.ExecuteNonQuery(sql) == 0)
+                {
+                    MessageBox.Show("Thay đổi mật khẩu không thành công");
+                    return;
+                }
                 MessageBox.Show("Đã Thay Đổi Mật Khẩu");
                 this.Close();
             }
