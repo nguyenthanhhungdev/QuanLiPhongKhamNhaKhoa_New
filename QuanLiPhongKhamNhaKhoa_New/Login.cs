@@ -14,34 +14,10 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class Login : Form
     {
-        private bool isBs;
-        private bool isNv;
-        private bool hasLogin = false;
-
-        public bool IsBs
-        {
-            get => isBs;
-            set => isBs = value;
-        }
-
-        public bool IsBs1
-        {
-            get => isBs;
-            set => isBs = value;
-        }
-
-        public bool IsNv
-        {
-            get => isNv;
-            set => isNv = value;
-        }
-
-        public bool HasLogin
-        {
-            get => hasLogin;
-            set => hasLogin = value;
-        }
-
+        public static bool isBs = false;
+        public static bool isNv = false;
+        public static bool hasLogin = false;
+        public static bool isAdmin = false;
         public Login()
         {
             InitializeComponent();
@@ -89,6 +65,14 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
+            string sqlBS = string.Format("SELECT * FROM BACSI WHERE MaBS = '{0}' AND MatKhau = '{1}'",
+                (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text);
+            string sqlNV = string.Format("SELECT * FROM NHANVIEN WHERE MaNV = '{0}' AND MatKhau = '{1}'",
+                (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text);
+
+            string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
+            isAdmin = textBoxMa.Text.Contains("BS01") ? true : false;
+            
             try
             {
                 if (textBoxMa.Text.Length == 0)
@@ -100,8 +84,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     MessageBox.Show("Mật khẩu không được để trống");
                     return;
                 } else if (DataProvider
-                          .ExecuteQuery(string.Format("SELECT * FROM BACSI WHERE MaNV = '{0}' AND MatKhau = '{1}'",
-                              (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text)).Rows.Count == 0)
+                          .ExecuteQuery(sql).Rows.Count == 0)
                 {
                     int num1 = (int)MessageBox.Show("MÃ HOẶC PASSWORD KHÔNG ĐÚNG");
                 }
