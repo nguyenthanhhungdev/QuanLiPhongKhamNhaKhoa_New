@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using QuanLiPhongKhamNhaKhoa_New.DAO;
 
@@ -96,9 +97,24 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            StreamWriter streamWriter = new StreamWriter("data.txt");
-            streamWriter.WriteLine(textBoxMa.Text);
-            streamWriter.WriteLine(maskedTextBoxMatKhau.Text);
+            FileStream fileStream = null;
+            try
+            {
+                fileStream = new FileStream("data.txt", FileMode.OpenOrCreate);
+                using (StreamWriter writer = new StreamWriter(fileStream, Encoding.UTF8))
+                {
+                    if (checkBox1.Checked) writer.WriteLine("true");
+                    else writer.WriteLine("false");
+                    writer.WriteLine(textBoxMa.Text);
+                    writer.WriteLine(maskedTextBoxMatKhau.Text);
+                    writer.Close();
+                    fileStream.Close();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -107,6 +123,33 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 DataProvider.Load();
                 MessageBox.Show("Kết nối database thành công");
+                
+                FileStream fileStream = null;
+                try
+                {
+                    fileStream = new FileStream("data.txt", FileMode.OpenOrCreate);
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        string line;
+                        int dem = 0;
+                        bool check = reader.ReadLine().Equals("true");
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            if (check) {
+                                checkBox1.Checked = true;
+                                if (dem == 0) textBoxMa.Text = line;
+                                else if (dem == 1) maskedTextBoxMatKhau.Text = line;
+                                dem++;
+                            }
+                        }
+                        reader.Close();
+                        fileStream.Close();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
             }
             catch
             {
