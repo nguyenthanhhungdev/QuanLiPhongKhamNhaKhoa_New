@@ -148,3 +148,4 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhon
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.csproj.CopyComplete
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
+D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.ThayDoiMatKhau.resources

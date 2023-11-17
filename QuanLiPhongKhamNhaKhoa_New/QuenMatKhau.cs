@@ -12,8 +12,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
     public partial class QuenMatKhau : Form
     {
         bool hasConfirm = false;
-        int maXacNhan = RandomFrom1To1000();
-
+        public static int maXacNhan = RandomFrom1To1000();
         public QuenMatKhau()
         {
             InitializeComponent();
@@ -22,23 +21,26 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBoxEmail.Text;
-            if (textBoxEmail.Text.Length == 0)
+            string ma = textBoxMa.Text;
+            if (email.Length == 0 || ma.Length == 0)
             {
-                MessageBox.Show("Email không được để trống");
+                MessageBox.Show("Email hoặc mã không được để trống");
                 return;
             }
-
             try
             {
-                string sql = string.Format("Select * from BACSI where Email = '{0}'", email);
+                string sqlBS = string.Format("Select * from BACSI where Email = '{0}'and MaBS = '{1}'", email, ma);
+                string sqlNV = string.Format("Select * from NHANVIEN where Email = '{0}' and MaNV = '{1}'", email, ma);
+                string sql = ma.Contains("BS") ? sqlBS : sqlNV;
                 if (DataProvider.ExecuteQuery(sql).Rows.Count == 0)
                 {
-                    MessageBox.Show("Email không đúng");
+                    MessageBox.Show("Email hoặc mã không đúng");
                 }
                 else
                 {
                     sendEmail(maXacNhan, email);
-                    textBoxXacNhan.Focus();
+                    new ThayDoiMatKhau().Show();
+                    this.Close();
                 }
             }
             catch (SqlException sqlException)
@@ -90,59 +92,26 @@ namespace QuanLiPhongKhamNhaKhoa_New
             return rand.Next(1, 1001);
         }
 
-        private void buttonThayDoi_Click(object sender, EventArgs e)
+        
+
+        private void label4_Click(object sender, EventArgs e)
         {
-            if (hasConfirm)
-            {
-                if (textBoxThayDoiMK.Text.Length == 0)
-                {
-                    MessageBox.Show("Hãy nhập mật khẩu mới");
-                    return;
-                }
-                MessageBox.Show("Đã Thay Đổi Mật Khẩu");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Hãy nhập chính xác mã xác nhận");
-            }
+
         }
 
-        private void buttonXacNhan_Click(object sender, EventArgs e)
+        private void txtEmail_KeyDown(object sender, KeyEventArgs args)
         {
-            if (maXacNhan.ToString().Equals(textBoxXacNhan.Text))
+            if (args.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Mã xác nhận chính xác");
-                hasConfirm = true;
-                textBoxThayDoiMK.Focus();
-            }
-            else
-            {
-                MessageBox.Show("Mã xác nhận sai, vui lòng nhập lại chính xác");
+                textBoxMa.Focus();
             }
         }
-
-        public void txtEmail_KeyDown(object sender, KeyEventArgs keyEventArgs)
+        
+        private void txtMa_KeyDown(object sender, KeyEventArgs args)
         {
-            if (keyEventArgs.KeyCode == Keys.Enter)
+            if (args.KeyCode == Keys.Enter)
             {
                 button1_Click(sender, new EventArgs());
-            }
-        }
-        
-        public void txtMaXacNhan_KeyDown(object sender, KeyEventArgs keyEventArgs)
-        {
-            if (keyEventArgs.KeyCode == Keys.Enter)
-            {
-                buttonXacNhan_Click(sender, new EventArgs());
-            }
-        }
-        
-        public void txtThayDoiMK_KeyDown(object sender, KeyEventArgs keyEventArgs)
-        {
-            if (keyEventArgs.KeyCode == Keys.Enter)
-            {
-                buttonThayDoi_Click(sender, new EventArgs());
             }
         }
     }

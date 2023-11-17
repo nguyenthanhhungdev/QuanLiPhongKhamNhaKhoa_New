@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using QuanLiPhongKhamNhaKhoa_New.DAO;
 
@@ -95,6 +96,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            StreamWriter streamWriter = new StreamWriter("data.txt");
+            streamWriter.WriteLine(textBoxMa.Text);
+            streamWriter.WriteLine(maskedTextBoxMatKhau.Text);
         }
 
         private void Login_Load(object sender, EventArgs e)
