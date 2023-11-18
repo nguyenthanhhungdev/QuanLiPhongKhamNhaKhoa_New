@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home_Origin));
-            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBacSi = new System.Windows.Forms.TabPage();
-            this.toolStripBacSi = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelWaitingRoom = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripKham = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripService = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripResuft = new System.Windows.Forms.ToolStripLabel();
             this.tabPageLeTan = new System.Windows.Forms.TabPage();
             this.toolStripLeTan = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelThemBN = new System.Windows.Forms.ToolStripLabel();
@@ -40,7 +43,7 @@
             this.toolStripLabelTraCuuPK = new System.Windows.Forms.ToolStripLabel();
             this.tabPageQuanLi = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControlQuanLi = new System.Windows.Forms.ToolStrip();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelQLBN = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelQLBS = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelQLNV = new System.Windows.Forms.ToolStripLabel();
@@ -53,152 +56,183 @@
             this.tabPageThongKe = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.tabControl.SuspendLayout();
+            this.panelDoctor = new System.Windows.Forms.Panel();
+            this.tabControl1.SuspendLayout();
             this.tabBacSi.SuspendLayout();
-            this.toolStripBacSi.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.tabPageLeTan.SuspendLayout();
             this.toolStripLeTan.SuspendLayout();
             this.tabPageQuanLi.SuspendLayout();
-            this.tabControlQuanLi.SuspendLayout();
+            this.toolStrip3.SuspendLayout();
             this.tabPageCaNhan.SuspendLayout();
             this.toolStrip4.SuspendLayout();
             this.tabPageThongKe.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl
+            // tabControl1
             // 
-            this.tabControl.Controls.Add(this.tabBacSi);
-            this.tabControl.Controls.Add(this.tabPageLeTan);
-            this.tabControl.Controls.Add(this.tabPageQuanLi);
-            this.tabControl.Controls.Add(this.tabPageCaNhan);
-            this.tabControl.Controls.Add(this.tabPageThongKe);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.ItemSize = new System.Drawing.Size(80, 50);
-            this.tabControl.Location = new System.Drawing.Point(0, 0);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(881, 497);
-            this.tabControl.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabBacSi);
+            this.tabControl1.Controls.Add(this.tabPageLeTan);
+            this.tabControl1.Controls.Add(this.tabPageQuanLi);
+            this.tabControl1.Controls.Add(this.tabPageCaNhan);
+            this.tabControl1.Controls.Add(this.tabPageThongKe);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1482, 753);
+            this.tabControl1.TabIndex = 0;
             // 
             // tabBacSi
             // 
-            this.tabBacSi.Controls.Add(this.toolStripBacSi);
-            this.tabBacSi.Location = new System.Drawing.Point(4, 29);
+            this.tabBacSi.Controls.Add(this.panelDoctor);
+            this.tabBacSi.Controls.Add(this.toolStrip2);
+            this.tabBacSi.Location = new System.Drawing.Point(4, 31);
+            this.tabBacSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBacSi.Name = "tabBacSi";
-            this.tabBacSi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBacSi.Size = new System.Drawing.Size(873, 464);
+            this.tabBacSi.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabBacSi.Size = new System.Drawing.Size(1474, 718);
             this.tabBacSi.TabIndex = 0;
             this.tabBacSi.Text = "Bác sĩ";
             this.tabBacSi.UseVisualStyleBackColor = true;
             // 
-            // toolStripBacSi
+            // toolStrip2
             // 
-            this.toolStripBacSi.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStripBacSi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2});
-            this.toolStripBacSi.Location = new System.Drawing.Point(3, 3);
-            this.toolStripBacSi.Name = "toolStripBacSi";
-            this.toolStripBacSi.Size = new System.Drawing.Size(867, 33);
-            this.toolStripBacSi.TabIndex = 0;
-            this.toolStripBacSi.Text = "toolStrip2";
+            this.toolStrip2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelWaitingRoom,
+            this.toolStripKham,
+            this.toolStripService,
+            this.toolStripResuft});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 2);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1468, 31);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton2
+            // toolStripLabelWaitingRoom
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripLabelWaitingRoom.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_waiting_room_50;
+            this.toolStripLabelWaitingRoom.Name = "toolStripLabelWaitingRoom";
+            this.toolStripLabelWaitingRoom.Size = new System.Drawing.Size(116, 24);
+            this.toolStripLabelWaitingRoom.Text = "Phòng Chờ";
+            this.toolStripLabelWaitingRoom.Click += new System.EventHandler(this.toolStripLabelWaitingRoom_Click);
+            // 
+            // toolStripKham
+            // 
+            this.toolStripKham.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_prevention_64;
+            this.toolStripKham.Name = "toolStripKham";
+            this.toolStripKham.Size = new System.Drawing.Size(123, 24);
+            this.toolStripKham.Text = "Phiếu Khám";
+            this.toolStripKham.Click += new System.EventHandler(this.toolStripMedical_Click);
+            // 
+            // toolStripService
+            // 
+            this.toolStripService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_pencil_64;
+            this.toolStripService.Name = "toolStripService";
+            this.toolStripService.Size = new System.Drawing.Size(135, 24);
+            this.toolStripService.Text = "Phiếu Dịch Vụ";
+            this.toolStripService.Click += new System.EventHandler(this.toolStripService_Click);
+            // 
+            // toolStripResuft
+            // 
+            this.toolStripResuft.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_medical_result_64;
+            this.toolStripResuft.Name = "toolStripResuft";
+            this.toolStripResuft.Size = new System.Drawing.Size(138, 24);
+            this.toolStripResuft.Text = "Phiếu Kết Quả";
+            this.toolStripResuft.Click += new System.EventHandler(this.toolStripResuft_Click);
             // 
             // tabPageLeTan
             // 
             this.tabPageLeTan.Controls.Add(this.toolStripLeTan);
-            this.tabPageLeTan.Location = new System.Drawing.Point(4, 54);
+            this.tabPageLeTan.Location = new System.Drawing.Point(4, 31);
+            this.tabPageLeTan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageLeTan.Name = "tabPageLeTan";
-            this.tabPageLeTan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLeTan.Size = new System.Drawing.Size(873, 439);
+            this.tabPageLeTan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageLeTan.Size = new System.Drawing.Size(1474, 718);
             this.tabPageLeTan.TabIndex = 1;
             this.tabPageLeTan.Text = "Lễ Tân";
             this.tabPageLeTan.UseVisualStyleBackColor = true;
             // 
             // toolStripLeTan
             // 
-            this.toolStripLeTan.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStripLeTan.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripLeTan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelThemBN,
             this.toolStripLabelTraCuuBN,
             this.toolStripLabelTraCuuPK});
-            this.toolStripLeTan.Location = new System.Drawing.Point(3, 3);
+            this.toolStripLeTan.Location = new System.Drawing.Point(3, 2);
             this.toolStripLeTan.Name = "toolStripLeTan";
-            this.toolStripLeTan.Size = new System.Drawing.Size(867, 38);
+            this.toolStripLeTan.Size = new System.Drawing.Size(1468, 27);
             this.toolStripLeTan.TabIndex = 0;
             // 
             // toolStripLabelThemBN
             // 
             this.toolStripLabelThemBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_male_user_50;
             this.toolStripLabelThemBN.Name = "toolStripLabelThemBN";
-            this.toolStripLabelThemBN.Size = new System.Drawing.Size(169, 25);
+            this.toolStripLabelThemBN.Size = new System.Drawing.Size(143, 24);
             this.toolStripLabelThemBN.Text = "Thêm bệnh nhân";
             // 
             // toolStripLabelTraCuuBN
             // 
             this.toolStripLabelTraCuuBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_person_53;
             this.toolStripLabelTraCuuBN.Name = "toolStripLabelTraCuuBN";
-            this.toolStripLabelTraCuuBN.Size = new System.Drawing.Size(181, 25);
+            this.toolStripLabelTraCuuBN.Size = new System.Drawing.Size(154, 24);
             this.toolStripLabelTraCuuBN.Text = "Tra cứu bệnh nhân";
             // 
             // toolStripLabelTraCuuPK
             // 
             this.toolStripLabelTraCuuPK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_bar_48;
             this.toolStripLabelTraCuuPK.Name = "toolStripLabelTraCuuPK";
-            this.toolStripLabelTraCuuPK.Size = new System.Drawing.Size(199, 25);
+            this.toolStripLabelTraCuuPK.Size = new System.Drawing.Size(168, 24);
             this.toolStripLabelTraCuuPK.Text = "Tra cứu phòng khám";
             // 
             // tabPageQuanLi
             // 
             this.tabPageQuanLi.Controls.Add(this.panel1);
-            this.tabPageQuanLi.Controls.Add(this.tabControlQuanLi);
-            this.tabPageQuanLi.Location = new System.Drawing.Point(4, 29);
+            this.tabPageQuanLi.Controls.Add(this.toolStrip3);
+            this.tabPageQuanLi.Location = new System.Drawing.Point(4, 31);
+            this.tabPageQuanLi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageQuanLi.Name = "tabPageQuanLi";
-            this.tabPageQuanLi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageQuanLi.Size = new System.Drawing.Size(873, 464);
+            this.tabPageQuanLi.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageQuanLi.Size = new System.Drawing.Size(1474, 718);
             this.tabPageQuanLi.TabIndex = 2;
             this.tabPageQuanLi.Text = "Quản lí";
             this.tabPageQuanLi.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(9, 37);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 29);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(856, 419);
+            this.panel1.Size = new System.Drawing.Size(1468, 687);
             this.panel1.TabIndex = 1;
             // 
-            // tabControlQuanLi
+            // toolStrip3
             // 
-            this.tabControlQuanLi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlQuanLi.Dock = System.Windows.Forms.DockStyle.None;
-            this.tabControlQuanLi.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.tabControlQuanLi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip3.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelQLBN,
             this.toolStripLabelQLBS,
             this.toolStripLabelQLNV,
             this.toolStripLabelQLPK,
             this.toolStripLabel5});
-            this.tabControlQuanLi.Location = new System.Drawing.Point(3, 3);
-            this.tabControlQuanLi.Name = "tabControlQuanLi";
-            this.tabControlQuanLi.Size = new System.Drawing.Size(867, 30);
-            this.tabControlQuanLi.TabIndex = 0;
-            this.tabControlQuanLi.Text = "toolStrip3";
+            this.toolStrip3.Location = new System.Drawing.Point(3, 2);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(1468, 27);
+            this.toolStrip3.TabIndex = 0;
+            this.toolStrip3.Text = "toolStrip3";
             // 
             // toolStripLabelQLBN
             // 
             this.toolStripLabelQLBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_patient_50;
             this.toolStripLabelQLBN.Name = "toolStripLabelQLBN";
-            this.toolStripLabelQLBN.Size = new System.Drawing.Size(181, 33);
+            this.toolStripLabelQLBN.Size = new System.Drawing.Size(153, 24);
             this.toolStripLabelQLBN.Text = "Quản lí bệnh nhân";
             this.toolStripLabelQLBN.Click += new System.EventHandler(this.toolStripLabelQLBN_Click);
             // 
@@ -206,7 +240,7 @@
             // 
             this.toolStripLabelQLBS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_doctor_50;
             this.toolStripLabelQLBS.Name = "toolStripLabelQLBS";
-            this.toolStripLabelQLBS.Size = new System.Drawing.Size(142, 33);
+            this.toolStripLabelQLBS.Size = new System.Drawing.Size(122, 24);
             this.toolStripLabelQLBS.Text = "Quản lí bác sĩ";
             this.toolStripLabelQLBS.Click += new System.EventHandler(this.toolStripLabelQLBS_Click);
             // 
@@ -214,7 +248,7 @@
             // 
             this.toolStripLabelQLNV.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_staff_48;
             this.toolStripLabelQLNV.Name = "toolStripLabelQLNV";
-            this.toolStripLabelQLNV.Size = new System.Drawing.Size(173, 33);
+            this.toolStripLabelQLNV.Size = new System.Drawing.Size(147, 24);
             this.toolStripLabelQLNV.Text = "Quản lí nhân viên";
             this.toolStripLabelQLNV.Click += new System.EventHandler(this.toolStripLabelQLNV_Click);
             // 
@@ -222,7 +256,7 @@
             // 
             this.toolStripLabelQLPK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_patient_room_67;
             this.toolStripLabelQLPK.Name = "toolStripLabelQLPK";
-            this.toolStripLabelQLPK.Size = new System.Drawing.Size(199, 33);
+            this.toolStripLabelQLPK.Size = new System.Drawing.Size(167, 24);
             this.toolStripLabelQLPK.Text = "Quản lí phòng khám";
             this.toolStripLabelQLPK.Click += new System.EventHandler(this.toolStripLabelQLPK_Click);
             // 
@@ -230,16 +264,17 @@
             // 
             this.toolStripLabel5.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_service_50;
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(154, 33);
+            this.toolStripLabel5.Size = new System.Drawing.Size(131, 24);
             this.toolStripLabel5.Text = "Quản lí dịch vụ";
             // 
             // tabPageCaNhan
             // 
             this.tabPageCaNhan.Controls.Add(this.toolStrip4);
-            this.tabPageCaNhan.Location = new System.Drawing.Point(4, 54);
+            this.tabPageCaNhan.Location = new System.Drawing.Point(4, 31);
+            this.tabPageCaNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageCaNhan.Name = "tabPageCaNhan";
-            this.tabPageCaNhan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCaNhan.Size = new System.Drawing.Size(873, 439);
+            this.tabPageCaNhan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageCaNhan.Size = new System.Drawing.Size(1474, 718);
             this.tabPageCaNhan.TabIndex = 3;
             this.tabPageCaNhan.Text = "Cá nhân";
             this.tabPageCaNhan.UseVisualStyleBackColor = true;
@@ -250,9 +285,9 @@
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelTTCN,
             this.toolStripLabelTDMK});
-            this.toolStrip4.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip4.Location = new System.Drawing.Point(3, 2);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Size = new System.Drawing.Size(867, 30);
+            this.toolStrip4.Size = new System.Drawing.Size(1468, 27);
             this.toolStrip4.TabIndex = 0;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -260,22 +295,23 @@
             // 
             this.toolStripLabelTTCN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_personal_64;
             this.toolStripLabelTTCN.Name = "toolStripLabelTTCN";
-            this.toolStripLabelTTCN.Size = new System.Drawing.Size(178, 25);
+            this.toolStripLabelTTCN.Size = new System.Drawing.Size(151, 24);
             this.toolStripLabelTTCN.Text = "Thông tin cá nhân";
             // 
             // toolStripLabelTDMK
             // 
             this.toolStripLabelTDMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_password_50;
             this.toolStripLabelTDMK.Name = "toolStripLabelTDMK";
-            this.toolStripLabelTDMK.Size = new System.Drawing.Size(183, 25);
+            this.toolStripLabelTDMK.Size = new System.Drawing.Size(155, 24);
             this.toolStripLabelTDMK.Text = "Thay đổi mật khẩu";
             // 
             // tabPageThongKe
             // 
             this.tabPageThongKe.Controls.Add(this.toolStrip1);
-            this.tabPageThongKe.Location = new System.Drawing.Point(4, 54);
+            this.tabPageThongKe.Location = new System.Drawing.Point(4, 31);
+            this.tabPageThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageThongKe.Name = "tabPageThongKe";
-            this.tabPageThongKe.Size = new System.Drawing.Size(873, 439);
+            this.tabPageThongKe.Size = new System.Drawing.Size(1474, 718);
             this.tabPageThongKe.TabIndex = 4;
             this.tabPageThongKe.Text = "Thông kê";
             this.tabPageThongKe.UseVisualStyleBackColor = true;
@@ -287,7 +323,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(873, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(1474, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -297,30 +333,40 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // panelDoctor
+            // 
+            this.panelDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDoctor.Location = new System.Drawing.Point(3, 33);
+            this.panelDoctor.Name = "panelDoctor";
+            this.panelDoctor.Size = new System.Drawing.Size(1468, 683);
+            this.panelDoctor.TabIndex = 1;
             // 
             // Home_Origin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 497);
-            this.Controls.Add(this.tabControl);
+            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home_Origin";
             this.Text = "Home";
-            this.tabControl.ResumeLayout(false);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tabControl1.ResumeLayout(false);
             this.tabBacSi.ResumeLayout(false);
             this.tabBacSi.PerformLayout();
-            this.toolStripBacSi.ResumeLayout(false);
-            this.toolStripBacSi.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.tabPageLeTan.ResumeLayout(false);
             this.tabPageLeTan.PerformLayout();
             this.toolStripLeTan.ResumeLayout(false);
             this.toolStripLeTan.PerformLayout();
             this.tabPageQuanLi.ResumeLayout(false);
             this.tabPageQuanLi.PerformLayout();
-            this.tabControlQuanLi.ResumeLayout(false);
-            this.tabControlQuanLi.PerformLayout();
+            this.toolStrip3.ResumeLayout(false);
+            this.toolStrip3.PerformLayout();
             this.tabPageCaNhan.ResumeLayout(false);
             this.tabPageCaNhan.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
@@ -335,17 +381,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabBacSi;
         private System.Windows.Forms.TabPage tabPageLeTan;
         private System.Windows.Forms.TabPage tabPageQuanLi;
         private System.Windows.Forms.TabPage tabPageCaNhan;
         private System.Windows.Forms.TabPage tabPageThongKe;
-        private System.Windows.Forms.ToolStrip toolStripBacSi;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStrip tabControlQuanLi;
+        private System.Windows.Forms.ToolStrip toolStrip3;
         private System.Windows.Forms.ToolStripLabel toolStripLabelQLBN;
         private System.Windows.Forms.ToolStripLabel toolStripLabelQLBS;
         private System.Windows.Forms.ToolStripLabel toolStripLabelQLNV;
@@ -359,5 +404,10 @@
         private System.Windows.Forms.ToolStrip toolStrip4;
         private System.Windows.Forms.ToolStripLabel toolStripLabelTTCN;
         private System.Windows.Forms.ToolStripLabel toolStripLabelTDMK;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelWaitingRoom;
+        private System.Windows.Forms.ToolStripLabel toolStripService;
+        private System.Windows.Forms.ToolStripLabel toolStripKham;
+        private System.Windows.Forms.ToolStripLabel toolStripResuft;
+        public System.Windows.Forms.Panel panelDoctor;
     }
 }
