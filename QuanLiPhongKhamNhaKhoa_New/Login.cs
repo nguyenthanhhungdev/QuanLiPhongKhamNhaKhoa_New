@@ -12,6 +12,8 @@ namespace QuanLiPhongKhamNhaKhoa_New
         public static bool isNv = false;
         public static bool hasLogin = false;
         public static bool isAdmin = false;
+        private bool hasRead = false;
+
         public Login()
         {
             InitializeComponent();
@@ -66,19 +68,21 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
             string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
             isAdmin = textBoxMa.Text.Contains("BS01") ? true : false;
-            
+
             try
             {
                 if (textBoxMa.Text.Length == 0)
                 {
                     MessageBox.Show("Mã không được để trống");
                     return;
-                } else if (maskedTextBoxMatKhau.Text.Length == 0)
+                }
+                else if (maskedTextBoxMatKhau.Text.Length == 0)
                 {
                     MessageBox.Show("Mật khẩu không được để trống");
                     return;
-                } else if (DataProvider
-                          .ExecuteQuery(sql).Rows.Count == 0)
+                }
+                else if (DataProvider
+                             .ExecuteQuery(sql).Rows.Count == 0)
                 {
                     int num1 = (int)MessageBox.Show("MÃ HOẶC PASSWORD KHÔNG ĐÚNG");
                 }
@@ -87,15 +91,22 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     int num2 = (int)MessageBox.Show("ĐĂNG NHẬP THÀNH CÔNG");
                     this.Hide();
                     new Home_Origin().Show();
+                    hasLogin = true;
+                    if (hasRead && hasLogin) write();
                 }
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Lỗi hệ thống: \n" +  exception.Message);
+                MessageBox.Show("Lỗi hệ thống: \n" + exception.Message);
             }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            hasRead = true;
+        }
+
+        private void write()
         {
             FileStream fileStream = null;
             try
@@ -123,7 +134,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 DataProvider.Load();
                 MessageBox.Show("Kết nối database thành công");
-                
+
                 FileStream fileStream = null;
                 try
                 {
@@ -132,16 +143,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     {
                         string line;
                         int dem = 0;
-                        bool check = reader.ReadLine().Equals("true");
-                        while ((line = reader.ReadLine()) != null)
+                        bool check = reader.ReadLine()?.Equals("true") ?? false;
+                        while (((line = reader.ReadLine()) != null) && check)
                         {
-                            if (check) {
                                 checkBox1.Checked = true;
                                 if (dem == 0) textBoxMa.Text = line;
                                 else if (dem == 1) maskedTextBoxMatKhau.Text = line;
                                 dem++;
-                            }
                         }
+
                         reader.Close();
                         fileStream.Close();
                     }

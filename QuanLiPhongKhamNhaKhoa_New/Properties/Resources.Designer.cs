@@ -113,6 +113,16 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_body_29 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-body-29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_body_51 {
             get {
                 object obj = ResourceManager.GetObject("icons8-body-51", resourceCulture);

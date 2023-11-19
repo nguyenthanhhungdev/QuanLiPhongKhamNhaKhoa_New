@@ -73,7 +73,6 @@
             this.textBoxXacNhan.Name = "textBoxXacNhan";
             this.textBoxXacNhan.Size = new System.Drawing.Size(297, 26);
             this.textBoxXacNhan.TabIndex = 2;
-            this.textBoxXacNhan.KeyDown += txtMaXacNhan_KeyDown;
             // 
             // buttonXacNhan
             // 
@@ -81,12 +80,11 @@
             this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonXacNhan.Location = new System.Drawing.Point(261, 230);
             this.buttonXacNhan.Name = "buttonXacNhan";
-            this.buttonXacNhan.Size = new System.Drawing.Size(252, 119);
+            this.buttonXacNhan.Size = new System.Drawing.Size(173, 71);
             this.buttonXacNhan.TabIndex = 3;
             this.buttonXacNhan.Text = "Xác nhận";
             this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonXacNhan.UseVisualStyleBackColor = true;
-            this.buttonXacNhan.Click += buttonXacNhan_Click;
             // 
             // textBoxThayDoiMK
             // 
@@ -94,7 +92,6 @@
             this.textBoxThayDoiMK.Name = "textBoxThayDoiMK";
             this.textBoxThayDoiMK.Size = new System.Drawing.Size(297, 26);
             this.textBoxThayDoiMK.TabIndex = 4;
-            this.textBoxThayDoiMK.KeyDown += txtThayDoiMK_KeyDown;
             // 
             // label3
             // 
@@ -111,12 +108,11 @@
             this.buttonThayDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonThayDoiMK.Location = new System.Drawing.Point(261, 466);
             this.buttonThayDoiMK.Name = "buttonThayDoiMK";
-            this.buttonThayDoiMK.Size = new System.Drawing.Size(252, 113);
+            this.buttonThayDoiMK.Size = new System.Drawing.Size(162, 83);
             this.buttonThayDoiMK.TabIndex = 6;
             this.buttonThayDoiMK.Text = "Thay đổi";
             this.buttonThayDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThayDoiMK.UseVisualStyleBackColor = true;
-            this.buttonThayDoiMK.Click += buttonThayDoi_Click;
             // 
             // ThayDoiMatKhau
             // 
