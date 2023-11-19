@@ -72,7 +72,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
                 var smtpClient = new MailKit.Net.Smtp.SmtpClient();
                 smtpClient.Connect("smtp.ethereal.email", 587, SecureSocketOptions.Auto);
-                smtpClient.Authenticate("casimir.stehr@ethereal.email", "6mEr7bWTBuEtk3C12Q");
+                smtpClient.Authenticate("salvatore59@ethereal.email", "vM9RYByAaG2KhRQgZC");
                 smtpClient.Send(message);
                 smtpClient.Disconnect(true);
 
