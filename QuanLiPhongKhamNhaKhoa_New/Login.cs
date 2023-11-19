@@ -12,7 +12,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
         public static bool isNv = false;
         public static bool hasLogin = false;
         public static bool isAdmin = false;
-        private bool hasRead = false;
 
         public Login()
         {
@@ -67,8 +66,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text);
 
             string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
-            isAdmin = textBoxMa.Text.Contains("BS01") ? true : false;
-
+            isAdmin = textBoxMa.Text.Contains("BS01");
+            if (textBoxMa.Text.Contains("BS")) isBs = true;
+            else isNv = true;
             try
             {
                 if (textBoxMa.Text.Length == 0)
@@ -104,7 +104,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            hasRead = checkBox1.Checked;
         }
 
         private void write()
