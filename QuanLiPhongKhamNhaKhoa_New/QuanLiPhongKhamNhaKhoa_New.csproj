@@ -407,5 +407,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-body-29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8_change_20.png" />
+    <Content Include="Resources\icons8_confirm_20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,6 +39,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 }
                 MessageBox.Show("Đã Thay Đổi Mật Khẩu");
                 this.Close();
+                new Login().Show();
             }
             else
             {
@@ -74,6 +75,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 buttonThayDoi_Click(sender, new EventArgs());
             }
+        }
+
+        private void textBoxThayDoiMK_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 9);
+            this.label1.Location = new System.Drawing.Point(103, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 37);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 179);
+            this.label2.Location = new System.Drawing.Point(36, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 1;
@@ -69,34 +69,37 @@
             // 
             // textBoxXacNhan
             // 
-            this.textBoxXacNhan.Location = new System.Drawing.Point(261, 176);
+            this.textBoxXacNhan.Location = new System.Drawing.Point(141, 132);
             this.textBoxXacNhan.Name = "textBoxXacNhan";
             this.textBoxXacNhan.Size = new System.Drawing.Size(297, 26);
             this.textBoxXacNhan.TabIndex = 2;
+            this.textBoxXacNhan.KeyDown += txtMaXacNhan_KeyDown;
             // 
             // buttonXacNhan
             // 
-            this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_64;
+            this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_20;
             this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonXacNhan.Location = new System.Drawing.Point(261, 230);
+            this.buttonXacNhan.Location = new System.Drawing.Point(141, 164);
             this.buttonXacNhan.Name = "buttonXacNhan";
-            this.buttonXacNhan.Size = new System.Drawing.Size(173, 71);
+            this.buttonXacNhan.Size = new System.Drawing.Size(122, 47);
             this.buttonXacNhan.TabIndex = 3;
             this.buttonXacNhan.Text = "Xác nhận";
             this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonXacNhan.UseVisualStyleBackColor = true;
+            this.buttonXacNhan.Click += buttonXacNhan_Click;
             // 
             // textBoxThayDoiMK
             // 
-            this.textBoxThayDoiMK.Location = new System.Drawing.Point(261, 414);
+            this.textBoxThayDoiMK.Location = new System.Drawing.Point(141, 220);
             this.textBoxThayDoiMK.Name = "textBoxThayDoiMK";
             this.textBoxThayDoiMK.Size = new System.Drawing.Size(297, 26);
             this.textBoxThayDoiMK.TabIndex = 4;
+            this.textBoxThayDoiMK.KeyDown += txtThayDoiMK_KeyDown;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 420);
+            this.label3.Location = new System.Drawing.Point(31, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 5;
@@ -104,21 +107,22 @@
             // 
             // buttonThayDoiMK
             // 
-            this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_64;
+            this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_20;
             this.buttonThayDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThayDoiMK.Location = new System.Drawing.Point(261, 466);
+            this.buttonThayDoiMK.Location = new System.Drawing.Point(141, 269);
             this.buttonThayDoiMK.Name = "buttonThayDoiMK";
-            this.buttonThayDoiMK.Size = new System.Drawing.Size(162, 83);
+            this.buttonThayDoiMK.Size = new System.Drawing.Size(122, 50);
             this.buttonThayDoiMK.TabIndex = 6;
             this.buttonThayDoiMK.Text = "Thay đổi";
             this.buttonThayDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThayDoiMK.UseVisualStyleBackColor = true;
+            this.buttonThayDoiMK.Click += buttonThayDoi_Click;
             // 
             // ThayDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 626);
+            this.ClientSize = new System.Drawing.Size(485, 420);
             this.Controls.Add(this.buttonThayDoiMK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxThayDoiMK);
@@ -132,7 +136,6 @@
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
