@@ -92,18 +92,19 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     this.Hide();
                     new Home_Origin().Show();
                     hasLogin = true;
-                    if (hasRead && hasLogin) write();
+                    write();
                 }
             }
             catch (Exception exception)
             {
                 MessageBox.Show("Lỗi hệ thống: \n" + exception.Message);
             }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            hasRead = true;
+            hasRead = checkBox1.Checked;
         }
 
         private void write()
@@ -146,10 +147,10 @@ namespace QuanLiPhongKhamNhaKhoa_New
                         bool check = reader.ReadLine()?.Equals("true") ?? false;
                         while (((line = reader.ReadLine()) != null) && check)
                         {
-                                checkBox1.Checked = true;
-                                if (dem == 0) textBoxMa.Text = line;
-                                else if (dem == 1) maskedTextBoxMatKhau.Text = line;
-                                dem++;
+                            checkBox1.Checked = true;
+                            if (dem == 0) textBoxMa.Text = line;
+                            else if (dem == 1) maskedTextBoxMatKhau.Text = line;
+                            dem++;
                         }
 
                         reader.Close();
@@ -170,6 +171,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void buttonQuenMK_Click(object sender, EventArgs e)
         {
             new QuenMatKhau().Show();
+            this.Hide();
         }
     }
 }

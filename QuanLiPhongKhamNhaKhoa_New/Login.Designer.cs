@@ -86,6 +86,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Đăng nhập 1 lần";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // maskedTextBoxMatKhau
             // 
