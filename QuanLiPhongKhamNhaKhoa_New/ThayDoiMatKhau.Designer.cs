@@ -73,7 +73,6 @@
             this.textBoxXacNhan.Name = "textBoxXacNhan";
             this.textBoxXacNhan.Size = new System.Drawing.Size(297, 26);
             this.textBoxXacNhan.TabIndex = 2;
-            this.textBoxXacNhan.KeyDown += txtMaXacNhan_KeyDown;
             // 
             // buttonXacNhan
             // 
@@ -86,7 +85,6 @@
             this.buttonXacNhan.Text = "Xác nhận";
             this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonXacNhan.UseVisualStyleBackColor = true;
-            this.buttonXacNhan.Click += buttonXacNhan_Click;
             // 
             // textBoxThayDoiMK
             // 
@@ -94,7 +92,7 @@
             this.textBoxThayDoiMK.Name = "textBoxThayDoiMK";
             this.textBoxThayDoiMK.Size = new System.Drawing.Size(297, 26);
             this.textBoxThayDoiMK.TabIndex = 4;
-            this.textBoxThayDoiMK.KeyDown += txtThayDoiMK_KeyDown;
+            this.textBoxThayDoiMK.TextChanged += new System.EventHandler(this.textBoxThayDoiMK_TextChanged);
             // 
             // label3
             // 
@@ -116,7 +114,6 @@
             this.buttonThayDoiMK.Text = "Thay đổi";
             this.buttonThayDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThayDoiMK.UseVisualStyleBackColor = true;
-            this.buttonThayDoiMK.Click += buttonThayDoi_Click;
             // 
             // ThayDoiMatKhau
             // 

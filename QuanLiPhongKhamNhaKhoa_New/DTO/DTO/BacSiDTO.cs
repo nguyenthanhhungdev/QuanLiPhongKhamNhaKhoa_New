@@ -10,37 +10,17 @@ namespace DTO
 {
     internal class BacSiDTO : UserDTO
     {
-        private string MaPhong;
-        private string CaLam;
+        public string MaPhong;
 
         public BacSiDTO()
         {
         }
 
-        public BacSiDTO(string ma, string ten, string diaChi, DateTime ngSinh, string sDT, string email, string gioiTinh, string caLam, string matKhau, string maPhong)
+        public BacSiDTO(string ma, string ten, string diaChi, DateTime ngSinh, string sDT, string email,
+            string gioiTinh, string caLam, string matKhau, string maPhong) :
+            base(ma, ten, diaChi, ngSinh, sDT, email, gioiTinh, matKhau, caLam)
         {
-            Ma = ma;
-            Ten = ten;
-            DiaChi = diaChi;
-            NgSinh = ngSinh;
-            SDT= sDT;
-            Email= email;
-            GioiTinh = gioiTinh;
-            CaLam = caLam;
-            MatKhau = matKhau;
             MaPhong = maPhong;
-        }
-
-        public string MaPhong1
-        {
-            get => MaPhong;
-            set => MaPhong = value;
-        }
-
-        public string CaLam1
-        {
-            get => CaLam;
-            set => CaLam = value;
         }
     }
 }

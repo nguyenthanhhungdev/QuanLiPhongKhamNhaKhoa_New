@@ -12,16 +12,10 @@ namespace DTO
         {
         }
 
-        public NhanVienDTO(string maNV, string tenNV, string diaChi, DateTime ngSinh, string sDT, string email, string gioiTinh, string matKhau)
+        public NhanVienDTO(string maNV, string tenNV, string diaChi, DateTime ngSinh, string sDT, string email, string gioiTinh, string matKhau, string caLam): 
+            base(maNV, tenNV, diaChi, ngSinh, sDT, email, gioiTinh, matKhau, caLam)
         {
-            Ma = maNV;
-            Ten = tenNV;
-            DiaChi = diaChi;
-            NgSinh = ngSinh;
-            SDT = sDT;
-            Email = email;
-            GioiTinh = gioiTinh;
-            MatKhau = matKhau;
+            
         }
     }
 }

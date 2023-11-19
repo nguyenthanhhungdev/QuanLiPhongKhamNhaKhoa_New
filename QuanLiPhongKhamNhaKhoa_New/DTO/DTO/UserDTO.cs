@@ -4,61 +4,30 @@ namespace DTO
 {
     public class UserDTO
     {
-        protected string Ma;
-        protected string Ten;
-        protected string DiaChi;
-        protected DateTime NgSinh;
-        protected string SDT;
-        protected string Email;
-        protected string GioiTinh;
-        protected string MatKhau;
-
-        public string Ma1
+        public string Ma;
+        public string Ten;
+        public string DiaChi;
+        public DateTime NgSinh;
+        public string Sdt;
+        public string Email;
+        public string GioiTinh;
+        public string MatKhau;
+        public string CaLam;
+        public UserDTO()
         {
-            get => Ma;
-            set => Ma = value;
         }
 
-        public string Ten1
+        public UserDTO(string ma, string ten, string diaChi, DateTime ngSinh, string sdt, string email, string gioiTinh, string matKhau, string caLam)
         {
-            get => Ten;
-            set => Ten = value;
-        }
-
-        public string DiaChi1
-        {
-            get => DiaChi;
-            set => DiaChi = value;
-        }
-
-        public DateTime NgSinh1
-        {
-            get => NgSinh;
-            set => NgSinh = value;
-        }
-
-        public string Sdt
-        {
-            get => SDT;
-            set => SDT = value;
-        }
-
-        public string Email1
-        {
-            get => Email;
-            set => Email = value;
-        }
-
-        public string GioiTinh1
-        {
-            get => GioiTinh;
-            set => GioiTinh = value;
-        }
-
-        public string MatKhau1
-        {
-            get => MatKhau;
-            set => MatKhau = value;
+            Ma = ma;
+            Ten = ten;
+            DiaChi = diaChi;
+            NgSinh = ngSinh;
+            Sdt = sdt;
+            Email = email;
+            GioiTinh = gioiTinh;
+            MatKhau = matKhau;
+            CaLam = caLam;
         }
     }
 }

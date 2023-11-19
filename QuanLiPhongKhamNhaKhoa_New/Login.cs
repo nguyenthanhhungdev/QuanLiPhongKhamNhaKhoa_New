@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections;
+using System.Data;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors.Filtering.Templates;
+using DTO;
 using QuanLiPhongKhamNhaKhoa_New.DAO;
 
 namespace QuanLiPhongKhamNhaKhoa_New
@@ -9,10 +14,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
     public partial class Login : Form
     {
         public static bool isBs = false;
-        public static bool isNv = false;
         public static bool hasLogin = false;
         public static bool isAdmin = false;
-
+        public static UserDTO dto;
         public Login()
         {
             InitializeComponent();
@@ -59,48 +63,99 @@ namespace QuanLiPhongKhamNhaKhoa_New
         // private SqlConnection conn;
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
+    {
+      string sqlBS = string.Format("SELECT * FROM BACSI WHERE MaBS = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
+      string sqlNV = string.Format("SELECT * FROM NHANVIEN WHERE MaNV = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
+      string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
+      Login.isAdmin = this.textBoxMa.Text.Contains("BS01");
+      Login.isBs = this.textBoxMa.Text.Contains("BS");
+      try
+      {
+        if (this.textBoxMa.Text.Length == 0)
         {
-            string sqlBS = string.Format("SELECT * FROM BACSI WHERE MaBS = '{0}' AND MatKhau = '{1}'",
-                (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text);
-            string sqlNV = string.Format("SELECT * FROM NHANVIEN WHERE MaNV = '{0}' AND MatKhau = '{1}'",
-                (object)this.textBoxMa.Text, (object)this.maskedTextBoxMatKhau.Text);
-
-            string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
-            isAdmin = textBoxMa.Text.Contains("BS01");
-            if (textBoxMa.Text.Contains("BS")) isBs = true;
-            else isNv = true;
-            try
-            {
-                if (textBoxMa.Text.Length == 0)
-                {
-                    MessageBox.Show("Mã không được để trống");
-                    return;
-                }
-                else if (maskedTextBoxMatKhau.Text.Length == 0)
-                {
-                    MessageBox.Show("Mật khẩu không được để trống");
-                    return;
-                }
-                else if (DataProvider
-                             .ExecuteQuery(sql).Rows.Count == 0)
-                {
-                    int num1 = (int)MessageBox.Show("MÃ HOẶC PASSWORD KHÔNG ĐÚNG");
-                }
-                else
-                {
-                    int num2 = (int)MessageBox.Show("ĐĂNG NHẬP THÀNH CÔNG");
-                    this.Hide();
-                    new Home_Origin().Show();
-                    hasLogin = true;
-                    write();
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show("Lỗi hệ thống: \n" + exception.Message);
-            }
-
+          int num1 = (int) MessageBox.Show("Mã không được để trống");
         }
+        else if (this.maskedTextBoxMatKhau.Text.Length == 0)
+        {
+          int num2 = (int) MessageBox.Show("Mật khẩu không được để trống");
+        }
+        else
+        {
+          DataTable dataTable = DataProvider.ExecuteQuery(sql);
+          if (dataTable.Rows.Count == 0)
+          {
+            int num1_1 = (int) MessageBox.Show("MÃ HOẶC PASSWORD KHÔNG ĐÚNG");
+          }
+          else
+          {
+            if (Login.isBs)
+            {
+              IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+              try
+              {
+                while (enumerator.MoveNext())
+                {
+                  DataRow row = (DataRow) enumerator.Current;
+                  BacSiDTO bacSiDto = new BacSiDTO();
+                  bacSiDto.Ma = row.Field<string>("MaBS");
+                  bacSiDto.Ten = row.Field<string>("TenBS");
+                  bacSiDto.DiaChi = row.Field<string>("DiaChi");
+                  bacSiDto.NgSinh = row.Field<DateTime>("NgSinh");
+                  bacSiDto.Sdt = row.Field<string>("SDT");
+                  bacSiDto.Email = row.Field<string>("SDT");
+                  bacSiDto.GioiTinh = row.Field<string>("GioiTinh");
+                  bacSiDto.CaLam = row.Field<string>("CaLam");
+                  bacSiDto.MatKhau = row.Field<string>("MatKhau");
+                  bacSiDto.MaPhong = row.Field<string>("MaPhong");
+                  Login.dto = (UserDTO) bacSiDto;
+                }
+              }
+              finally
+              {
+                if (enumerator is IDisposable disposable)
+                  disposable.Dispose();
+              }
+            }
+            else
+            {
+              IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+              try
+              {
+                while (enumerator.MoveNext())
+                {
+                  DataRow row = (DataRow) enumerator.Current;
+                  NhanVienDTO nhanVienDto = new NhanVienDTO();
+                  nhanVienDto.Ma = row.Field<string>("MaBS");
+                  nhanVienDto.Ten = row.Field<string>("TenBS");
+                  nhanVienDto.DiaChi = row.Field<string>("DiaChi");
+                  nhanVienDto.NgSinh = row.Field<DateTime>("NgSinh");
+                  nhanVienDto.Sdt = row.Field<string>("SDT");
+                  nhanVienDto.Email = row.Field<string>("SDT");
+                  nhanVienDto.GioiTinh = row.Field<string>("GioiTinh");
+                  nhanVienDto.CaLam = row.Field<string>("CaLam");
+                  nhanVienDto.MatKhau = row.Field<string>("MatKhau");
+                  Login.dto = (UserDTO) nhanVienDto;
+                }
+              }
+              finally
+              {
+                if (enumerator is IDisposable disposable)
+                  disposable.Dispose();
+              }
+            }
+            int num2_1 = (int) MessageBox.Show("ĐĂNG NHẬP THÀNH CÔNG");
+            this.Hide();
+            new Home_Origin().Show();
+            Login.hasLogin = true;
+            this.write();
+          }
+        }
+      }
+      catch (Exception exception)
+      {
+        int num = (int) MessageBox.Show(string.Concat("Lỗi hệ thống: \n", exception.Message));
+      }
+    }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -161,10 +216,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     MessageBox.Show(exception.Message);
                 }
             }
-            catch
+            catch (Exception exception)
             {
-                MessageBox.Show("Có lỗi trong khi kết nối database");
+                MessageBox.Show(exception.Message);
             }
+            textBoxMa.Focus();
         }
 
         private void buttonQuenMK_Click(object sender, EventArgs e)
