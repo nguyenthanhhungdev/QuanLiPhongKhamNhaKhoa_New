@@ -73,6 +73,86 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cao_voi_rang {
+            get {
+                object obj = ResourceManager.GetObject("cao-voi-rang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dichvu {
+            get {
+                object obj = ResourceManager.GetObject("dichvu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dichvu__2_ {
+            get {
+                object obj = ResourceManager.GetObject("dichvu (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dieu_tri_tuy {
+            get {
+                object obj = ResourceManager.GetObject("dieu-tri-tuy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ham_gia_thao_lap_tam_duc_smile_jpg_1695452087_ {
+            get {
+                object obj = ResourceManager.GetObject("ham-gia-thao-lap-tam-duc-smile.jpg-1695452087-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_han_tram_rang_sau_01 {
+            get {
+                object obj = ResourceManager.GetObject("icon-han-tram-rang-sau-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_nho_rang_khon_1 {
+            get {
+                object obj = ResourceManager.GetObject("icon-nho-rang-khon-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tay_trang_rang_1 {
+            get {
+                object obj = ResourceManager.GetObject("icon-tay-trang-rang-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-48", resourceCulture);
@@ -306,6 +386,36 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         internal static System.Drawing.Bitmap lam_sao_thu_hut_benh_nhan_cho_phong_kham_nha_khoa_2 {
             get {
                 object obj = ResourceManager.GetObject("lam-sao-thu-hut-benh-nhan-cho-phong-kham-nha-khoa-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nhorangthuong {
+            get {
+                object obj = ResourceManager.GetObject("nhorangthuong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nieng_rang_tham_my {
+            get {
+                object obj = ResourceManager.GetObject("nieng-rang-tham-my", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trong_rang_implant_1 {
+            get {
+                object obj = ResourceManager.GetObject("trong-rang-implant_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

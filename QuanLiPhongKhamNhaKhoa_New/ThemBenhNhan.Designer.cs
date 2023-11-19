@@ -68,83 +68,83 @@
             // maBNLabel
             // 
             maBNLabel.AutoSize = true;
-            maBNLabel.Location = new System.Drawing.Point(12, 35);
+            maBNLabel.Location = new System.Drawing.Point(11, 28);
             maBNLabel.Name = "maBNLabel";
-            maBNLabel.Size = new System.Drawing.Size(61, 20);
+            maBNLabel.Size = new System.Drawing.Size(51, 16);
             maBNLabel.TabIndex = 1;
-            maBNLabel.Text = "Ma BN:";
+            maBNLabel.Text = "Mã BN:";
             // 
             // tenBNLabel
             // 
             tenBNLabel.AutoSize = true;
-            tenBNLabel.Location = new System.Drawing.Point(12, 67);
+            tenBNLabel.Location = new System.Drawing.Point(11, 54);
             tenBNLabel.Name = "tenBNLabel";
-            tenBNLabel.Size = new System.Drawing.Size(66, 20);
+            tenBNLabel.Size = new System.Drawing.Size(56, 16);
             tenBNLabel.TabIndex = 3;
-            tenBNLabel.Text = "Ten BN:";
+            tenBNLabel.Text = "Tên BN:";
             // 
             // cMNDLabel
             // 
             cMNDLabel.AutoSize = true;
-            cMNDLabel.Location = new System.Drawing.Point(12, 99);
+            cMNDLabel.Location = new System.Drawing.Point(11, 79);
             cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(60, 20);
+            cMNDLabel.Size = new System.Drawing.Size(50, 16);
             cMNDLabel.TabIndex = 5;
             cMNDLabel.Text = "CMND:";
             // 
             // diaChiLabel
             // 
             diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(12, 131);
+            diaChiLabel.Location = new System.Drawing.Point(11, 105);
             diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new System.Drawing.Size(64, 20);
+            diaChiLabel.Size = new System.Drawing.Size(50, 16);
             diaChiLabel.TabIndex = 7;
-            diaChiLabel.Text = "Dia Chi:";
+            diaChiLabel.Text = "Địa chỉ:";
             // 
             // ngSinhLabel
             // 
             ngSinhLabel.AutoSize = true;
-            ngSinhLabel.Location = new System.Drawing.Point(12, 164);
+            ngSinhLabel.Location = new System.Drawing.Point(11, 131);
             ngSinhLabel.Name = "ngSinhLabel";
-            ngSinhLabel.Size = new System.Drawing.Size(69, 20);
+            ngSinhLabel.Size = new System.Drawing.Size(55, 16);
             ngSinhLabel.TabIndex = 9;
-            ngSinhLabel.Text = "Ng Sinh:";
+            ngSinhLabel.Text = "Ng sinh:";
             // 
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(12, 195);
+            sDTLabel.Location = new System.Drawing.Point(11, 156);
             sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(45, 20);
+            sDTLabel.Size = new System.Drawing.Size(38, 16);
             sDTLabel.TabIndex = 11;
             sDTLabel.Text = "SDT:";
             // 
             // benhLyLabel
             // 
             benhLyLabel.AutoSize = true;
-            benhLyLabel.Location = new System.Drawing.Point(12, 227);
+            benhLyLabel.Location = new System.Drawing.Point(11, 182);
             benhLyLabel.Name = "benhLyLabel";
-            benhLyLabel.Size = new System.Drawing.Size(71, 20);
+            benhLyLabel.Size = new System.Drawing.Size(54, 16);
             benhLyLabel.TabIndex = 13;
-            benhLyLabel.Text = "Benh Ly:";
+            benhLyLabel.Text = "Bệnh lý:";
             // 
             // gioiTinhLabel
             // 
             gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Location = new System.Drawing.Point(12, 262);
+            gioiTinhLabel.Location = new System.Drawing.Point(11, 210);
             gioiTinhLabel.Name = "gioiTinhLabel";
-            gioiTinhLabel.Size = new System.Drawing.Size(75, 20);
+            gioiTinhLabel.Size = new System.Drawing.Size(57, 16);
             gioiTinhLabel.TabIndex = 15;
-            gioiTinhLabel.Text = "Gioi Tinh:";
+            gioiTinhLabel.Text = "Giới tính:";
             // 
             // soPhieuDVLabel
             // 
             soPhieuDVLabel.AutoSize = true;
-            soPhieuDVLabel.Location = new System.Drawing.Point(12, 291);
+            soPhieuDVLabel.Location = new System.Drawing.Point(11, 233);
             soPhieuDVLabel.Name = "soPhieuDVLabel";
-            soPhieuDVLabel.Size = new System.Drawing.Size(104, 20);
+            soPhieuDVLabel.Size = new System.Drawing.Size(85, 16);
             soPhieuDVLabel.TabIndex = 17;
-            soPhieuDVLabel.Text = "So Phieu DV:";
+            soPhieuDVLabel.Text = "Số phiếu DV:";
             // 
             // phongKhamNhaKhoaDataSet
             // 
@@ -179,65 +179,73 @@
             // maBNTextBox
             // 
             this.maBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "MaBN", true));
-            this.maBNTextBox.Location = new System.Drawing.Point(122, 32);
+            this.maBNTextBox.Location = new System.Drawing.Point(108, 26);
+            this.maBNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maBNTextBox.Name = "maBNTextBox";
-            this.maBNTextBox.Size = new System.Drawing.Size(200, 26);
+            this.maBNTextBox.Size = new System.Drawing.Size(178, 22);
             this.maBNTextBox.TabIndex = 2;
             // 
             // tenBNTextBox
             // 
             this.tenBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "TenBN", true));
-            this.tenBNTextBox.Location = new System.Drawing.Point(122, 64);
+            this.tenBNTextBox.Location = new System.Drawing.Point(108, 51);
+            this.tenBNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tenBNTextBox.Name = "tenBNTextBox";
-            this.tenBNTextBox.Size = new System.Drawing.Size(200, 26);
+            this.tenBNTextBox.Size = new System.Drawing.Size(178, 22);
             this.tenBNTextBox.TabIndex = 4;
             // 
             // cMNDTextBox
             // 
             this.cMNDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "CMND", true));
-            this.cMNDTextBox.Location = new System.Drawing.Point(122, 96);
+            this.cMNDTextBox.Location = new System.Drawing.Point(108, 77);
+            this.cMNDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cMNDTextBox.Name = "cMNDTextBox";
-            this.cMNDTextBox.Size = new System.Drawing.Size(200, 26);
+            this.cMNDTextBox.Size = new System.Drawing.Size(178, 22);
             this.cMNDTextBox.TabIndex = 6;
             // 
             // diaChiTextBox
             // 
             this.diaChiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "DiaChi", true));
-            this.diaChiTextBox.Location = new System.Drawing.Point(122, 128);
+            this.diaChiTextBox.Location = new System.Drawing.Point(108, 102);
+            this.diaChiTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.diaChiTextBox.Name = "diaChiTextBox";
-            this.diaChiTextBox.Size = new System.Drawing.Size(200, 26);
+            this.diaChiTextBox.Size = new System.Drawing.Size(178, 22);
             this.diaChiTextBox.TabIndex = 8;
             // 
             // ngSinhDateTimePicker
             // 
             this.ngSinhDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bENHNHANBindingSource, "NgSinh", true));
-            this.ngSinhDateTimePicker.Location = new System.Drawing.Point(122, 160);
+            this.ngSinhDateTimePicker.Location = new System.Drawing.Point(108, 128);
+            this.ngSinhDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ngSinhDateTimePicker.Name = "ngSinhDateTimePicker";
-            this.ngSinhDateTimePicker.Size = new System.Drawing.Size(200, 26);
+            this.ngSinhDateTimePicker.Size = new System.Drawing.Size(178, 22);
             this.ngSinhDateTimePicker.TabIndex = 10;
             // 
             // sDTTextBox
             // 
             this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "SDT", true));
-            this.sDTTextBox.Location = new System.Drawing.Point(122, 192);
+            this.sDTTextBox.Location = new System.Drawing.Point(108, 154);
+            this.sDTTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sDTTextBox.Name = "sDTTextBox";
-            this.sDTTextBox.Size = new System.Drawing.Size(200, 26);
+            this.sDTTextBox.Size = new System.Drawing.Size(178, 22);
             this.sDTTextBox.TabIndex = 12;
             // 
             // benhLyTextBox
             // 
             this.benhLyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "BenhLy", true));
-            this.benhLyTextBox.Location = new System.Drawing.Point(122, 224);
+            this.benhLyTextBox.Location = new System.Drawing.Point(108, 179);
+            this.benhLyTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.benhLyTextBox.Name = "benhLyTextBox";
-            this.benhLyTextBox.Size = new System.Drawing.Size(200, 26);
+            this.benhLyTextBox.Size = new System.Drawing.Size(178, 22);
             this.benhLyTextBox.TabIndex = 14;
             // 
             // gioiTinhRadioButton
             // 
             this.gioiTinhRadioButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bENHNHANBindingSource, "GioiTinh", true));
-            this.gioiTinhRadioButton.Location = new System.Drawing.Point(122, 256);
+            this.gioiTinhRadioButton.Location = new System.Drawing.Point(108, 205);
+            this.gioiTinhRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gioiTinhRadioButton.Name = "gioiTinhRadioButton";
-            this.gioiTinhRadioButton.Size = new System.Drawing.Size(200, 24);
+            this.gioiTinhRadioButton.Size = new System.Drawing.Size(178, 19);
             this.gioiTinhRadioButton.TabIndex = 16;
             this.gioiTinhRadioButton.TabStop = true;
             this.gioiTinhRadioButton.Text = "Nam";
@@ -246,17 +254,19 @@
             // soPhieuDVTextBox
             // 
             this.soPhieuDVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bENHNHANBindingSource, "SoPhieuDV", true));
-            this.soPhieuDVTextBox.Location = new System.Drawing.Point(122, 288);
+            this.soPhieuDVTextBox.Location = new System.Drawing.Point(108, 230);
+            this.soPhieuDVTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.soPhieuDVTextBox.Name = "soPhieuDVTextBox";
-            this.soPhieuDVTextBox.Size = new System.Drawing.Size(200, 26);
+            this.soPhieuDVTextBox.Size = new System.Drawing.Size(178, 22);
             this.soPhieuDVTextBox.TabIndex = 18;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(264, 255);
+            this.radioButton1.Location = new System.Drawing.Point(235, 204);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 24);
+            this.radioButton1.Size = new System.Drawing.Size(45, 20);
             this.radioButton1.TabIndex = 19;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nữ";
@@ -264,9 +274,9 @@
             // 
             // ThemBenhNhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 450);
+            this.ClientSize = new System.Drawing.Size(372, 360);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(maBNLabel);
             this.Controls.Add(this.maBNTextBox);
@@ -286,6 +296,8 @@
             this.Controls.Add(this.gioiTinhRadioButton);
             this.Controls.Add(soPhieuDVLabel);
             this.Controls.Add(this.soPhieuDVTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "ThemBenhNhan";
             this.Text = "ThemBenhNhan";
             this.Load += new System.EventHandler(this.ThemBenhNhan_Load);
