@@ -238,6 +238,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
             }
         }
+
+        private void listWaiting_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
         
 }

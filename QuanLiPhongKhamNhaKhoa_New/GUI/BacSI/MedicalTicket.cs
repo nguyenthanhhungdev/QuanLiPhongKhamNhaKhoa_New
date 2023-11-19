@@ -106,7 +106,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         }
         public string autoMaPhieu(int soPhieu)
         {
-            string maPhieu = soPhieu.ToString("D4");
+            DateTime time = DateTime.Now;
+            string formattedDateTime = time.ToString("ddMMyy");
+            string maPhieu = formattedDateTime+soPhieu.ToString("D3");
             return maPhieu;
         }
         private bool IsPhoneNumberValid(string phoneNumber)

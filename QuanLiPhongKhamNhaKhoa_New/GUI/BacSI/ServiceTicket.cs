@@ -245,7 +245,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một dịch vụ muốn xóa!");
+                MessageBox.Show("Vui lòng chọn một dịch vụ muốn sửa!");
             }
         }
         public bool isServiceFormVisible = false;

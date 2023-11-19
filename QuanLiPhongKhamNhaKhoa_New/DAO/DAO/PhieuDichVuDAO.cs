@@ -12,8 +12,9 @@ namespace DAO
         private readonly Database database = new Database();
         public DataTable GetListPhieuDv()
         {
-            string query = "SELECT * FROM PhieuDichVu ";
+            string query = "SELECT * FROM PHIEUDICHVU WHERE SUBSTRING(SoPhieuDV, 1, 6) = FORMAT(GETDATE(), 'ddMMyy');";
             return database.Execute(query);
+
         }
         public bool insertPDV(DataTable phieudv)
         {
@@ -23,7 +24,8 @@ namespace DAO
             string Sophieudv = row["SoPhieuDV"].ToString();
             string MaBS = row["MaBS"].ToString();
             string Sophieukq = row["SoPhieuKQ"].ToString();
-            string query = $"INSERT INTO PHIEUDICHVU VALUES('{Sophieudv}','{colTTValue}','{MaBS}','{Sophieukq}')";
+            string mabn = row["MaBN"].ToString();
+            string query = $"INSERT INTO PHIEUDICHVU VALUES('{Sophieudv}','{colTTValue}','{MaBS}','{Sophieukq}','{mabn}')";
             int rowsAffected = database.ExecuteNonQuery(query);
             if (rowsAffected > 0)
             {
