@@ -89,6 +89,7 @@
             this.listWaiting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listWaiting.Size = new System.Drawing.Size(847, 409);
             this.listWaiting.TabIndex = 2;
+            this.listWaiting.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listWaiting_CellContentClick_1);
             // 
             // labelTT
             // 

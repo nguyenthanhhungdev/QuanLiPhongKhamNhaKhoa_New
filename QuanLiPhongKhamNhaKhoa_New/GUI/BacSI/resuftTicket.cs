@@ -60,6 +60,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             PDVTbl.Columns.Add("ThanhTien", typeof(String));
             PDVTbl.Columns.Add("MaBS", typeof(string));
             PDVTbl.Columns.Add("SoPhieuKQ", typeof(String));
+            PDVTbl.Columns.Add("MaBN", typeof(String));
             //thêm cột cho tieps đón bệnh nhân
             TDBNTbl.Columns.Add("MaBN", typeof(String));
             TDBNTbl.Columns.Add("MaNV", typeof(String));
@@ -167,6 +168,8 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     rowdv["ThanhTien"] = colTTValue;
                     rowdv["MaBS"] = "BS01";
                     rowdv["SoPhieuKQ"] = txtPDV.Text;
+                    MessageBox.Show("MaBN:" + txtMaBN.Text.Trim());
+                    rowdv["MaBN"]=txtMaBN.Text.Trim();
                     PDVTbl.Rows.Add(rowdv);
                     if (PKQBUS.insertPKQ(PKQTbl) && PDVBUS.insertPDV(PDVTbl) && TDBNBUS.UpdateTDBN(TDBNTbl))
                     {
@@ -206,6 +209,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                         rowdv["ThanhTien"] = colTTValue;
                         rowdv["MaBS"] = "BS01";
                         rowdv["SoPhieuKQ"] = txtPDV.Text;
+                        rowdv["MaBN"] = txtMaBN.Text.Trim();
                         PDVTbl.Rows.Add(rowdv);
                         if (TKBUS.insertTK(TKTbladd))
                         {
