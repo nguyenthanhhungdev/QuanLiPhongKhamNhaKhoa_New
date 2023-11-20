@@ -79,7 +79,7 @@
             // 
             // buttonGuiMail
             // 
-            this.buttonGuiMail.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_send_email_48;
+            // this.buttonGuiMail.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_send_email_48;
             this.buttonGuiMail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGuiMail.Location = new System.Drawing.Point(151, 281);
             this.buttonGuiMail.Name = "buttonGuiMail";

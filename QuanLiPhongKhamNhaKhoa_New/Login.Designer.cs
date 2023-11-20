@@ -166,7 +166,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // 
             // buttonDangNhap
             // 
-            this.buttonDangNhap.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_login_50;
+            // this.buttonDangNhap.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_login_50;
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDangNhap.Location = new System.Drawing.Point(100, 20);
             this.buttonDangNhap.Name = "buttonDangNhap";
@@ -179,7 +179,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // 
             // buttonQuenMK
             // 
-            this.buttonQuenMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_body_29;
+            // this.buttonQuenMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_body_29;
             this.buttonQuenMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonQuenMK.Location = new System.Drawing.Point(12, 235);
             this.buttonQuenMK.Name = "buttonQuenMK";

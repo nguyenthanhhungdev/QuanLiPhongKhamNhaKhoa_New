@@ -393,7 +393,7 @@
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete;
+            // this.btnDel.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete;
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDel.Location = new System.Drawing.Point(90, 13);
             this.btnDel.Name = "btnDel";

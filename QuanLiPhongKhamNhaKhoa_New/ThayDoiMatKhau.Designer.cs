@@ -76,7 +76,7 @@
             // 
             // buttonXacNhan
             // 
-            this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_20;
+            // this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_20;
             this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonXacNhan.Location = new System.Drawing.Point(141, 164);
             this.buttonXacNhan.Name = "buttonXacNhan";
@@ -105,7 +105,7 @@
             // 
             // buttonThayDoiMK
             // 
-            this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_20;
+            // this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_20;
             this.buttonThayDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonThayDoiMK.Location = new System.Drawing.Point(141, 269);
             this.buttonThayDoiMK.Name = "buttonThayDoiMK";

@@ -278,7 +278,7 @@
             // 
             this.btnService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_create;
+            // this.btnService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.;
             this.btnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnService.Location = new System.Drawing.Point(381, 428);
             this.btnService.Name = "btnService";

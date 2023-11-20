@@ -158,7 +158,7 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_exit_button_50;
+            // this.btnExit.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_exit_button_50;
             this.btnExit.Location = new System.Drawing.Point(806, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(59, 56);
