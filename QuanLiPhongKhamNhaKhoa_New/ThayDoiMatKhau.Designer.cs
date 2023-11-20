@@ -96,7 +96,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxThayDoiMK.Name = "textBoxThayDoiMK";
             this.textBoxThayDoiMK.Size = new System.Drawing.Size(297, 26);
             this.textBoxThayDoiMK.TabIndex = 4;
-            this.textBoxThayDoiMK.TextChanged += new System.EventHandler(this.textBoxThayDoiMK_TextChanged);
             this.textBoxThayDoiMK.KeyDown += new KeyEventHandler(this.txtThayDoiMK_KeyDown);
             // 
             // label3

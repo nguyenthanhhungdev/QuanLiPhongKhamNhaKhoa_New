@@ -77,9 +77,5 @@ namespace QuanLiPhongKhamNhaKhoa_New
             }
         }
 
-        private void textBoxThayDoiMK_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
