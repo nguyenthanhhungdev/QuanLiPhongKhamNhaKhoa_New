@@ -447,7 +447,7 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // this.btnExit.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_exit_button_50;
+            this.btnExit.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_exit_button_50;
             this.btnExit.Location = new System.Drawing.Point(1100, 17);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(59, 56);
@@ -461,7 +461,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXacNhanRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // this.btnXacNhanRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_30;
+            this.btnXacNhanRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_30;
             this.btnXacNhanRS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXacNhanRS.Location = new System.Drawing.Point(152, 24);
             this.btnXacNhanRS.Name = "btnXacNhanRS";
@@ -475,7 +475,7 @@
             // btnPrintRS
             // 
             this.btnPrintRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // this.btnPrintRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_print;
+            this.btnPrintRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_print;
             this.btnPrintRS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrintRS.Location = new System.Drawing.Point(813, 22);
             this.btnPrintRS.Name = "btnPrintRS";
@@ -489,7 +489,7 @@
             // btnSaveRS
             // 
             this.btnSaveRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // this.btnSaveRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_save_48;
+            this.btnSaveRS.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_save_48;
             this.btnSaveRS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveRS.Location = new System.Drawing.Point(498, 22);
             this.btnSaveRS.Name = "btnSaveRS";
