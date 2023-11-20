@@ -61,7 +61,7 @@
             // btnXacNhan
             // 
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // this.btnXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_20;
+            this.btnXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_30;
             this.btnXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXacNhan.Location = new System.Drawing.Point(171, 72);
             this.btnXacNhan.Name = "btnXacNhan";
