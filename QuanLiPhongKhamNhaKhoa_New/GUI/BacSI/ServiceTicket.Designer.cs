@@ -327,7 +327,7 @@
             // addService
             // 
             this.addService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add;
+            // this.addService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add;
             this.addService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addService.Location = new System.Drawing.Point(177, 243);
             this.addService.Name = "addService";
