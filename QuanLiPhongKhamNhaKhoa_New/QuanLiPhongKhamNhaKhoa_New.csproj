@@ -554,9 +554,6 @@
     <None Include="Resources\icons8-exit-button-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-login-50.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-body-51.png" />
   </ItemGroup>
   <ItemGroup>
@@ -575,8 +572,10 @@
     <None Include="Resources\icons8-body-29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons8_body_25.png" />
     <Content Include="Resources\icons8_change_20.png" />
     <Content Include="Resources\icons8_confirm_20.png" />
+    <Content Include="Resources\icons8_login_50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

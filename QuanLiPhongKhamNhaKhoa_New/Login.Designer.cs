@@ -31,7 +31,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonQuenMK = new System.Windows.Forms.Button();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.maskedTextBoxMatKhau = new System.Windows.Forms.MaskedTextBox();
@@ -40,10 +42,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMa = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonDangNhap = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonDangNhap = new System.Windows.Forms.Button();
-            this.buttonQuenMK = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -59,8 +60,21 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 450);
+            this.panel1.Size = new System.Drawing.Size(378, 416);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonQuenMK
+            // 
+            this.buttonQuenMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_body_25;
+            this.buttonQuenMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonQuenMK.Location = new System.Drawing.Point(12, 235);
+            this.buttonQuenMK.Name = "buttonQuenMK";
+            this.buttonQuenMK.Size = new System.Drawing.Size(173, 53);
+            this.buttonQuenMK.TabIndex = 17;
+            this.buttonQuenMK.Text = "Quên mật khẩu";
+            this.buttonQuenMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonQuenMK.UseVisualStyleBackColor = true;
+            this.buttonQuenMK.Click += new System.EventHandler(this.buttonQuenMK_Click);
             // 
             // panelControl1
             // 
@@ -74,7 +88,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panelControl1.Location = new System.Drawing.Point(0, 92);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(390, 258);
+            this.panelControl1.Size = new System.Drawing.Size(378, 224);
             this.panelControl1.TabIndex = 18;
             // 
             // checkBox1
@@ -86,7 +100,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Đăng nhập 1 lần";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // maskedTextBoxMatKhau
             // 
@@ -95,7 +108,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.maskedTextBoxMatKhau.PasswordChar = '*';
             this.maskedTextBoxMatKhau.Size = new System.Drawing.Size(238, 27);
             this.maskedTextBoxMatKhau.TabIndex = 25;
-            this.maskedTextBoxMatKhau.KeyDown += txtPassword_KeyDown;
+            this.maskedTextBoxMatKhau.KeyDown += new KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // checkBoxHienMatKhau
             // 
@@ -132,17 +145,30 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.Name = "textBoxMa";
             this.textBoxMa.Size = new System.Drawing.Size(238, 27);
             this.textBoxMa.TabIndex = 20;
-            this.textBoxMa.KeyDown += txtMa_KeyDown;
+            this.textBoxMa.KeyDown += new KeyEventHandler(this.txtMa_KeyDown);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.buttonDangNhap);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 350);
+            this.panel3.Location = new System.Drawing.Point(0, 316);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(390, 100);
+            this.panel3.Size = new System.Drawing.Size(378, 100);
             this.panel3.TabIndex = 18;
+            // 
+            // buttonDangNhap
+            // 
+            this.buttonDangNhap.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_login_50;
+            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDangNhap.Location = new System.Drawing.Point(100, 20);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(188, 68);
+            this.buttonDangNhap.TabIndex = 23;
+            this.buttonDangNhap.Text = "Đăng nhập";
+            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDangNhap.UseVisualStyleBackColor = true;
+            this.buttonDangNhap.Click += new EventHandler(this.buttonDangNhap_Click);
             // 
             // panel2
             // 
@@ -151,7 +177,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(390, 92);
+            this.panel2.Size = new System.Drawing.Size(378, 92);
             this.panel2.TabIndex = 17;
             // 
             // label3
@@ -164,38 +190,13 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.label3.TabIndex = 0;
             this.label3.Text = "Welcome";
             // 
-            // buttonDangNhap
-            // 
-            // this.buttonDangNhap.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_login_50;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(100, 20);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(188, 68);
-            this.buttonDangNhap.TabIndex = 23;
-            this.buttonDangNhap.Text = "Đăng nhập";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.UseVisualStyleBackColor = true;
-            this.buttonDangNhap.Click += buttonDangNhap_Click;
-            // 
-            // buttonQuenMK
-            // 
-            // this.buttonQuenMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_body_29;
-            this.buttonQuenMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonQuenMK.Location = new System.Drawing.Point(12, 235);
-            this.buttonQuenMK.Name = "buttonQuenMK";
-            this.buttonQuenMK.Size = new System.Drawing.Size(173, 53);
-            this.buttonQuenMK.TabIndex = 17;
-            this.buttonQuenMK.Text = "Quên mật khẩu";
-            this.buttonQuenMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonQuenMK.UseVisualStyleBackColor = true;
-            this.buttonQuenMK.Click += new System.EventHandler(this.buttonQuenMK_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 450);
+            this.ClientSize = new System.Drawing.Size(378, 416);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
@@ -208,7 +209,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.FormClosing += LoginForm_FormClosing;
+            this.FormClosing += new FormClosingEventHandler(this.LoginForm_FormClosing);
         }
 
         #endregion
@@ -222,7 +223,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private CheckBox checkBox1;
         private MaskedTextBox maskedTextBoxMatKhau;
         private CheckBox checkBoxHienMatKhau;
-        private Button buttonDangNhap;
+        private System.Windows.Forms.Button buttonDangNhap;
         private Label label2;
         private Label label1;
         private TextBox textBoxMa;
