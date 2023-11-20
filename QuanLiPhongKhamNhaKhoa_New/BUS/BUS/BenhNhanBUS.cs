@@ -1,23 +1,20 @@
-﻿using DAO;
+﻿// Giả sử bạn có một class BUS tên là BenhNhanBUS
+
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DAO;
+using DAO.DAO; // Import namespace của DAO
+using DTO; // Import namespace của DTO
 
 namespace BUS
 {
     internal class BenhNhanBUS
     {
-        BenhNhanDAO BNDAO=new BenhNhanDAO();
-        public DataTable GetList()
+        private readonly BenhNhanDAO benhNhanDAO = new BenhNhanDAO();
+
+        public DataTable LayDuLieuBenhNhan()
         {
-            return BNDAO.GetList();
-        }
-        public bool UpdateBN(DataTable BNnew)
-        {
-            return BNDAO.UpdateBN(BNnew);
+            return benhNhanDAO.LayDuLieuBenhNhan();
         }
     }
 }

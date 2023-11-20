@@ -6,16 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using System.Windows.Forms;
 
-namespace DAO
+namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
 {
     internal class Database
     {
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
-        public string srvName = @"LAPTOP-91RK5R5L\SQLEXPRESS";  //chỉ định tên server
+        public string srvName = "LAPTOP-8JINTJMF";	//chỉ định tên server
         public string dbName = "PhongKhamNhaKhoa";   //chỉ định tên CSDL
         public Database()
         {
@@ -25,35 +24,25 @@ namespace DAO
         //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu
         public DataTable Execute(string sqlStr)
         {
-            da = new SqlDataAdapter(sqlStr, sqlConn);
+            da = new SqlDataAdapter(sqlStr, sqlConn); 
             ds = new DataSet();
             da.Fill(ds);
             return ds.Tables[0];
         }
-       
-        public int ExecuteNonQuery(string sqlStr)
+        public void ExecuteNonQuery(string strSQL)
         {
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sqlStr, sqlConn);
-                
-                sqlConn.Open();
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected;
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error in ExecuteNonQuery. SQL: {sqlStr}. Error: {ex.Message}");
-                return -1; // Return a value indicating an error
-            }
-            finally
-            {
-                if (sqlConn.State == ConnectionState.Open)
-                {
-                    sqlConn.Close();
-                }
-            }
+           SqlCommand cmd = new SqlCommand(strSQL, sqlConn);
+           sqlConn.Open();
+           cmd.ExecuteNonQuery();
+           sqlConn.Close();
+        }
+        public int ExecuteScalar(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, sqlConn);
+            sqlConn.Open();
+            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            sqlConn.Close();
+            return i;
         }
     }
 }
