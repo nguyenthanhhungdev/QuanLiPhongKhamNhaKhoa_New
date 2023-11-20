@@ -1,4 +1,6 @@
-﻿namespace QuanLiPhongKhamNhaKhoa_New
+﻿using System.Windows.Forms;
+
+namespace QuanLiPhongKhamNhaKhoa_New
 {
     partial class QuenMatKhau
     {
@@ -28,14 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuenMatKhau));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxMa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonGuiMail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxMa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,8 +54,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 566);
+            this.panel1.Size = new System.Drawing.Size(437, 379);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxMa
+            // 
+            this.textBoxMa.Location = new System.Drawing.Point(107, 249);
+            this.textBoxMa.Name = "textBoxMa";
+            this.textBoxMa.Size = new System.Drawing.Size(239, 26);
+            this.textBoxMa.TabIndex = 11;
+            this.textBoxMa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMa_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(70, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Mã";
             // 
             // panel2
             // 
@@ -79,11 +99,11 @@
             // 
             // buttonGuiMail
             // 
-            // this.buttonGuiMail.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_send_email_48;
+            this.buttonGuiMail.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_email_send_25;
             this.buttonGuiMail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGuiMail.Location = new System.Drawing.Point(151, 281);
             this.buttonGuiMail.Name = "buttonGuiMail";
-            this.buttonGuiMail.Size = new System.Drawing.Size(164, 101);
+            this.buttonGuiMail.Size = new System.Drawing.Size(164, 52);
             this.buttonGuiMail.TabIndex = 2;
             this.buttonGuiMail.Text = "Gửi email";
             this.buttonGuiMail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -105,31 +125,15 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(239, 26);
             this.textBoxEmail.TabIndex = 0;
-            this.textBoxEmail.KeyDown += txtEmail_KeyDown;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 252);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Mã";
-            // 
-            // textBoxMa
-            // 
-            this.textBoxMa.Location = new System.Drawing.Point(107, 249);
-            this.textBoxMa.Name = "textBoxMa";
-            this.textBoxMa.Size = new System.Drawing.Size(239, 26);
-            this.textBoxMa.TabIndex = 11;
-            this.textBoxMa.KeyDown += txtMa_KeyDown;
+            this.textBoxEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
             // 
             // QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 566);
+            this.ClientSize = new System.Drawing.Size(437, 379);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuenMatKhau";
@@ -139,7 +143,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

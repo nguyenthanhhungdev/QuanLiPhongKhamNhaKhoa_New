@@ -575,6 +575,7 @@
     <Content Include="Resources\icons8_body_25.png" />
     <Content Include="Resources\icons8_change_20.png" />
     <Content Include="Resources\icons8_confirm_20.png" />
+    <Content Include="Resources\icons8_email_send_25.png" />
     <Content Include="Resources\icons8_login_50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
