@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 
 namespace DAO
 {
@@ -18,7 +19,7 @@ namespace DAO
             string Sophieu = row["SoPhieuKQ"].ToString();
             string MaTK = row["MaTK"].ToString();
             string query = $"INSERT INTO PHIEUKETQUA VALUES('{Sophieu}','{ketluan}',NULLIF('{MaTK}', ''))";
-            int rowsAffected = database.ExecuteNonQuery(query);
+            int rowsAffected = database.ExecuteNonQueryInt(query);
             if (rowsAffected > 0)
             {
                 // Cập nhật thành công

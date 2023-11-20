@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 
 namespace DAO
 {
@@ -32,7 +33,7 @@ namespace DAO
             string MaTK = row["MaTK"].ToString();
             MessageBox.Show("ngày TK: "+ formattedDate);
             string query = $"INSERT INTO TAIKHAM VALUES('{MaTK}','{formattedDate}','{tinhtrang}')";
-            int rowsAffected = database.ExecuteNonQuery(query);
+            int rowsAffected = database.ExecuteNonQueryInt(query);
             if (rowsAffected > 0)
             {
                 return true;

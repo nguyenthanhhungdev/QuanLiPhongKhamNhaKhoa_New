@@ -50,7 +50,7 @@
             this.toolStripLabelQLBS = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelQLNV = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelQLPK = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            // this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tabPageCaNhan = new System.Windows.Forms.TabPage();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelQLLDV = new System.Windows.Forms.ToolStripLabel();
@@ -116,8 +116,6 @@
             this.toolStripService,
             this.toolStripResuft});
             this.toolStrip2.Location = new System.Drawing.Point(3, 2);
-            this.toolStripButton2});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 2);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1297, 31);
             this.toolStrip2.TabIndex = 0;
@@ -140,22 +138,23 @@
             this.toolStripKham.Click += new System.EventHandler(this.toolStripMedical_Click);
             // 
             // toolStripService
-            // toolStripButton2
             // 
             this.toolStripService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_pencil_64;
             this.toolStripService.Name = "toolStripService";
             this.toolStripService.Size = new System.Drawing.Size(135, 24);
             this.toolStripService.Text = "Phiếu Dịch Vụ";
             this.toolStripService.Click += new System.EventHandler(this.toolStripService_Click);
+            //
+            // toolStripButton2
+            //
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            // this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripResuft
-            // tabPageLeTan
             // 
             this.toolStripResuft.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_medical_result_64;
             this.toolStripResuft.Name = "toolStripResuft";
@@ -212,7 +211,7 @@
             // 
             // toolStripLabelTraCuuPK
             // 
-            this.toolStripLabelTraCuuPK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_bar_48;
+            // this.toolStripLabelTraCuuPK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_bar_48;
             this.toolStripLabelTraCuuPK.Name = "toolStripLabelTraCuuPK";
             this.toolStripLabelTraCuuPK.Size = new System.Drawing.Size(168, 24);
             this.toolStripLabelTraCuuPK.Text = "Tra cứu phòng khám";
@@ -305,10 +304,6 @@
             // 
             // tabPageCaNhan
             // 
-            this.toolStripLabel5.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_service_50;
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(131, 24);
-            this.toolStripLabel5.Text = "Quản lí dịch vụ";
             this.tabPageCaNhan.Controls.Add(this.toolStrip4);
             this.tabPageCaNhan.Location = new System.Drawing.Point(4, 25);
             this.tabPageCaNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -474,5 +469,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripResuft;
         public System.Windows.Forms.Panel panelDoctor;
         private System.Windows.Forms.ToolStripLabel toolStripLabelQLDV;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

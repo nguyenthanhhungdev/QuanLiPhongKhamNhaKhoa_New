@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
@@ -35,6 +36,32 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
            sqlConn.Open();
            cmd.ExecuteNonQuery();
            sqlConn.Close();
+        }
+        
+        
+        public int ExecuteNonQueryInt(string sqlStr)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlStr, sqlConn);
+
+                sqlConn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in ExecuteNonQuery. SQL: {sqlStr}. Error: {ex.Message}");
+                return -1; // Return a value indicating an error
+            }
+            finally
+            {
+                if (sqlConn.State == ConnectionState.Open)
+                {
+                    sqlConn.Close();
+                }
+            }
         }
         public int ExecuteScalar(string sql)
         {

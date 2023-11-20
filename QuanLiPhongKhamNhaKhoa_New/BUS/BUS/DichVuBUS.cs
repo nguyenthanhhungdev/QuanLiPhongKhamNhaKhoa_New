@@ -35,6 +35,10 @@ namespace BUS
         {
             return dichVuDAO.LayTongDV();
         }
-
+        
+        public DataTable GetListService()
+        {
+            return dichVuDAO.GetListService();
+        }
     }
 }

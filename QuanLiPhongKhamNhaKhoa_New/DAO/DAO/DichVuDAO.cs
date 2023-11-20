@@ -41,5 +41,12 @@ namespace DAO
             int i = database.ExecuteScalar(sql);
             return i;
         }
+        
+        public DataTable GetListService()
+        {
+
+            string query = $@"SELECT *FROM DichVu";
+            return database.Execute(query);
+        }
     }
 }

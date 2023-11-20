@@ -40,5 +40,11 @@ namespace DAO
             string sql = string.Format("DELETE FROM LOAIDICHVU WHERE MaLDV = '{0}'", maLDV);
             database.ExecuteNonQuery(sql);
         }
+        
+        public DataTable GetListTypeService()
+        {
+            string query = $@"SELECT *FROM LoaiDichVu";
+            return database.Execute(query);
+        }
     }
 }

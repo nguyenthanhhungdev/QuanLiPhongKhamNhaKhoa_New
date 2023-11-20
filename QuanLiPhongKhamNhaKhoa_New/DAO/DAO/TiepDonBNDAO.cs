@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 
 namespace DAO
 {
@@ -40,7 +41,7 @@ namespace DAO
                 string tinhtrang = row["TinhTrang"].ToString();               
                 string query = $"UPDATE TIEPDONBN SET TinhTrang = N'{tinhtrang}' " +
                                       $"WHERE MaBN = '{maBenhNhan}' AND CONVERT(DATE, NgayKham) = CONVERT(DATE, GETDATE())";
-                int rowsAffected = database.ExecuteNonQuery(query);
+                int rowsAffected = database.ExecuteNonQueryInt(query);
                 if (rowsAffected > 0)
                 {
                     // Cập nhật thành công

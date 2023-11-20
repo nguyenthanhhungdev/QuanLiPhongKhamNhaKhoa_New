@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 
 namespace DAO
 {
@@ -26,7 +27,7 @@ namespace DAO
             string Sophieukq = row["SoPhieuKQ"].ToString();
             string mabn = row["MaBN"].ToString();
             string query = $"INSERT INTO PHIEUDICHVU VALUES('{Sophieudv}','{colTTValue}','{MaBS}','{Sophieukq}','{mabn}')";
-            int rowsAffected = database.ExecuteNonQuery(query);
+            int rowsAffected = database.ExecuteNonQueryInt(query);
             if (rowsAffected > 0)
             {
                 // Cập nhật thành công

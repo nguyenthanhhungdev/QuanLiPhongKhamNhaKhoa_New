@@ -1,3 +1,66 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FMedicalTicket/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FresuftTicket/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FServiceTicket/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FSoLuongDV/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FwaitingRoom/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome_005FOrigin/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FLogin/@EntryIndexedValue">True</s:Boolean>
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FMedicalTicket/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FresuftTicket/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FServiceTicket/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FSoLuongDV/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FwaitingRoom/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome_005FOrigin/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FLogin/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiBacSi/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiBenhNhan/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiDichVu/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiLoaiDichVu/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiNhanVien/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiPhongKham/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuenMatKhau/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FSuaBacSi/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FSuaDichVu/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FSuaLoaiDV/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FSuaNhanVien/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FSuaPhongKham/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThayDoiMatKhau/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemBacSi/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemBenhNhan/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemDichVu/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemLoaiDV/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemNhanVien/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemPhongKham/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FTraCuuBenhNhan/@EntryIndexedValue">True</s:Boolean>
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiBacSi/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiBenhNhan/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiNhanVien/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiPhongKham/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuenMatKhau/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThayDoiMatKhau/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FThemBenhNhan/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FTraCuuBenhNhan/@EntryIndexedValue">False</s:Boolean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -16,5 +16,14 @@ namespace BUS
         {
             return benhNhanDAO.LayDuLieuBenhNhan();
         }
+        BenhNhanDAO BNDAO=new BenhNhanDAO();
+        public DataTable GetList()
+        {
+            return BNDAO.GetList();
+        }
+        public bool UpdateBN(DataTable BNnew)
+        {
+            return BNDAO.UpdateBN(BNnew);
+        }
     }
 }

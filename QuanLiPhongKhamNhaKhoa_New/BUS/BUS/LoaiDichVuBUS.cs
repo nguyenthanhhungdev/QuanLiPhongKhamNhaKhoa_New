@@ -34,5 +34,10 @@ namespace BUS
         {
             loaiDichVuDAO.XoaLoaiDV(maLDV);
         }
+        
+        public DataTable GetListTypeService()
+        {
+            return loaiDichVuDAO.GetListTypeService();
+        }
     }
 }
