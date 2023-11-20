@@ -492,9 +492,6 @@
     <EmbeddedResource Include="GUI\BacSI\SoLuongDV.resx">
       <DependentUpon>SoLuongDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home_Origin.resx">
       <DependentUpon>Home_Origin.cs</DependentUpon>
     </EmbeddedResource>
@@ -634,13 +631,15 @@
     <None Include="Resources\icons8-save-16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-cancel-48.png" />
+    <Resource Include="Resources\icons8-cancel-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-avatar-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avatar_0.png" />
+    <Resource Include="Resources\avatar_0.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nền nha khoa.jpg" />
@@ -745,6 +744,13 @@
     <None Include="Resources\icons8-body-29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons8-medical-48-_1_.ico" />
+    <Content Include="Resources\icons8-medical-48.ico" />
+    <Content Include="Resources\icons8-ticket-64.png" />
+    <Content Include="Resources\icons8-tooth-100-_1_.ico" />
+    <Content Include="Resources\icons8-tooth-100.ico" />
+    <Content Include="Resources\icons8-tooth-64.ico" />
+    <Content Include="Resources\icons8-waiting-room-64.ico" />
     <Content Include="Resources\icons8_body_25.png" />
     <Content Include="Resources\icons8_change_20.png" />
     <Content Include="Resources\icons8_change_201.png" />

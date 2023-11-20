@@ -1,11 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Miscellaneous_0020Files_002FResources/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FMedicalTicket/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FresuftTicket/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FServiceTicket/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FSoLuongDV/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FwaitingRoom/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome_005FOrigin/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome/@EntryIndexedValue">True</s:Boolean>
+	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FLogin/@EntryIndexedValue">True</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FMedicalTicket/@EntryIndexedValue">False</s:Boolean>
@@ -14,7 +15,7 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FSoLuongDV/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FGUI_002FBacSI_002FwaitingRoom/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome_005FOrigin/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FHome/@EntryIndexedValue">False</s:Boolean>
+	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FLogin/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=QuanLiPhongKhamNhaKhoa_005FNew_002FQuanLiBacSi/@EntryIndexedValue">True</s:Boolean>
@@ -63,4 +64,5 @@
 	
 	
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowComments/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
