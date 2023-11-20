@@ -108,7 +108,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.maskedTextBoxMatKhau.PasswordChar = '*';
             this.maskedTextBoxMatKhau.Size = new System.Drawing.Size(238, 27);
             this.maskedTextBoxMatKhau.TabIndex = 25;
-            this.maskedTextBoxMatKhau.KeyDown += new KeyEventHandler(this.txtPassword_KeyDown);
+            this.maskedTextBoxMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // checkBoxHienMatKhau
             // 
@@ -145,7 +145,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.textBoxMa.Name = "textBoxMa";
             this.textBoxMa.Size = new System.Drawing.Size(238, 27);
             this.textBoxMa.TabIndex = 20;
-            this.textBoxMa.KeyDown += new KeyEventHandler(this.txtMa_KeyDown);
+            this.textBoxMa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMa_KeyDown);
             // 
             // panel3
             // 
@@ -168,7 +168,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDangNhap.UseVisualStyleBackColor = true;
-            this.buttonDangNhap.Click += new EventHandler(this.buttonDangNhap_Click);
+            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // panel2
             // 
@@ -202,6 +202,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -209,7 +210,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.FormClosing += new FormClosingEventHandler(this.LoginForm_FormClosing);
         }
 
         #endregion

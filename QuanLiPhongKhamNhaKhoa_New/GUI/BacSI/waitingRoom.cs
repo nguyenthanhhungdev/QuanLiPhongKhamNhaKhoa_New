@@ -18,8 +18,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class waitingRoom : Form
     {
-        
-        private readonly TiepDonBNBUS TDBUS=new TiepDonBNBUS();
+        private readonly TiepDonBNBUS TDBUS = new TiepDonBNBUS();
         private readonly BenhNhanBUS BNBUS = new BenhNhanBUS();
         public DataTable TdTbl;
         public DataTable BNTbl;
@@ -29,10 +28,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             InitializeComponent();
             homeOriginInstance = homeOrigin;
-            String maphong = "P01"; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+            String maphong = "";
+            if (Login.isBs)
+            {
+                BacSiDTO bacSiDto = (BacSiDTO)Login.dto;
+                maphong = bacSiDto.MaPhong; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+            }
             TdTbl = TDBUS.GetListWaitingRoom(maphong);
             BNTbl = BNBUS.GetList();
         }
+
         public waitingRoom()
         {
             InitializeComponent();
@@ -40,7 +45,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
             TdTbl = TDBUS.GetListWaitingRoom(maphong);
             BNTbl = BNBUS.GetList();
         }
+
         List<string> columnOrder;
+
         private void waitingRoom_Load(object sender, EventArgs e)
         {
             rdoAll.Checked = true;
@@ -70,6 +77,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     }
                 }
             }
+
             // Thêm cột DataGridViewButtonColumn vào listWaiting
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
             buttonColumn.HeaderText = "Khám";
@@ -91,12 +99,12 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // Sự kiện CellFormatting cho cột "btnKham"
             listWaiting.CellFormatting += listWaiting_CellFormatting;
             listWaiting.CellContentClick += listWaiting_CellContentClick;
-
         }
 
         private void listWaiting_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == listWaiting.Columns["btnKham"].Index && e.RowIndex >= 0 && e.RowIndex < listWaiting.RowCount - 1)
+            if (e.ColumnIndex == listWaiting.Columns["btnKham"].Index && e.RowIndex >= 0 &&
+                e.RowIndex < listWaiting.RowCount - 1)
             {
                 // Đặt văn bản của nút dựa trên giá trị trong cột "TinhTrang" tương ứng
                 String tinhTrangValue = listWaiting.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString().Trim();
@@ -113,16 +121,18 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 }
             }
         }
+
         private bool isMedicalFormVisible = false;
 
         private void ShowMedicalForm(string tinhTrangValue, string maBenhNhan)
         {
             // Nếu form đã hiển thị, không thực hiện gì cả
-            if (isMedicalFormVisible) {
+            if (isMedicalFormVisible)
+            {
                 MessageBox.Show("Đang Thực Hiện Khám Bệnh Nhân Rồi!");
                 return;
             }
-                
+
 
             // Tạo form mới
             MedicalTicket mdform = new MedicalTicket(homeOriginInstance);
@@ -135,32 +145,32 @@ namespace QuanLiPhongKhamNhaKhoa_New
             isMedicalFormVisible = true;
 
             // Thực hiện các thao tác cần thiết dựa trên giá trị của nút
-            
-            foreach(DataRow rowbn in BNTbl.Rows)
+
+            foreach (DataRow rowbn in BNTbl.Rows)
             {
                 if (rowbn["MaBN"].ToString().Trim().Equals(maBenhNhan.Trim()))
                 {
-                    mdform.txtMaBN.Text= rowbn["MaBN"].ToString().Trim();
+                    mdform.txtMaBN.Text = rowbn["MaBN"].ToString().Trim();
                     mdform.txtTen.Text = rowbn["TenBN"].ToString().Trim();
-                    mdform.txtGT.Text= rowbn["GioiTinh"].ToString().Trim();
+                    mdform.txtGT.Text = rowbn["GioiTinh"].ToString().Trim();
                     mdform.txtNgS.Text = rowbn["NgSinh"].ToString().Trim();
                     mdform.txtDC.Text = rowbn["DiaChi"].ToString().Trim();
                     mdform.txtSdt.Text = rowbn["SDT"].ToString().Trim();
                     mdform.txtCmnd.Text = rowbn["CMND"].ToString().Trim();
                     mdform.txtBL.Text = rowbn["BenhLy"].ToString().Trim();
                     mdform.txtLK.Text = tinhTrangValue.Trim();
-                    
                 }
-                    
             }
-            
+
             // Sự kiện Closed của form medical để đặt lại trạng thái isMedicalFormVisible khi form được đóng
             mdform.FormClosed += (sender, e) => { isMedicalFormVisible = false; };
         }
+
         private void listWaiting_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Kiểm tra xem có click vào cột "btnKham" không
-            if (listWaiting.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && e.RowIndex < listWaiting.RowCount - 1)
+            if (listWaiting.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 &&
+                e.RowIndex < listWaiting.RowCount - 1)
             {
                 string tinhTrangValue = listWaiting.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString().Trim();
                 string maBenhNhan = listWaiting.Rows[e.RowIndex].Cells["MaBN"].Value.ToString();
@@ -184,11 +194,13 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             DisplayPatientsByTinhTrang("Tái Khám");
         }
+
         private void DisplayAllPatients()
         {
             // Hiển thị tất cả bệnh nhân
             listWaiting.DataSource = TdTbl;
         }
+
         private void DisplayPatientsByTinhTrang(String tinhTrangValue)
         {
             RestoreColumnOrder();
@@ -202,6 +214,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             // Gán dữ liệu đã lọc vào DataGridView hoặc điều chỉnh hiển thị tùy thuộc vào cách bạn quản lý dữ liệu
             listWaiting.DataSource = filteredData;
         }
+
         //lưu thứ tự cột
         private void SaveColumnOrder()
         {
@@ -212,6 +225,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 columnOrder.Add(column.Name);
             }
         }
+
         private void RestoreColumnOrder()
         {
             // Khôi phục thứ tự của các cột dựa trên danh sách đã lưu
@@ -230,19 +244,17 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
             // Kiểm tra kết quả của hộp thoại
             if (result == DialogResult.Yes)
             {
                 this.Close();
-
             }
         }
 
         private void listWaiting_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
-        
 }
