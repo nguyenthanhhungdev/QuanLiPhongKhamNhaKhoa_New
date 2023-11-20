@@ -1,4 +1,7 @@
-﻿namespace QuanLiPhongKhamNhaKhoa_New
+﻿using System;
+using System.Windows.Forms;
+
+namespace QuanLiPhongKhamNhaKhoa_New
 {
     partial class ThayDoiMatKhau
     {
@@ -73,10 +76,10 @@
             this.textBoxXacNhan.Name = "textBoxXacNhan";
             this.textBoxXacNhan.Size = new System.Drawing.Size(297, 26);
             this.textBoxXacNhan.TabIndex = 2;
+            this.textBoxXacNhan.KeyDown += new KeyEventHandler(this.txtMaXacNhan_KeyDown);
             // 
             // buttonXacNhan
             // 
-            // this.buttonXacNhan.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_20;
             this.buttonXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonXacNhan.Location = new System.Drawing.Point(141, 164);
             this.buttonXacNhan.Name = "buttonXacNhan";
@@ -85,6 +88,7 @@
             this.buttonXacNhan.Text = "Xác nhận";
             this.buttonXacNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonXacNhan.UseVisualStyleBackColor = true;
+            this.buttonXacNhan.Click += new EventHandler(this.buttonXacNhan_Click);
             // 
             // textBoxThayDoiMK
             // 
@@ -93,6 +97,7 @@
             this.textBoxThayDoiMK.Size = new System.Drawing.Size(297, 26);
             this.textBoxThayDoiMK.TabIndex = 4;
             this.textBoxThayDoiMK.TextChanged += new System.EventHandler(this.textBoxThayDoiMK_TextChanged);
+            this.textBoxThayDoiMK.KeyDown += new KeyEventHandler(this.txtThayDoiMK_KeyDown);
             // 
             // label3
             // 
@@ -105,7 +110,6 @@
             // 
             // buttonThayDoiMK
             // 
-            // this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_change_20;
             this.buttonThayDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonThayDoiMK.Location = new System.Drawing.Point(141, 269);
             this.buttonThayDoiMK.Name = "buttonThayDoiMK";
@@ -114,6 +118,7 @@
             this.buttonThayDoiMK.Text = "Thay đổi";
             this.buttonThayDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThayDoiMK.UseVisualStyleBackColor = true;
+            this.buttonThayDoiMK.Click += new EventHandler(this.buttonThayDoi_Click);
             // 
             // ThayDoiMatKhau
             // 

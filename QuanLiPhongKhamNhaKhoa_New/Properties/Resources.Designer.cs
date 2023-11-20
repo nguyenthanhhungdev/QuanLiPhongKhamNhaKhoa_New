@@ -152,6 +152,36 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_change_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_change_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_confirm_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_confirm_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_confirm_201 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_confirm_201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_confirm_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-confirm-30", resourceCulture);
