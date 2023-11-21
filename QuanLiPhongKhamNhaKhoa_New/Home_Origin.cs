@@ -65,7 +65,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void toolStripMedical_Click(object sender, EventArgs e)
         {
             panelDoctor.Controls.Clear();
-            MedicalTicket mdform = new MedicalTicket(this);
+            MedicalTicket mdform = new MedicalTicket();
             mdform.TopLevel = false;
             panelDoctor.Controls.Add(mdform);
             mdform.Show();
@@ -74,7 +74,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void toolStripLabelWaitingRoom_Click(object sender, EventArgs e)
         {
             panelDoctor.Controls.Clear();
-            waitingRoom waitform = new waitingRoom(this);
+            waitingRoom waitform = new waitingRoom();
             waitform.TopLevel = false;
             panelDoctor.Controls.Add(waitform);
             waitform.Show();
@@ -83,7 +83,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void toolStripService_Click(object sender, EventArgs e)
         {
             panelDoctor.Controls.Clear();
-            ServiceTicket serviceform = new ServiceTicket(this);
+            ServiceTicket serviceform = new ServiceTicket();
             serviceform.TopLevel = false;
             panelDoctor.Controls.Add(serviceform);
             serviceform.Show();
@@ -94,7 +94,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void toolStripResuft_Click(object sender, EventArgs e)
         {
             panelDoctor.Controls.Clear();
-            resuftTicket resuftform = new resuftTicket(this);
+            resuftTicket resuftform = new resuftTicket();
             resuftform.TopLevel = false;
             panelDoctor.Controls.Add(resuftform);
             resuftform.Show();

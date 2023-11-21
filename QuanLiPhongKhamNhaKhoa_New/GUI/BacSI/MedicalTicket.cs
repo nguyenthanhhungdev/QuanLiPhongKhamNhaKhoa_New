@@ -14,22 +14,17 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 {
     public partial class MedicalTicket : Form
     {
-        private readonly Home_Origin homeOriginInstance ;
         private readonly BenhNhanBUS BNBUS = new BenhNhanBUS();
         private readonly PhieuDichVuBUS PDVBUS = new PhieuDichVuBUS();
         public DataTable PDVTbl;
         public DataTable BNTbl;
-        public MedicalTicket(Home_Origin home)
-        {
-            InitializeComponent();
-            homeOriginInstance = home;
-            BNTbl = BNBUS.GetList();
-            PDVTbl = PDVBUS.GetListPhieuDv();
-        }
+        
+        
         public MedicalTicket()
         {
             InitializeComponent();
-            
+            BNTbl = BNBUS.GetList();
+            PDVTbl = PDVBUS.GetListPhieuDv();
         }
         public bool isMedicalFormVisible = false;
         private void btnService_Click(object sender, EventArgs e)
@@ -59,10 +54,10 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 return;
             }
             isMedicalFormVisible = true;
-            ServiceTicket svtk = new ServiceTicket(homeOriginInstance);
+            ServiceTicket svtk = new ServiceTicket();
             svtk.FormClosed += (s, args) => { isMedicalFormVisible = false; };
             svtk.TopLevel = false;
-            homeOriginInstance.panelDoctor.Controls.Add(svtk);
+            Home_Origin.panelDoctor.Controls.Add(svtk);
             svtk.Show();
             svtk.BringToFront();
             
@@ -89,7 +84,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 svtk.txtMaBN.Text = BNTblNew.Rows[0]["MaBN"].ToString();
                 svtk.txtTen.Text = BNTblNew.Rows[0]["TenBN"].ToString();
                 svtk.txtSdt.Text = BNTblNew.Rows[0]["SDT"].ToString();
-                svtk.txtNgS.Text = BNTblNew.Rows[0]["NgSinh"].ToString();
+                DateTime ngayKham = Convert.ToDateTime(BNTblNew.Rows[0]["NgSinh"].ToString());
+                string ngayKhamFormatted = ngayKham.ToString("dd/MM/yyyy");
+                svtk.txtNgS.Text = ngayKhamFormatted;
                 svtk.txtGT.Text = BNTblNew.Rows[0]["GioiTinh"].ToString();
                 svtk.txtCmnd.Text = BNTblNew.Rows[0]["CMND"].ToString();
                 svtk.txtDC.Text = BNTblNew.Rows[0]["DiaChi"].ToString();

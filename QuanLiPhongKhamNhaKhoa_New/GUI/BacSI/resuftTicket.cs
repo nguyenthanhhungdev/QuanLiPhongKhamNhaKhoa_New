@@ -23,7 +23,6 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 {
     public partial class resuftTicket : Form
     {
-        private readonly Home_Origin homeOriginInstance;
         private readonly TaiKhamBUS TKBUS = new TaiKhamBUS();
         private readonly TiepDonBNBUS TDBNBUS = new TiepDonBNBUS();
         private readonly PhieuDichVuBUS PDVBUS = new PhieuDichVuBUS();
@@ -34,10 +33,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         DataTable PKQTbl;
         DataTable TDBNTbl;
         private DataTable tblChooseDVResuft = new DataTable();
-        public resuftTicket(Home_Origin home)
+        public resuftTicket()
         {
             InitializeComponent();
-            homeOriginInstance = home;
             TKTbl = TKBUS.Getlist();
             PKQTbl = new DataTable();
             PDVTbl = new DataTable();
@@ -127,9 +125,15 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         {
             e.Handled = true; // Ngăn chặn sự kiện KeyDown để ngăn nhập giá trị từ bàn phím
         }
-
+        private bool isActionPerformed = false;
         private void btnSaveRS_Click(object sender, EventArgs e)
         {
+            if (isActionPerformed)
+            {
+                // Nếu đã thực hiện, hiển thị thông báo và kết thúc hàm
+                MessageBox.Show("Đã thực hiện rồi.");
+                return;
+            }
             string sdt = txtSdt.Text.Trim();
             string diaChi = txtDC.Text.Trim();
             string madv = txtPDV.Text.Trim();
@@ -168,11 +172,11 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     rowdv["ThanhTien"] = colTTValue;
                     rowdv["MaBS"] = "BS01";
                     rowdv["SoPhieuKQ"] = txtPDV.Text;
-                    MessageBox.Show("MaBN:" + txtMaBN.Text.Trim());
                     rowdv["MaBN"]=txtMaBN.Text.Trim();
                     PDVTbl.Rows.Add(rowdv);
                     if (PKQBUS.insertPKQ(PKQTbl) && PDVBUS.insertPDV(PDVTbl) && TDBNBUS.UpdateTDBN(TDBNTbl))
                     {
+                        isActionPerformed = true;
                         MessageBox.Show("Cập nhật thành công");
                     }
                     else
@@ -215,8 +219,8 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                         {
                             if (PKQBUS.insertPKQ(PKQTbl) && PDVBUS.insertPDV(PDVTbl)&& TDBNBUS.UpdateTDBN(TDBNTbl))
                             {
+                                isActionPerformed = true;
                                 MessageBox.Show("Cập nhật thành công");
-
                             }
                             else
                             {
@@ -228,8 +232,21 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 }
             }
         }
+        private bool isActionSavePDF = false;
         private void btnPrintRS_Click(object sender, EventArgs e)
         {
+
+            string currentFolderPath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectFolderPath = Path.GetFullPath(Path.Combine(currentFolderPath, @"..\..\.."));
+
+            //MessageBox.Show("Đường Dẫn 1:" + currentFolderPath);
+            //MessageBox.Show("Đường Dẫn 2:" + projectFolderPath);
+            if (isActionSavePDF)
+            {
+                // Nếu đã thực hiện, hiển thị thông báo và kết thúc hàm
+                MessageBox.Show("Đã thực hiện rồi.");
+                return;
+            }
             string sdt = txtSdt.Text.Trim();
             string diaChi = txtDC.Text.Trim();
             string madv = txtPDV.Text.Trim();
@@ -247,7 +264,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             string namefile = ""+txtTen.Text +","+ formattedDateTime;
             save.FileName = $"{namefile}.pdf";
             bool ErrorMessage = false;
-            save.InitialDirectory = @"D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\DeAnCuoiKy\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\PhieuKetQua";
+            save.InitialDirectory = projectFolderPath+@"\PhieuKetQua";
             if (save.ShowDialog() == DialogResult.OK)
             {
                 if (File.Exists(save.FileName))
@@ -291,6 +308,8 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                             // Thêm ngày đã định dạng vào tài liệu PDF
                             document.Add(new Paragraph(formattedDate).SetTextAlignment(TextAlignment.CENTER).SetFont(font).SetFontSize(10));
                             // Tiếp tục thêm nội dung của bạn ở đây
+                            document.Add(new Paragraph("Số Phiếu Kết Quả: "+txtPDV.Text).SetTextAlignment(TextAlignment.LEFT).SetFont(font).SetFontSize(12));
+
                             Paragraph infoBN = new Paragraph("Thông Tin Bệnh Nhân").SetTextAlignment(TextAlignment.LEFT).SetFont(font).SetFontSize(12);
                             document.Add(infoBN);
                             Table infoTable = new Table(2);
@@ -350,6 +369,11 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                             // Thêm vị trí cho "Tổng Tiền"
                             Paragraph TongTien = new Paragraph("Tổng Tiền: " + txtTT.Text).SetTextAlignment(TextAlignment.RIGHT).SetFont(font).SetFontSize(10);
                             document.Add(TongTien);
+                            if (!string.IsNullOrWhiteSpace(txtKL.Text))
+                            {
+                                // Nếu txtKL không rỗng, thêm nội dung vào tài liệu
+                                document.Add(new Paragraph("Kết Luận: " + txtKL.Text).SetTextAlignment(TextAlignment.LEFT));
+                            }
                             if (string.IsNullOrWhiteSpace(txtMaTK.Text))
                             {
                                 // Code xử lý khi txtMaTK rỗng
@@ -393,6 +417,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
 
                         MessageBox.Show("Xuất PDF thành công!", "Thông báo");
+                        isActionSavePDF = true;
                     }
                     catch (Exception ex)
                     {
@@ -406,7 +431,6 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn muốn thoát trang(Yes) hay muốn xóa hết trang(No)?", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
             // Kiểm tra kết quả của hộp thoại
             if (result == DialogResult.Yes)
             {
@@ -414,7 +438,17 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             }
             else if (result == DialogResult.No)
             {
-                homeOriginInstance.panelDoctor.Controls.Clear();
+                if (!isActionPerformed)
+                {
+                    MessageBox.Show("Bạn thực hiện lưu kết quả!");
+                    return;
+                }
+                if (!isActionSavePDF)
+                {
+                    MessageBox.Show("Bạn thực hiện in kết quả!");
+                    return;
+                }
+                Home_Origin.panelDoctor.Controls.Clear();
             }
         }   
     }

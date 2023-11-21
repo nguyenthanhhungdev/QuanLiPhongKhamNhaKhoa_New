@@ -15,7 +15,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
-        public string srvName = "LAPTOP-8JINTJMF";	//chỉ định tên server
+        public string srvName = @"LAPTOP-91RK5R5L\SQLEXPRESS";	//chỉ định tên server
         public string dbName = "PhongKhamNhaKhoa";   //chỉ định tên CSDL
         public Database()
         {

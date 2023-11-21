@@ -135,11 +135,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
 
             // Tạo form mới
-            MedicalTicket mdform = new MedicalTicket(homeOriginInstance);
+            MedicalTicket mdform = new MedicalTicket();
             mdform.TopLevel = false;
 
             // Lấy vị trí và kích thước của form waiting
-            homeOriginInstance.panelDoctor.Controls.Add(mdform);
+            Home_Origin.panelDoctor.Controls.Add(mdform);
             mdform.Show();
             mdform.BringToFront();
             isMedicalFormVisible = true;
@@ -153,7 +153,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     mdform.txtMaBN.Text = rowbn["MaBN"].ToString().Trim();
                     mdform.txtTen.Text = rowbn["TenBN"].ToString().Trim();
                     mdform.txtGT.Text = rowbn["GioiTinh"].ToString().Trim();
-                    mdform.txtNgS.Text = rowbn["NgSinh"].ToString().Trim();
+                    DateTime ngayKham = Convert.ToDateTime(rowbn["NgSinh"].ToString().Trim());
+                    string ngayKhamFormatted = ngayKham.ToString("dd/MM/yyyy");
+                    mdform.txtNgS.Text = ngayKhamFormatted;
                     mdform.txtDC.Text = rowbn["DiaChi"].ToString().Trim();
                     mdform.txtSdt.Text = rowbn["SDT"].ToString().Trim();
                     mdform.txtCmnd.Text = rowbn["CMND"].ToString().Trim();

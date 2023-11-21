@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\QuanLiPhongKhamNhaKhoa_New",
+    "\\QuanLiPhongKhamNhaKhoa_New\\BUS",
+    "\\QuanLiPhongKhamNhaKhoa_New\\BUS\\BUS",
     "\\QuanLiPhongKhamNhaKhoa_New\\DAO",
     "\\QuanLiPhongKhamNhaKhoa_New\\DAO\\DAO",
     "\\QuanLiPhongKhamNhaKhoa_New\\GUI",
-    "\\QuanLiPhongKhamNhaKhoa_New\\GUI\\BacSI",
-    "\\QuanLiPhongKhamNhaKhoa_New\\BUS",
-    "\\QuanLiPhongKhamNhaKhoa_New\\BUS\\BUS"
+    "\\QuanLiPhongKhamNhaKhoa_New\\GUI\\BacSI"
   ],
-  "SelectedNode": "\\QuanLiPhongKhamNhaKhoa_New\\QuanLiNhanVien.cs",
+  "SelectedNode": "\\QuanLiPhongKhamNhaKhoa_New\\GUI\\BacSI\\ServiceTicket.cs",
   "PreviewInSolutionExplorer": false
 }

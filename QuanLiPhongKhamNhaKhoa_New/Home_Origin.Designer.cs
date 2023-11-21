@@ -62,7 +62,7 @@
             this.tabPageThongKe = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.panelDoctor = new System.Windows.Forms.Panel();
+            panelDoctor = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabBacSi.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -95,7 +95,7 @@
             // 
             // tabBacSi
             // 
-            this.tabBacSi.Controls.Add(this.panelDoctor);
+            this.tabBacSi.Controls.Add(panelDoctor);
             this.tabBacSi.Controls.Add(this.toolStrip2);
             this.tabBacSi.Location = new System.Drawing.Point(4, 25);
             this.tabBacSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -397,11 +397,11 @@
             // 
             // panelDoctor
             // 
-            this.panelDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDoctor.Location = new System.Drawing.Point(3, 33);
-            this.panelDoctor.Name = "panelDoctor";
-            this.panelDoctor.Size = new System.Drawing.Size(1468, 683);
-            this.panelDoctor.TabIndex = 1;
+            panelDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelDoctor.Location = new System.Drawing.Point(3, 33);
+            panelDoctor.Name = "panelDoctor";
+            panelDoctor.Size = new System.Drawing.Size(1468, 683);
+            panelDoctor.TabIndex = 1;
             // 
             // Home_Origin
             // 
@@ -467,7 +467,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripService;
         private System.Windows.Forms.ToolStripLabel toolStripKham;
         private System.Windows.Forms.ToolStripLabel toolStripResuft;
-        public System.Windows.Forms.Panel panelDoctor;
+        public static System.Windows.Forms.Panel panelDoctor;
         private System.Windows.Forms.ToolStripLabel toolStripLabelQLDV;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
     }

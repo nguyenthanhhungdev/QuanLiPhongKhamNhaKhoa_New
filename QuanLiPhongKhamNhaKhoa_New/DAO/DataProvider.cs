@@ -17,7 +17,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             try
             {
                 connection = new SqlConnection(
-                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+                    @"Data Source=LAPTOP-91RK5R5L\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=123456");
             }
             catch (SqlException e)
             {
@@ -74,7 +74,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             {
                 // Tạo một đối tượng SqlConnection
                 SqlConnection connection = new SqlConnection(
-                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+                    @"Data Source=LAPTOP-91RK5R5L\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=123456");
 
                 // Mở kết nối với cơ sở dữ liệu
                 connection.Open();
@@ -111,7 +111,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             {
                 // Tạo một đối tượng SqlConnection
                 SqlConnection connection = new SqlConnection(
-                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=1405hung");
+                    @"Data Source=LAPTOP-91RK5R5L\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;User ID=sa;Password=123456");
 
                 // Mở kết nối với cơ sở dữ liệu
                 connection.Open();

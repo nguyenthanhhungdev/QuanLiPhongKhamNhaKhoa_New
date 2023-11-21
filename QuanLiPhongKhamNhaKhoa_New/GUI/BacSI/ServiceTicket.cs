@@ -14,7 +14,6 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 {
     public partial class ServiceTicket : Form
     {
-        private readonly Home_Origin homeOriginInstance;
         private readonly LoaiDichVuBUS LDVBUS = new LoaiDichVuBUS();
         private readonly DichVuBUS DVBUS = new DichVuBUS();
         private DataTable loaidvlist;
@@ -29,13 +28,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             loaidvlist = LDVBUS.GetListTypeService();
             dvlist = DVBUS.GetListService();
         }
-        public ServiceTicket(Home_Origin home)
-        {
-            InitializeComponent();
-            homeOriginInstance = home;
-            loaidvlist = LDVBUS.GetListTypeService();
-            dvlist = DVBUS.GetListService();
-        }
+        
         private void ServiceTicket_Load(object sender, EventArgs e)
         {
             //load combobox loaidichvu
@@ -277,10 +270,10 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             else
             {
                 isServiceFormVisible = true;
-                resuftTicket rstk = new resuftTicket(homeOriginInstance);
+                resuftTicket rstk = new resuftTicket();
                 rstk.FormClosed += (s, args) => { isServiceFormVisible = false; };
                 rstk.TopLevel = false;
-                homeOriginInstance.panelDoctor.Controls.Add(rstk);
+                Home_Origin.panelDoctor.Controls.Add(rstk);
                 rstk.Show();
                 rstk.BringToFront();
                 rstk.txtMaBN.Text = txtMaBN.Text.ToString();
