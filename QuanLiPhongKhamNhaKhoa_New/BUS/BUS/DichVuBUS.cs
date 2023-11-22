@@ -40,5 +40,9 @@ namespace BUS
         {
             return dichVuDAO.GetListService();
         }
+        public DataTable GetListReadPDF(string madv)
+        {
+            return dichVuDAO.GetListReadPDF(madv);
+        }
     }
 }

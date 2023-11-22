@@ -564,3 +564,4 @@ D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.csproj.CopyComplete
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
+D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.GUI.BacSI.ServiceTicketTK.resources

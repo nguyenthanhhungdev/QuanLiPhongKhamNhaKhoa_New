@@ -44,9 +44,17 @@ namespace DAO
         
         public DataTable GetListService()
         {
-
             string query = $@"SELECT *FROM DichVu";
             return database.Execute(query);
         }
+        public DataTable GetListReadPDF(string madv)
+        {
+            string sql = $@"SELECT DichVu.MaDV, DichVu.TenDV,LoaiDichVu.TenLDV,DichVu.Gia
+                FROM LoaiDichVu
+                JOIN DichVu ON LoaiDichVu.MaLDV = DichVu.MaLDV
+                Where MaDV='{madv}'";
+            return database.Execute(sql);
+        }
+
     }
 }

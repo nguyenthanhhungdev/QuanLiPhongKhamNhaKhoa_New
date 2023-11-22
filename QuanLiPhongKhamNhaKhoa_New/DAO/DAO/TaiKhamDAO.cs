@@ -31,7 +31,6 @@ namespace DAO
             string formattedDate = adjustedDateTime.ToString("yyyy-MM-dd HH:mm:ss");
             string tinhtrang = row["TinhTrang"].ToString();
             string MaTK = row["MaTK"].ToString();
-            MessageBox.Show("ngày TK: "+ formattedDate);
             string query = $"INSERT INTO TAIKHAM VALUES('{MaTK}','{formattedDate}','{tinhtrang}')";
             int rowsAffected = database.ExecuteNonQueryInt(query);
             if (rowsAffected > 0)

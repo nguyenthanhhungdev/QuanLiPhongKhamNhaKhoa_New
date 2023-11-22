@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(waitingRoom));
             this.PhongKhamlbl = new System.Windows.Forms.Label();
-            this.numberRoom = new System.Windows.Forms.Label();
             this.listWaiting = new System.Windows.Forms.DataGridView();
             this.labelTT = new System.Windows.Forms.Label();
             this.rdoAll = new System.Windows.Forms.RadioButton();
@@ -51,21 +50,11 @@
             this.PhongKhamlbl.AutoSize = true;
             this.PhongKhamlbl.Font = new System.Drawing.Font("Arial Narrow", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhongKhamlbl.ForeColor = System.Drawing.Color.Cyan;
-            this.PhongKhamlbl.Location = new System.Drawing.Point(228, 9);
+            this.PhongKhamlbl.Location = new System.Drawing.Point(272, 9);
             this.PhongKhamlbl.Name = "PhongKhamlbl";
             this.PhongKhamlbl.Size = new System.Drawing.Size(279, 43);
             this.PhongKhamlbl.TabIndex = 0;
             this.PhongKhamlbl.Text = "Phòng Chờ Khám";
-            // 
-            // numberRoom
-            // 
-            this.numberRoom.AutoSize = true;
-            this.numberRoom.Font = new System.Drawing.Font("Arial Narrow", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberRoom.ForeColor = System.Drawing.Color.Cyan;
-            this.numberRoom.Location = new System.Drawing.Point(445, 9);
-            this.numberRoom.Name = "numberRoom";
-            this.numberRoom.Size = new System.Drawing.Size(0, 43);
-            this.numberRoom.TabIndex = 1;
             // 
             // listWaiting
             // 
@@ -181,7 +170,6 @@
             this.Controls.Add(this.rdoChuakham);
             this.Controls.Add(this.rdoAll);
             this.Controls.Add(this.labelTT);
-            this.Controls.Add(this.numberRoom);
             this.Controls.Add(this.PhongKhamlbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -197,7 +185,6 @@
         #endregion
 
         private System.Windows.Forms.Label PhongKhamlbl;
-        private System.Windows.Forms.Label numberRoom;
         private System.Windows.Forms.DataGridView listWaiting;
         private System.Windows.Forms.Label labelTT;
         private System.Windows.Forms.RadioButton rdoAll;

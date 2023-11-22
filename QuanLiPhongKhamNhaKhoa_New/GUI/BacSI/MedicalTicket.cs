@@ -53,6 +53,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 MessageBox.Show("Số điện thoại không đúng định dạng.");
                 return;
             }
+
             isMedicalFormVisible = true;
             ServiceTicket svtk = new ServiceTicket();
             svtk.FormClosed += (s, args) => { isMedicalFormVisible = false; };
@@ -79,20 +80,44 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             BNTblNew.Rows.Add(newRow);
             if(BNBUS.UpdateBN(BNTblNew))
             {
+                if (txtLK.Text.Equals("Khám"))
+                {
+                    string maphieu = autoMaPhieu(PDVTbl.Rows.Count + 1);
+                    svtk.txtMaBN.Text = BNTblNew.Rows[0]["MaBN"].ToString();
+                    svtk.txtTen.Text = BNTblNew.Rows[0]["TenBN"].ToString();
+                    svtk.txtSdt.Text = BNTblNew.Rows[0]["SDT"].ToString();
+                    DateTime ngayKham = Convert.ToDateTime(BNTblNew.Rows[0]["NgSinh"].ToString());
+                    string ngayKhamFormatted = ngayKham.ToString("dd/MM/yyyy");
+                    svtk.txtNgS.Text = ngayKhamFormatted;
+                    svtk.txtGT.Text = BNTblNew.Rows[0]["GioiTinh"].ToString();
+                    svtk.txtCmnd.Text = BNTblNew.Rows[0]["CMND"].ToString();
+                    svtk.txtDC.Text = BNTblNew.Rows[0]["DiaChi"].ToString();
+                    svtk.txtBL.Text = BNTblNew.Rows[0]["BenhLy"].ToString();
+                    svtk.txtPDV.Text = maphieu;
+                    svtk.txtLK.Text = txtLK.Text.ToString();
+                }
+                else if(txtLK.Text.Equals("Tái Khám"))
+                {
+                    string maphieu = autoMaPhieu(PDVTbl.Rows.Count + 1);
+                    svtk.txtMaBN.Text = BNTblNew.Rows[0]["MaBN"].ToString();
+                    svtk.txtTen.Text = BNTblNew.Rows[0]["TenBN"].ToString();
+                    svtk.txtSdt.Text = BNTblNew.Rows[0]["SDT"].ToString();
+                    DateTime ngayKham = Convert.ToDateTime(BNTblNew.Rows[0]["NgSinh"].ToString());
+                    string ngayKhamFormatted = ngayKham.ToString("dd/MM/yyyy");
+                    svtk.txtNgS.Text = ngayKhamFormatted;
+                    svtk.txtGT.Text = BNTblNew.Rows[0]["GioiTinh"].ToString();
+                    svtk.txtCmnd.Text = BNTblNew.Rows[0]["CMND"].ToString();
+                    svtk.txtDC.Text = BNTblNew.Rows[0]["DiaChi"].ToString();
+                    svtk.txtBL.Text = BNTblNew.Rows[0]["BenhLy"].ToString();
+                    svtk.txtPDV.Text = maphieu;
+                    svtk.txtLK.Text = txtLK.Text.ToString();
+                    svtk.btnPDF.Visible = true;
+                    svtk.btnShowDV.Visible = true;
+                    
+
+                }
                 //MessageBox.Show("cập nhật thành công!");
-                string maphieu = autoMaPhieu(PDVTbl.Rows.Count + 1);
-                svtk.txtMaBN.Text = BNTblNew.Rows[0]["MaBN"].ToString();
-                svtk.txtTen.Text = BNTblNew.Rows[0]["TenBN"].ToString();
-                svtk.txtSdt.Text = BNTblNew.Rows[0]["SDT"].ToString();
-                DateTime ngayKham = Convert.ToDateTime(BNTblNew.Rows[0]["NgSinh"].ToString());
-                string ngayKhamFormatted = ngayKham.ToString("dd/MM/yyyy");
-                svtk.txtNgS.Text = ngayKhamFormatted;
-                svtk.txtGT.Text = BNTblNew.Rows[0]["GioiTinh"].ToString();
-                svtk.txtCmnd.Text = BNTblNew.Rows[0]["CMND"].ToString();
-                svtk.txtDC.Text = BNTblNew.Rows[0]["DiaChi"].ToString();
-                svtk.txtBL.Text = BNTblNew.Rows[0]["BenhLy"].ToString();
-                svtk.txtPDV.Text = maphieu;
-                svtk.txtLK.Text=txtLK.Text.ToString();
+                
             }
             else
             {

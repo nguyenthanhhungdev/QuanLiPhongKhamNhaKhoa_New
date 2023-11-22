@@ -53,17 +53,19 @@
             this.lblBL = new System.Windows.Forms.Label();
             this.lblTenBN = new System.Windows.Forms.Label();
             this.servicebox = new System.Windows.Forms.GroupBox();
+            this.btnShowDV = new System.Windows.Forms.Button();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.addService = new System.Windows.Forms.Button();
             this.cbbTypeDV = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listService = new System.Windows.Forms.DataGridView();
-            this.btnFix = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
             this.chooseService = new System.Windows.Forms.GroupBox();
             this.listDVChoose = new System.Windows.Forms.DataGridView();
             this.chooseHandle = new System.Windows.Forms.GroupBox();
             this.vachngan = new System.Windows.Forms.Label();
+            this.btnFix = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.btnSaveSV = new System.Windows.Forms.Button();
             this.grpKham.SuspendLayout();
             this.servicebox.SuspendLayout();
@@ -313,6 +315,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.servicebox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.servicebox.Controls.Add(this.btnShowDV);
+            this.servicebox.Controls.Add(this.btnPDF);
             this.servicebox.Controls.Add(this.addService);
             this.servicebox.Controls.Add(this.cbbTypeDV);
             this.servicebox.Controls.Add(this.label1);
@@ -324,14 +328,44 @@
             this.servicebox.TabStop = false;
             this.servicebox.Text = "Dịch Vụ";
             // 
+            // btnShowDV
+            // 
+            this.btnShowDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowDV.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_show_property_50;
+            this.btnShowDV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowDV.Location = new System.Drawing.Point(212, 244);
+            this.btnShowDV.Name = "btnShowDV";
+            this.btnShowDV.Size = new System.Drawing.Size(141, 58);
+            this.btnShowDV.TabIndex = 18;
+            this.btnShowDV.Text = "Tái Khám";
+            this.btnShowDV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowDV.UseVisualStyleBackColor = true;
+            this.btnShowDV.Visible = false;
+            this.btnShowDV.Click += new System.EventHandler(this.btnShowDV_Click);
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDF.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_choose_24;
+            this.btnPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPDF.Location = new System.Drawing.Point(388, 244);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(151, 58);
+            this.btnPDF.TabIndex = 17;
+            this.btnPDF.Text = "Chọn Hóa Đơn";
+            this.btnPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Visible = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // addService
             // 
             this.addService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add;
             this.addService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addService.Location = new System.Drawing.Point(177, 243);
+            this.addService.Location = new System.Drawing.Point(6, 244);
             this.addService.Name = "addService";
-            this.addService.Size = new System.Drawing.Size(198, 58);
+            this.addService.Size = new System.Drawing.Size(165, 58);
             this.addService.TabIndex = 16;
             this.addService.Text = "Thêm Dịch Vụ";
             this.addService.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -375,34 +409,6 @@
             this.listService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listService.Size = new System.Drawing.Size(533, 168);
             this.listService.TabIndex = 0;
-            // 
-            // btnFix
-            // 
-            this.btnFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFix.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_edit_64;
-            this.btnFix.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFix.Location = new System.Drawing.Point(305, 13);
-            this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(168, 54);
-            this.btnFix.TabIndex = 18;
-            this.btnFix.Text = "Sửa Dịch Vụ";
-            this.btnFix.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFix.UseVisualStyleBackColor = true;
-            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete;
-            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDel.Location = new System.Drawing.Point(90, 13);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(158, 54);
-            this.btnDel.TabIndex = 17;
-            this.btnDel.Text = "Xóa Dịch Vụ";
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // chooseService
             // 
@@ -460,6 +466,20 @@
             this.vachngan.Size = new System.Drawing.Size(7, 75);
             this.vachngan.TabIndex = 19;
             // 
+            // btnFix
+            // 
+            this.btnFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFix.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_edit_64;
+            this.btnFix.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFix.Location = new System.Drawing.Point(305, 13);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(168, 54);
+            this.btnFix.TabIndex = 18;
+            this.btnFix.Text = "Sửa Dịch Vụ";
+            this.btnFix.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFix.UseVisualStyleBackColor = true;
+            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
+            // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -472,6 +492,20 @@
             this.btnExit.TabIndex = 10;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel.Location = new System.Drawing.Point(90, 13);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(158, 54);
+            this.btnDel.TabIndex = 17;
+            this.btnDel.Text = "Xóa Dịch Vụ";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSaveSV
             // 
@@ -538,7 +572,6 @@
         public System.Windows.Forms.ComboBox cbbTypeDV;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.GroupBox chooseService;
-        public System.Windows.Forms.DataGridView listDVChoose;
         public System.Windows.Forms.GroupBox chooseHandle;
         public System.Windows.Forms.Button btnSaveSV;
         public System.Windows.Forms.Button btnDel;
@@ -555,5 +588,8 @@
         private System.Windows.Forms.Label vachngan;
         public System.Windows.Forms.TextBox txtMaBN;
         public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Button btnPDF;
+        public System.Windows.Forms.Button btnShowDV;
+        public System.Windows.Forms.DataGridView listDVChoose;
     }
 }

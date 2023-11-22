@@ -259,9 +259,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             }
             SaveFileDialog save = new SaveFileDialog();
             DateTime time= DateTime.Now;
-            string formattedDateTime = time.ToString("HHmmssddMMyyyy");
+            string formattedDateTime = time.ToString("ddMMyyyy HHmmss");
             save.Filter = "PDF (*.pdf)|*.pdf";
-            string namefile = ""+txtTen.Text +","+ formattedDateTime;
+            string namefile = txtPDV.Text.Trim()+","+txtTen.Text +","+ formattedDateTime;
             save.FileName = $"{namefile}.pdf";
             bool ErrorMessage = false;
             save.InitialDirectory = projectFolderPath+@"\PhieuKetQua";
@@ -341,32 +341,46 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                             // Thêm tiêu đề của bảng
                             Paragraph danhSachDichVuTitle = new Paragraph("Danh Sách Dịch Vụ").SetTextAlignment(TextAlignment.CENTER).SetFont(font).SetFontSize(14);
                             document.Add(danhSachDichVuTitle);
-
                             // Tạo bảng với số cột là số cột trong DataGridView
                             Table table = new Table(listDVChooseRusuft.Columns.Count);
 
                             // Đặt chiều rộng của các cột trong bảng
-                            foreach (DataGridViewColumn column in (listDVChooseRusuft.Columns))
+                            float[] columnWidths = new float[] { 1, 10, 5, 0.5F, 3, 3 }; // Tùy chỉnh các giá trị theo mong muốn
+
+                            foreach (DataGridViewColumn column in listDVChooseRusuft.Columns)
                             {
-                                table.AddCell(new Cell().Add(new Paragraph(column.HeaderText)).SetFont(font).SetFontSize(12));
+                                string columnHeader = (column.HeaderText == "Số Lượng") ? "SL" : column.HeaderText;
+                                table.AddCell(new Cell().Add(new Paragraph(columnHeader)).SetFont(font).SetFontSize(10));
                             }
-                            table.SetWidth(UnitValue.CreatePercentValue(100));
+
                             int rowCount = listDVChooseRusuft.Rows.Count;
 
                             for (int i = 0; i < rowCount - 1; i++)
                             {
                                 DataGridViewRow row = listDVChooseRusuft.Rows[i];
 
-                                foreach (DataGridViewCell cell in row.Cells)
+                                for (int j = 0; j < row.Cells.Count; j++)
                                 {
-                                    string cellValue = cell.Value != null ? cell.Value.ToString() : "";
+                                    string cellValue = row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "";
 
-                                    table.AddCell(new Cell().Add(new Paragraph(cellValue)).SetFont(font).SetFontSize(10));
+                                    Cell cell = new Cell().Add(new Paragraph(cellValue)).SetFont(font).SetFontSize(9);
+
+                                    // Đặt chiều rộng của cột dựa trên tỷ lệ phần trăm
+                                    cell.SetWidth(UnitValue.CreatePercentValue(columnWidths[j]));
+                                    if (j == row.Cells.Count - 1 && cellValue == "0")
+                                    {
+                                        cellValue = "Tái Khám";
+                                        cell = new Cell().Add(new Paragraph(cellValue)).SetFont(font).SetFontSize(9);
+                                        // Đặt chiều rộng của cột dựa trên tỷ lệ phần trăm
+                                        cell.SetWidth(UnitValue.CreatePercentValue(columnWidths[j]));
+                                    }
+
+                                    table.AddCell(cell);
                                 }
                             }
+
                             // Thêm bảng vào tài liệu PDF
                             document.Add(table);
-                            // Thêm vị trí cho "Tổng Tiền"
                             Paragraph TongTien = new Paragraph("Tổng Tiền: " + txtTT.Text).SetTextAlignment(TextAlignment.RIGHT).SetFont(font).SetFontSize(10);
                             document.Add(TongTien);
                             if (!string.IsNullOrWhiteSpace(txtKL.Text))
@@ -451,5 +465,6 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 Home_Origin.panelDoctor.Controls.Clear();
             }
         }   
+
     }
 }

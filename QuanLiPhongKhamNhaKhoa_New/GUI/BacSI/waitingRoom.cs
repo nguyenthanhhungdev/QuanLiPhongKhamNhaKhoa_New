@@ -24,24 +24,19 @@ namespace QuanLiPhongKhamNhaKhoa_New
         public DataTable BNTbl;
         private readonly Home_Origin homeOriginInstance;
 
-        public waitingRoom(Home_Origin homeOrigin)
+        
+
+        public waitingRoom()
         {
             InitializeComponent();
-            homeOriginInstance = homeOrigin;
             String maphong = "";
             if (Login.isBs)
             {
                 BacSiDTO bacSiDto = (BacSiDTO)Login.dto;
                 maphong = bacSiDto.MaPhong; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+                PhongKhamlbl.Text = PhongKhamlbl.Text+" "+maphong;
             }
-            TdTbl = TDBUS.GetListWaitingRoom(maphong);
-            BNTbl = BNBUS.GetList();
-        }
-
-        public waitingRoom()
-        {
-            InitializeComponent();
-            String maphong = "P01"; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+            
             TdTbl = TDBUS.GetListWaitingRoom(maphong);
             BNTbl = BNBUS.GetList();
         }

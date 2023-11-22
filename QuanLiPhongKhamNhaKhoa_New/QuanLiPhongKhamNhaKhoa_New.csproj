@@ -289,6 +289,12 @@
     <Compile Include="DTO\DTO\TaiKhamDTO.cs" />
     <Compile Include="DTO\DTO\TiepDonBNDTO.cs" />
     <Compile Include="DTO\DTO\UserDTO.cs" />
+    <Compile Include="GUI\BacSI\ServiceTicketTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BacSI\ServiceTicketTK.Designer.cs">
+      <DependentUpon>ServiceTicketTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BacSI\MedicalTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -488,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BacSI\ServiceTicket.resx">
       <DependentUpon>ServiceTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BacSI\ServiceTicketTK.resx">
+      <DependentUpon>ServiceTicketTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BacSI\SoLuongDV.resx">
       <DependentUpon>SoLuongDV.cs</DependentUpon>
@@ -744,8 +753,10 @@
     <None Include="Resources\icons8-body-29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-choose-24.png" />
     <Content Include="Resources\icons8-medical-48-_1_.ico" />
     <Content Include="Resources\icons8-medical-48.ico" />
+    <None Include="Resources\icons8-show-property-50.png" />
     <Content Include="Resources\icons8-ticket-64.png" />
     <Content Include="Resources\icons8-tooth-100-_1_.ico" />
     <Content Include="Resources\icons8-tooth-100.ico" />

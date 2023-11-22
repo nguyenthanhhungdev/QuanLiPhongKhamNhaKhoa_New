@@ -19,5 +19,9 @@ namespace BUS
         {
             return PDVDAO.insertPDV(phieudv);
         }
+        public DataTable GetSoPhieu(string maBN)
+        {
+            return PDVDAO.GetSoPhieu(maBN);
+        }
     }
 }

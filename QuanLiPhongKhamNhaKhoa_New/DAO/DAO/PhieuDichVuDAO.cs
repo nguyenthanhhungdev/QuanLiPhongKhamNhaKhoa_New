@@ -40,5 +40,13 @@ namespace DAO
                 return false;
             }
         }
+        public DataTable GetSoPhieu(string maBN)
+        {
+            //MessageBox.Show("MaBN: "+maBN);
+            string sql = $@"SELECT TOP 1 SoPhieuDV FROM  PHIEUDICHVU A 
+                WHERE A.MaBN = '{maBN}' 
+            ORDER BY SoPhieuDV DESC";
+            return database.Execute(sql);
+        }
     }
 }
