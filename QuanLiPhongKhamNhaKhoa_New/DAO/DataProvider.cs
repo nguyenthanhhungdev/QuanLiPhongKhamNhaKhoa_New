@@ -17,7 +17,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             try
             {
                 connection = new SqlConnection(
-                    "Data Source=LAPTOP-3GFMRAKL\\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True");
+                    @"Data Source=LAPTOP-3GFMRAKL\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True");
             }
             catch (SqlException e)
             {
@@ -75,7 +75,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             {
                 // Tạo một đối tượng SqlConnection
                 SqlConnection connection = new SqlConnection(
-                    "Data Source=LAPTOP-3GFMRAKL\\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True");
+                    @"Data Source=LAPTOP-3GFMRAKL\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True");
 
                 // Mở kết nối với cơ sở dữ liệu
                 connection.Open();
@@ -112,7 +112,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             {
                 // Tạo một đối tượng SqlConnection
                 SqlConnection connection = new SqlConnection(
-                    "Data Source=LAPTOP-3GFMRAKL\\VENCHU;Initial Catalog=PhongKhamNhaKhoa;Integrated Security=True");
+                    @"Data Source=LAPTOP-3GFMRAKL\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True");
 
                 // Mở kết nối với cơ sở dữ liệu
                 connection.Open();

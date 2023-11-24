@@ -19,7 +19,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
         public string dbName = "PhongKhamNhaKhoa";   //chỉ định tên CSDL
         public Database()
         {
-            string connStr = "Data Source=LAPTOP-3GFMRAKL\\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True";
+            string connStr = @"Data Source=LAPTOP-3GFMRAKL\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True";
             sqlConn = new SqlConnection(connStr);
         }
         //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu
