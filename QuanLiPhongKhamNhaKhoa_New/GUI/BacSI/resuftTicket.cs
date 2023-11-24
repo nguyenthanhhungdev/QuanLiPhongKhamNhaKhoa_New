@@ -160,6 +160,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     rowkq["SoPhieuKQ"] = txtPDV.Text;
                     rowkq["KetLuan"] = txtKL.Text;
                     rowkq["MaTK"] = txtMaTK.Text;
+                    rowkq["TinhTrang"] = false;
                     PKQTbl.Rows.Add(rowkq);
                     // Thêm dữ liệu vào bảng PDVTbl
                     string thanhtien = txtTT.Text;
@@ -207,6 +208,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                         rowkq["SoPhieuKQ"] = txtPDV.Text;
                         rowkq["KetLuan"] = txtKL.Text;
                         rowkq["MaTK"] = txtMaTK.Text;
+                        rowkq["TinhTrang"] = false;
                         PKQTbl.Rows.Add(rowkq);
                         string thanhtien = txtTT.Text;
                         string numericOnly = Regex.Replace(thanhtien, "[^0-9]", "");

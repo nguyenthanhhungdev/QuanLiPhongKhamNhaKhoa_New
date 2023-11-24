@@ -19,5 +19,10 @@ namespace BUS
         {
             return PKQDAO.GetBill(sophieu);
         }
+
+        public bool UpdatePay(string soPhieu)
+        {
+            return PKQDAO.UpdatePay(soPhieu);
+        }
     }
 }

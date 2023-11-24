@@ -36,11 +36,11 @@ namespace DAO
         {
             string sqlnull = $@"select PHIEUKETQUA.SoPhieuKQ,BENHNHAN.MaBN,BENHNHAN.TenBN,PHIEUDICHVU.ThanhTien from PHIEUKETQUA
                 join PHIEUDICHVU on PHIEUKETQUA.SoPhieuKQ=PHIEUDICHVU.SoPhieuKQ
-                join BENHNHAN on BENHNHAN.MaBN=PHIEUDICHVU.MaBN";
+                join BENHNHAN on BENHNHAN.MaBN=PHIEUDICHVU.MaBN WHERE PHIEUKETQUA.TinhTrang = 'False'";
             string sqlnotnull = $@"select PHIEUKETQUA.SoPhieuKQ,BENHNHAN.MaBN,BENHNHAN.TenBN,PHIEUDICHVU.ThanhTien from PHIEUKETQUA
                 join PHIEUDICHVU on PHIEUKETQUA.SoPhieuKQ=PHIEUDICHVU.SoPhieuKQ
                 join BENHNHAN on BENHNHAN.MaBN=PHIEUDICHVU.MaBN
-                where PHIEUKETQUA.SoPhieuKQ like '%{sophieu}%';";
+                where PHIEUKETQUA.SoPhieuKQ like '%{sophieu}%' and PHIEUKETQUA.TinhTrang = 'False';";
             if (!string.IsNullOrEmpty(sophieu))
             {
                 return database.Execute(sqlnotnull);
@@ -50,6 +50,23 @@ namespace DAO
                 return database.Execute(sqlnull);
             }
             
+        }
+
+        public bool UpdatePay(string soPhieu)
+        {
+            string sql = "UPDATE PHIEUKETQUA SET TinhTrang = 'True' WHERE SoPhieuKQ = '" + soPhieu + "'";
+            int rowsAffected = database.ExecuteNonQueryInt(sql);
+            if (rowsAffected > 0)
+            {
+                // Cập nhật thành công
+                return true;
+
+            }
+            else
+            {
+                // Không có dòng nào được cập nhật
+                return false;
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         void HienThiDSBenhNhan()
         {
-            dataGridView1.DataSource = bn.GetList();
+            dataGridView1.DataSource = bn.LayDuLieuBenhNhan();
         }
 
         void HienThiDSBenhNhan(string maBN, string tenBN, string cmnd, string sdt)

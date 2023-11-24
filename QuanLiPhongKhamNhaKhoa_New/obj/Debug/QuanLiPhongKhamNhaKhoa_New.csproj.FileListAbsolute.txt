@@ -724,3 +724,4 @@ C:\Users\ACER\Desktop\C#\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNha
 C:\Users\ACER\Desktop\C#\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.csproj.CopyComplete
 C:\Users\ACER\Desktop\C#\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 C:\Users\ACER\Desktop\C#\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
+C:\Users\ACER\Desktop\C#\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.ThemBNTD.resources

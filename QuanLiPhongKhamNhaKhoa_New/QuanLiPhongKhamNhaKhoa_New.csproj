@@ -480,6 +480,12 @@
     <Compile Include="ThemBenhNhan.Designer.cs">
       <DependentUpon>ThemBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemBNTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemBNTD.Designer.cs">
+      <DependentUpon>ThemBNTD.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,6 +614,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemBenhNhan.resx">
       <DependentUpon>ThemBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemBNTD.resx">
+      <DependentUpon>ThemBNTD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemDichVu.resx">
       <DependentUpon>ThemDichVu.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class XacNhanPay : UserControl
     {
+        private readonly PhieuKetQuaBUS PKQBUS = new PhieuKetQuaBUS();
         public XacNhanPay()
         {
             InitializeComponent();
@@ -54,7 +56,27 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void btnXnPay_Click(object sender, EventArgs e)
         {
-
+            if (txtDebt.Text == "0")
+            {
+                if (PKQBUS.UpdatePay(lblSoPhieu.Text.Trim()))
+                {
+                    string moneyString = txtGive.Text.Trim();
+                    moneyString = moneyString.Replace(".", "").Replace(" VNĐ", "");
+                    float moneyFloat = float.Parse(moneyString);
+                    if (moneyFloat > 0) {
+                        MessageBox.Show("Tiền thối: " + txtGive.Text);
+                    }
+                    MessageBox.Show("Thanh toán thành công!");
+                    this.Dispose();
+                } else
+                {
+                    MessageBox.Show("Thanh toán thất bại!");
+                }
+                
+            } else
+            {
+                MessageBox.Show("Phải thanh toán đủ tiền");
+            }
         }
     }
 }

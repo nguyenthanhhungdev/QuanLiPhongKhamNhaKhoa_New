@@ -39,8 +39,8 @@
             this.toolStripResuft = new System.Windows.Forms.ToolStripLabel();
             tabPageLeTan = new System.Windows.Forms.TabPage();
             this.toolStripLeTan = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabelThemBN = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelTraCuuBN = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabelThemBN = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelTraCuuPK = new System.Windows.Forms.ToolStripLabel();
             this.toolStripPay = new System.Windows.Forms.ToolStripLabel();
             this.tabPageQuanLi = new System.Windows.Forms.TabPage();
@@ -105,9 +105,9 @@
             // panelDoctor
             // 
             panelDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelDoctor.Location = new System.Drawing.Point(3, 29);
+            panelDoctor.Location = new System.Drawing.Point(3, 33);
             panelDoctor.Name = "panelDoctor";
-            panelDoctor.Size = new System.Drawing.Size(1297, 400);
+            panelDoctor.Size = new System.Drawing.Size(1297, 396);
             panelDoctor.TabIndex = 1;
             // 
             // toolStrip2
@@ -121,7 +121,7 @@
             this.toolStripResuft});
             this.toolStrip2.Location = new System.Drawing.Point(3, 2);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1297, 27);
+            this.toolStrip2.Size = new System.Drawing.Size(1297, 31);
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -129,7 +129,7 @@
             // 
             this.toolStripLabelWaitingRoom.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_waiting_room_50;
             this.toolStripLabelWaitingRoom.Name = "toolStripLabelWaitingRoom";
-            this.toolStripLabelWaitingRoom.Size = new System.Drawing.Size(116, 24);
+            this.toolStripLabelWaitingRoom.Size = new System.Drawing.Size(116, 28);
             this.toolStripLabelWaitingRoom.Text = "Phòng Chờ";
             this.toolStripLabelWaitingRoom.Click += new System.EventHandler(this.toolStripLabelWaitingRoom_Click);
             // 
@@ -137,7 +137,7 @@
             // 
             this.toolStripKham.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_prevention_64;
             this.toolStripKham.Name = "toolStripKham";
-            this.toolStripKham.Size = new System.Drawing.Size(123, 24);
+            this.toolStripKham.Size = new System.Drawing.Size(123, 28);
             this.toolStripKham.Text = "Phiếu Khám";
             this.toolStripKham.Click += new System.EventHandler(this.toolStripMedical_Click);
             // 
@@ -145,7 +145,7 @@
             // 
             this.toolStripService.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_pencil_64;
             this.toolStripService.Name = "toolStripService";
-            this.toolStripService.Size = new System.Drawing.Size(135, 24);
+            this.toolStripService.Size = new System.Drawing.Size(135, 28);
             this.toolStripService.Text = "Phiếu Dịch Vụ";
             this.toolStripService.Click += new System.EventHandler(this.toolStripService_Click);
             // 
@@ -153,7 +153,7 @@
             // 
             this.toolStripResuft.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_medical_result_64;
             this.toolStripResuft.Name = "toolStripResuft";
-            this.toolStripResuft.Size = new System.Drawing.Size(138, 24);
+            this.toolStripResuft.Size = new System.Drawing.Size(138, 28);
             this.toolStripResuft.Text = "Phiếu Kết Quả";
             this.toolStripResuft.Click += new System.EventHandler(this.toolStripResuft_Click);
             // 
@@ -182,13 +182,6 @@
             this.toolStripLeTan.Size = new System.Drawing.Size(1297, 27);
             this.toolStripLeTan.TabIndex = 0;
             // 
-            // toolStripLabelThemBN
-            // 
-            this.toolStripLabelThemBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_male_user_50;
-            this.toolStripLabelThemBN.Name = "toolStripLabelThemBN";
-            this.toolStripLabelThemBN.Size = new System.Drawing.Size(143, 24);
-            this.toolStripLabelThemBN.Text = "Thêm bệnh nhân";
-            // 
             // toolStripLabelTraCuuBN
             // 
             this.toolStripLabelTraCuuBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_person_53;
@@ -196,6 +189,13 @@
             this.toolStripLabelTraCuuBN.Size = new System.Drawing.Size(154, 24);
             this.toolStripLabelTraCuuBN.Text = "Tra cứu bệnh nhân";
             this.toolStripLabelTraCuuBN.Click += new System.EventHandler(this.toolStripLabelTraCuuBN_Click);
+            // 
+            // toolStripLabelThemBN
+            // 
+            this.toolStripLabelThemBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_male_user_50;
+            this.toolStripLabelThemBN.Name = "toolStripLabelThemBN";
+            this.toolStripLabelThemBN.Size = new System.Drawing.Size(143, 24);
+            this.toolStripLabelThemBN.Text = "Thêm bệnh nhân";
             // 
             // toolStripLabelTraCuuPK
             // 

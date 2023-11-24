@@ -58,7 +58,7 @@
             // txtMoney
             // 
             this.txtMoney.Enabled = false;
-            this.txtMoney.Location = new System.Drawing.Point(163, 19);
+            this.txtMoney.Location = new System.Drawing.Point(235, 19);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(230, 22);
             this.txtMoney.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 19);
+            this.label2.Location = new System.Drawing.Point(66, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 0;
@@ -86,7 +86,7 @@
             // 
             // txtReceive
             // 
-            this.txtReceive.Location = new System.Drawing.Point(163, 60);
+            this.txtReceive.Location = new System.Drawing.Point(235, 60);
             this.txtReceive.Name = "txtReceive";
             this.txtReceive.Size = new System.Drawing.Size(230, 22);
             this.txtReceive.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 62);
+            this.label3.Location = new System.Drawing.Point(66, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 20);
             this.label3.TabIndex = 2;
@@ -105,7 +105,7 @@
             // txtDebt
             // 
             this.txtDebt.Enabled = false;
-            this.txtDebt.Location = new System.Drawing.Point(163, 104);
+            this.txtDebt.Location = new System.Drawing.Point(235, 104);
             this.txtDebt.Name = "txtDebt";
             this.txtDebt.Size = new System.Drawing.Size(230, 22);
             this.txtDebt.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 106);
+            this.label4.Location = new System.Drawing.Point(66, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 4;
@@ -138,7 +138,7 @@
             // txtGive
             // 
             this.txtGive.Enabled = false;
-            this.txtGive.Location = new System.Drawing.Point(163, 150);
+            this.txtGive.Location = new System.Drawing.Point(235, 150);
             this.txtGive.Name = "txtGive";
             this.txtGive.Size = new System.Drawing.Size(230, 22);
             this.txtGive.TabIndex = 7;
@@ -147,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 152);
+            this.label5.Location = new System.Drawing.Point(66, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 6;

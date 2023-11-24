@@ -67,12 +67,16 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             BNTblNew = BNTbl.Clone();
             DataRow newRow = BNTblNew.NewRow();
 
+
+
+            MessageBox.Show("NgSinh:" + txtNgS.Text.ToString());
+
             // Gán giá trị cho các cột của dòng mới
             newRow["MaBN"] = txtMaBN.Text.ToString();
             newRow["TenBN"] = txtTen.Text.ToString();
             newRow["GioiTinh"] = txtGT.Text.ToString();
             newRow["CMND"] = txtCmnd.Text.ToString();
-            newRow["NgSinh"] = txtNgS.Text.ToString();
+            newRow["NgSinh"] = Convert.ToDateTime(txtNgS.Text);
             newRow["SDT"] = txtSdt.Text.ToString();
             newRow["DiaChi"] = txtDC.Text.ToString();
             newRow["BenhLy"] = txtBL.Text.ToString();
