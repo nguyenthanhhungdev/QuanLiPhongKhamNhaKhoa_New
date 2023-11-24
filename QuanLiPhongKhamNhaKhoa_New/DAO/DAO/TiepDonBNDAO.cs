@@ -61,5 +61,22 @@ namespace DAO
                 return false;
             }
         }
+
+        
+
+        //Lấy danh sách tiếp đón
+        public DataTable LayDSTiepDon()
+        {
+            string sql = "SELECT TenPhong, TenBN, NgayKham, TinhTrang\r\nFROM ((BENHNHAN A join TIEPDONBN B on A.MaBN = B.MaBN) join PHONGKHAM C on B.MaPhong = C.MaPhong) left join PHIEUDICHVU D on A.MaBN = D.MaBN WHERE DAY(NgayKham) = DAY(GETDATE())";
+            DataTable dt = database.Execute(sql);
+            return dt;
+        }
+
+        //Thêm tiếp đón
+        public void ThemTiepDon(string maNV, string maBN, string maP, string ngayKham, string tinhTrang)
+        {
+            string sql = string.Format("INSERT INTO TIEPDONBN VALUES('{0}', '{1}', '{2}', '{3}', N'{4}')", maNV, maBN, maP, ngayKham, tinhTrang);
+            database.ExecuteNonQuery(sql);
+        }
     }
 }

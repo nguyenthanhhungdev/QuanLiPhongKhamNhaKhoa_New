@@ -46,5 +46,13 @@ namespace DAO
             int i = database.ExecuteScalar(sql);
             return i;
         }
+
+        //Lấy danh sách phòng trống
+        public DataTable LayDSPhongTrong(string caLam)
+        {
+            string sql = "SELECT PHONGKHAM.MaPhong, TenPhong, MaBS FROM BACSI  JOIN PHONGKHAM ON  BACSI.MaPhong = PHONGKHAM.MaPhong \r\nWHERE CaLam = N'" + caLam + "' AND TenPhong NOT IN\r\n(SELECT DISTINCT TenPhong AS SoLuongBN FROM PHONGKHAM LEFT JOIN TIEPDONBN \r\nON PHONGKHAM.MaPhong = TIEPDONBN.MaPhong\r\nWHERE DAY(NgayKham) = DAY(GETDATE()) AND (TinhTrang = N'Tái Khám' OR TinhTrang = N'Khám') \r\nGROUP BY TenPhong, NgayKham\r\nHAVING COUNT(MaBN) != 0)";
+            DataTable dt = database.Execute(sql);
+            return dt;
+        }
     }
 }

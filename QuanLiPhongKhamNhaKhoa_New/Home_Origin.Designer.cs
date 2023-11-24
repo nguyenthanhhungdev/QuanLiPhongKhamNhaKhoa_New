@@ -75,7 +75,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(tabBacSi);
+            this.tabControl1.Controls.Add(this.tabBacSi);
             this.tabControl1.Controls.Add(tabPageLeTan);
             this.tabControl1.Controls.Add(this.tabPageQuanLi);
             this.tabControl1.Controls.Add(this.tabPageCaNhan);
@@ -173,40 +173,41 @@
             // 
             this.toolStripLeTan.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripLeTan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelThemBN,
             this.toolStripLabelTraCuuBN,
+            this.toolStripLabelThemBN,
             this.toolStripLabelTraCuuPK,
             this.toolStripPay});
             this.toolStripLeTan.Location = new System.Drawing.Point(3, 2);
             this.toolStripLeTan.Name = "toolStripLeTan";
-            this.toolStripLeTan.Size = new System.Drawing.Size(1297, 31);
+            this.toolStripLeTan.Size = new System.Drawing.Size(1297, 27);
             this.toolStripLeTan.TabIndex = 0;
             // 
             // toolStripLabelThemBN
             // 
             this.toolStripLabelThemBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_male_user_50;
             this.toolStripLabelThemBN.Name = "toolStripLabelThemBN";
-            this.toolStripLabelThemBN.Size = new System.Drawing.Size(143, 28);
+            this.toolStripLabelThemBN.Size = new System.Drawing.Size(143, 24);
             this.toolStripLabelThemBN.Text = "Thêm bệnh nhân";
             // 
             // toolStripLabelTraCuuBN
             // 
             this.toolStripLabelTraCuuBN.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_search_person_53;
             this.toolStripLabelTraCuuBN.Name = "toolStripLabelTraCuuBN";
-            this.toolStripLabelTraCuuBN.Size = new System.Drawing.Size(154, 28);
+            this.toolStripLabelTraCuuBN.Size = new System.Drawing.Size(154, 24);
             this.toolStripLabelTraCuuBN.Text = "Tra cứu bệnh nhân";
+            this.toolStripLabelTraCuuBN.Click += new System.EventHandler(this.toolStripLabelTraCuuBN_Click);
             // 
             // toolStripLabelTraCuuPK
             // 
             this.toolStripLabelTraCuuPK.Name = "toolStripLabelTraCuuPK";
-            this.toolStripLabelTraCuuPK.Size = new System.Drawing.Size(144, 28);
+            this.toolStripLabelTraCuuPK.Size = new System.Drawing.Size(144, 24);
             this.toolStripLabelTraCuuPK.Text = "Tra cứu phòng khám";
             // 
             // toolStripPay
             // 
             this.toolStripPay.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_salary_male_50;
             this.toolStripPay.Name = "toolStripPay";
-            this.toolStripPay.Size = new System.Drawing.Size(113, 28);
+            this.toolStripPay.Size = new System.Drawing.Size(113, 24);
             this.toolStripPay.Text = "Thanh Toán ";
             this.toolStripPay.Click += new System.EventHandler(this.toolStripPay_Click);
             // 

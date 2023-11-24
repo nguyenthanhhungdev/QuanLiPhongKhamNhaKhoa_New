@@ -15,11 +15,11 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
-        public string srvName = @"LAPTOP-91RK5R5L\SQLEXPRESS";	//chỉ định tên server
+        public string srvName = @"LAPTOP-3GFMRAKL\\VENCHU";	//chỉ định tên server
         public string dbName = "PhongKhamNhaKhoa";   //chỉ định tên CSDL
         public Database()
         {
-            string connStr = "Data source=" + srvName + ";database=" + dbName + ";Integrated Security=True" + ";User ID=sa;Password=123456";
+            string connStr = "Data Source=LAPTOP-3GFMRAKL\\VENCHU; Database=PHONGKHAMNHAKHOA;Integrated Security=True";
             sqlConn = new SqlConnection(connStr);
         }
         //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu
@@ -68,6 +68,15 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
             SqlCommand cmd = new SqlCommand(sql, sqlConn);
             sqlConn.Open();
             int i = Convert.ToInt32(cmd.ExecuteScalar());
+            sqlConn.Close();
+            return i;
+        }
+
+        public string ExecuteScalarStr(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, sqlConn);
+            sqlConn.Open();
+            string i = Convert.ToString(cmd.ExecuteScalar());
             sqlConn.Close();
             return i;
         }

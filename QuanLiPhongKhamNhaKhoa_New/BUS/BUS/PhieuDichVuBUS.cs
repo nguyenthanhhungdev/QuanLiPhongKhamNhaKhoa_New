@@ -27,5 +27,10 @@ namespace BUS
         {
             return PDVDAO.getTenBS(maphieu);
         }
+
+        public string LayMaTK(string maBN)
+        {
+            return PDVDAO.LayMaTK(maBN);
+        }
     }
 }

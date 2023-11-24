@@ -1,4 +1,5 @@
 ﻿using DAO;
+using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 using QuanLiPhongKhamNhaKhoa_New.GUI.BacSI;
 using System;
 using System.Collections.Generic;
@@ -127,6 +128,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
             Home_Origin.tabPageLeTan.Controls.Add(pay);
             pay.BringToFront();
             pay.Show();
+        }
+
+        private void toolStripLabelTraCuuBN_Click(object sender, EventArgs e)
+        {
+            HomeTraCuuBN home = new HomeTraCuuBN();
+            home.TopLevel = false;
+            tabPageLeTan.Controls.Add(home);
+            home.BringToFront();
+            home.Dock = DockStyle.Fill;
+            home.Show();
         }
     }
 }

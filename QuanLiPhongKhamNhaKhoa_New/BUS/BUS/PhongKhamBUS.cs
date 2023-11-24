@@ -37,5 +37,11 @@ namespace BUS
         {
             return phongKhamDAO.LayTongPK();
         }
+
+        //Lấy danh sách phòng trống
+        public DataTable LayDSPhong(string caLam)
+        {
+            return phongKhamDAO.LayDSPhongTrong(caLam);
+        }
     }
 }

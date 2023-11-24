@@ -53,5 +53,12 @@ namespace DAO
                 where PHIEUDICHVU.SoPhieuKQ='{maphieu}';";
             return database.Execute(sql);
         }
+
+        //Lấy mã tái khám
+        public string LayMaTK(string maBN)
+        {
+            string sql = "SELECT TOP 1 MaTK\r\nFROM PHIEUDICHVU A, PHIEUKETQUA B, TIEPDONBN C\r\nWHERE A.SoPhieuKQ = B.SoPhieuKQ AND A.MaBN = C.MaBN AND C.MaBN = '" + maBN + "'\r\nORDER BY NgayKham DESC";
+            return database.ExecuteScalarStr(sql);
+        }
     }
 }

@@ -25,6 +25,29 @@ namespace DAO.DAO
             string query = "SELECT * FROM BenhNhan ";
             return database.Execute(query);
         }
+
+        //Thêm BN
+        public void ThemBN(string maBN, string tenBN, string cmnd, string diaChi, string ngaySinh, string sdt, string gioiTinh)
+        {
+            string sql = string.Format("INSERT INTO BENHNHAN(MaBN, TenBN, CMND, DiaChi, NgSinh, SDT, GioiTinh) VALUES('{0}', N'{1}', '{2}', N'{3}', '{4}', '{5}', N'{6}')", maBN, tenBN, cmnd, diaChi, ngaySinh, sdt, gioiTinh);
+            database.ExecuteNonQuery(sql);
+        }
+
+        //Lấy số lượng BN trong db
+        public int LayBN()
+        {
+            string sql = "SELECT COUNT(MaBN) FROM BENHNHAN";
+            int i = database.ExecuteScalar(sql);
+            return i;
+        }
+
+        //Sửa BN
+        public void SuaBN(string maBN, string cmnd, string diaChi, string sdt)
+        {
+            string sql = string.Format("UPDATE BENHNHAN SET CMND = '{0}', DiaChi = N'{1}', SDT = '{2}' WHERE MaBN = '{3}'", cmnd, diaChi, sdt, maBN);
+            database.ExecuteNonQuery(sql);
+        }
+
         public bool UpdateBN(DataTable BNnew)
         {
             try

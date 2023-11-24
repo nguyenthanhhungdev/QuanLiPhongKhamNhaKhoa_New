@@ -29,5 +29,23 @@ namespace BUS
         {
             return BNDAO.GetListMaBN(mabn);
         }
+
+        //Thêm BN
+        public void ThemBN(string maBN, string tenBN, string cmnd, string diaChi, string ngaySinh, string sdt, string gioiTinh)
+        {
+            benhNhanDAO.ThemBN(maBN, tenBN, cmnd, diaChi, ngaySinh, sdt, gioiTinh);
+        }
+
+        //Lấy số lượng BN trong db
+        public int LayDem()
+        {
+            return benhNhanDAO.LayBN();
+        }
+
+        //Sửa BN
+        public void SuaBN(string maBN, string cmnd, string diaChi, string sdt)
+        {
+            benhNhanDAO.SuaBN(maBN, cmnd, diaChi, sdt);
+        }
     }
 }

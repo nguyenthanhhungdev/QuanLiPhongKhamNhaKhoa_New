@@ -261,13 +261,31 @@
     <Compile Include="BUS\BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\BUS\PhieuKetQuaBUS.cs" />
     <Compile Include="BUS\BUS\PhongKhamBUS.cs" />
+    <Compile Include="SuaBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaBN.Designer.cs">
+      <DependentUpon>SuaBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\BUS\TaiKhamBUS.cs" />
+    <Compile Include="ThemBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemBN.Designer.cs">
+      <DependentUpon>ThemBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\BUS\TiepDonBNBUS.cs" />
     <Compile Include="DAO\DAO\BacSiDAO.cs" />
     <Compile Include="DAO\DAO\BenhNhanDAO.cs" />
     <Compile Include="DAO\DAO\CT_DichVuDAO.cs" />
     <Compile Include="DAO\DAO\Database.cs" />
     <Compile Include="DAO\DAO\DichVuDAO.cs" />
+    <Compile Include="HomeThemBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeThemBN.Designer.cs">
+      <DependentUpon>HomeThemBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DAO\LoaiDichVuDAO.cs" />
     <Compile Include="DAO\DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\DAO\PhieuDichVuDAO.cs" />
@@ -289,6 +307,12 @@
     <Compile Include="DTO\DTO\TaiKhamDTO.cs" />
     <Compile Include="DTO\DTO\TiepDonBNDTO.cs" />
     <Compile Include="DTO\DTO\UserDTO.cs" />
+    <Compile Include="HomeTraCuuBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeTraCuuBN.Designer.cs">
+      <DependentUpon>HomeTraCuuBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +522,18 @@
     <Compile Include="XacNhanPay.Designer.cs">
       <DependentUpon>XacNhanPay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SuaBN.resx">
+      <DependentUpon>SuaBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemBN.resx">
+      <DependentUpon>ThemBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeThemBN.resx">
+      <DependentUpon>HomeThemBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeTraCuuBN.resx">
+      <DependentUpon>HomeTraCuuBN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayForm.resx">
       <DependentUpon>PayForm.cs</DependentUpon>
     </EmbeddedResource>

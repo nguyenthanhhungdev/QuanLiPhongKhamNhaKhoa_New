@@ -19,5 +19,17 @@ namespace BUS
         {
             return TDDAO.UpdateTDBN(tiepdonBN);
         }
+
+        //Lấy danh sách tiếp đón
+        public DataTable LayDSTiepDon()
+        {
+            return TDDAO.LayDSTiepDon();
+        }
+
+        //Thêm tiếp đón
+        public void ThemTiepDon(string maNV, string maBN, string maP, string ngay, string tinhTrang)
+        {
+            TDDAO.ThemTiepDon(maNV, maBN, maP, ngay, tinhTrang);
+        }
     }
 }
