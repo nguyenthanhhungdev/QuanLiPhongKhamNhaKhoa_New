@@ -15,7 +15,6 @@ namespace DAO
         {
             string query = "SELECT * FROM PHIEUDICHVU WHERE SUBSTRING(SoPhieuDV, 1, 6) = FORMAT(GETDATE(), 'ddMMyy');";
             return database.Execute(query);
-
         }
         public bool insertPDV(DataTable phieudv)
         {
@@ -32,7 +31,6 @@ namespace DAO
             {
                 // Cập nhật thành công
                 return true;
-
             }
             else
             {
@@ -44,8 +42,15 @@ namespace DAO
         {
             //MessageBox.Show("MaBN: "+maBN);
             string sql = $@"SELECT TOP 1 SoPhieuDV FROM  PHIEUDICHVU A 
-                WHERE A.MaBN = '{maBN}' 
-            ORDER BY SoPhieuDV DESC";
+                        WHERE A.MaBN = '{maBN}' 
+                        ORDER BY SoPhieuDV DESC";
+            return database.Execute(sql);
+        }
+        public DataTable getTenBS(string maphieu)
+        {
+            string sql= $@"select PHIEUDICHVU.SoPhieuKQ,Bacsi.TenBS from PHIEUDICHVU 
+                join BACSI on PHIEUDICHVU.MaBS=BACSI.MaBS
+                where PHIEUDICHVU.SoPhieuKQ='{maphieu}';";
             return database.Execute(sql);
         }
     }

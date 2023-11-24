@@ -423,6 +423,26 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pay_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pay-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_paycheque_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-paycheque-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_pen_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-pen-48", resourceCulture);
@@ -486,6 +506,16 @@ namespace QuanLiPhongKhamNhaKhoa_New.Properties {
         internal static System.Drawing.Bitmap icons8_reload_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-reload-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_salary_male_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-salary-male-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

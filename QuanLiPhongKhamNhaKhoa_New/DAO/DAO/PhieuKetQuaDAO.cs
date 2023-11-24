@@ -32,6 +32,24 @@ namespace DAO
                 return false;
             }
         }
-        
+        public DataTable GetBill(string sophieu)
+        {
+            string sqlnull = $@"select PHIEUKETQUA.SoPhieuKQ,BENHNHAN.MaBN,BENHNHAN.TenBN,PHIEUDICHVU.ThanhTien from PHIEUKETQUA
+                join PHIEUDICHVU on PHIEUKETQUA.SoPhieuKQ=PHIEUDICHVU.SoPhieuKQ
+                join BENHNHAN on BENHNHAN.MaBN=PHIEUDICHVU.MaBN";
+            string sqlnotnull = $@"select PHIEUKETQUA.SoPhieuKQ,BENHNHAN.MaBN,BENHNHAN.TenBN,PHIEUDICHVU.ThanhTien from PHIEUKETQUA
+                join PHIEUDICHVU on PHIEUKETQUA.SoPhieuKQ=PHIEUDICHVU.SoPhieuKQ
+                join BENHNHAN on BENHNHAN.MaBN=PHIEUDICHVU.MaBN
+                where PHIEUKETQUA.SoPhieuKQ like '%{sophieu}%';";
+            if (!string.IsNullOrEmpty(sophieu))
+            {
+                return database.Execute(sqlnotnull);
+            }
+            else
+            {
+                return database.Execute(sqlnull);
+            }
+            
+        }
     }
 }

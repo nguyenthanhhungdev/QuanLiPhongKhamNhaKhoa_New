@@ -15,7 +15,11 @@ namespace DAO.DAO
             string query = "SELECT * FROM BENHNHAN"; // Thay đổi query tùy theo cấu trúc bảng thực tế của bạn
             return database.Execute(query);
         }
-        
+        public DataTable GetListMaBN(string mabn)
+        {
+            string query = $@"SELECT * FROM BenhNhan where MaBN='{mabn}'";
+            return database.Execute(query);
+        }
         public DataTable GetList()
         {
             string query = "SELECT * FROM BenhNhan ";

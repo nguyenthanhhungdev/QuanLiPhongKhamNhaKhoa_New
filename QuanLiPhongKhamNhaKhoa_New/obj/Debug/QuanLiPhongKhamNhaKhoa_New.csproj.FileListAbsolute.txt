@@ -565,3 +565,5 @@ D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
 D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.GUI.BacSI.ServiceTicketTK.resources
+D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.PayBill.resources
+D:\OneDrive\Tai Lieu\Ngôn Ngữ C #\PhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.XacNhanPay.resources

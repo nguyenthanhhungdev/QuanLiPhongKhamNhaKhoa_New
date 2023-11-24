@@ -289,6 +289,12 @@
     <Compile Include="DTO\DTO\TaiKhamDTO.cs" />
     <Compile Include="DTO\DTO\TiepDonBNDTO.cs" />
     <Compile Include="DTO\DTO\UserDTO.cs" />
+    <Compile Include="PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayForm.Designer.cs">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BacSI\ServiceTicketTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,6 +492,15 @@
     <Compile Include="GUI\BacSI\waitingRoom.Designer.cs">
       <DependentUpon>waitingRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="XacNhanPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XacNhanPay.Designer.cs">
+      <DependentUpon>XacNhanPay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PayForm.resx">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BacSI\MedicalTicket.resx">
       <DependentUpon>MedicalTicket.cs</DependentUpon>
     </EmbeddedResource>
@@ -575,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BacSI\waitingRoom.resx">
       <DependentUpon>waitingRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacNhanPay.resx">
+      <DependentUpon>XacNhanPay.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PhongKhamNhaKhoaDataSet.xsc">
@@ -757,6 +775,9 @@
     <Content Include="Resources\icons8-medical-48-_1_.ico" />
     <Content Include="Resources\icons8-medical-48.ico" />
     <None Include="Resources\icons8-show-property-50.png" />
+    <None Include="Resources\icons8-pay-64.png" />
+    <None Include="Resources\icons8-salary-male-50.png" />
+    <None Include="Resources\icons8-paycheque-50.png" />
     <Content Include="Resources\icons8-ticket-64.png" />
     <Content Include="Resources\icons8-tooth-100-_1_.ico" />
     <Content Include="Resources\icons8-tooth-100.ico" />

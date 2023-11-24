@@ -23,5 +23,9 @@ namespace BUS
         {
             return PDVDAO.GetSoPhieu(maBN);
         }
+        public DataTable getTenBS(string maphieu)
+        {
+            return PDVDAO.getTenBS(maphieu);
+        }
     }
 }

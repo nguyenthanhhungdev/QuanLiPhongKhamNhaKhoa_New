@@ -1,12 +1,7 @@
 ﻿using BUS;
 using DevExpress.XtraEditors.Mask.Design;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +13,9 @@ using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Layout.Properties;
 using iText.Layout.Borders;
+using DocumentFormat.OpenXml.InkML;
+using DTO;
+using Table = iText.Layout.Element.Table;
 
 namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 {
@@ -170,7 +168,12 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     DataRow rowdv = PDVTbl.NewRow();
                     rowdv["SoPhieuDV"] = txtPDV.Text;
                     rowdv["ThanhTien"] = colTTValue;
-                    rowdv["MaBS"] = "BS01";
+                    if (Login.isBs)
+                    {
+                        BacSiDTO bacSiDto = (BacSiDTO)Login.dto;
+                        rowdv["MaBS"] = bacSiDto.Ma; // Thay mã BS bằng mã bác sĩ đăng nhập 
+                    }
+                     
                     rowdv["SoPhieuKQ"] = txtPDV.Text;
                     rowdv["MaBN"]=txtMaBN.Text.Trim();
                     PDVTbl.Rows.Add(rowdv);
@@ -211,7 +214,11 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                         DataRow rowdv = PDVTbl.NewRow();
                         rowdv["SoPhieuDV"] = txtPDV.Text;
                         rowdv["ThanhTien"] = colTTValue;
-                        rowdv["MaBS"] = "BS01";
+                        if (Login.isBs)
+                        {
+                            BacSiDTO bacSiDto = (BacSiDTO)Login.dto;
+                            rowdv["MaBS"] = bacSiDto.Ma; // Thay mã BS bằng mã bác sĩ đăng nhập 
+                        }
                         rowdv["SoPhieuKQ"] = txtPDV.Text;
                         rowdv["MaBN"] = txtMaBN.Text.Trim();
                         PDVTbl.Rows.Add(rowdv);
@@ -258,10 +265,10 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 return;
             }
             SaveFileDialog save = new SaveFileDialog();
-            DateTime time= DateTime.Now;
-            string formattedDateTime = time.ToString("ddMMyyyy HHmmss");
+            //DateTime time= DateTime.Now;
+            //string formattedDateTime = time.ToString("ddMMyyyy");
             save.Filter = "PDF (*.pdf)|*.pdf";
-            string namefile = txtPDV.Text.Trim()+","+txtTen.Text +","+ formattedDateTime;
+            string namefile = txtPDV.Text.Trim()+","+ txtMaBN.Text.Trim() + ","+ txtTen.Text.Trim();
             save.FileName = $"{namefile}.pdf";
             bool ErrorMessage = false;
             save.InitialDirectory = projectFolderPath+@"\PhieuKetQua";
@@ -367,14 +374,6 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
                                     // Đặt chiều rộng của cột dựa trên tỷ lệ phần trăm
                                     cell.SetWidth(UnitValue.CreatePercentValue(columnWidths[j]));
-                                    if (j == row.Cells.Count - 1 && cellValue == "0")
-                                    {
-                                        cellValue = "Tái Khám";
-                                        cell = new Cell().Add(new Paragraph(cellValue)).SetFont(font).SetFontSize(9);
-                                        // Đặt chiều rộng của cột dựa trên tỷ lệ phần trăm
-                                        cell.SetWidth(UnitValue.CreatePercentValue(columnWidths[j]));
-                                    }
-
                                     table.AddCell(cell);
                                 }
                             }

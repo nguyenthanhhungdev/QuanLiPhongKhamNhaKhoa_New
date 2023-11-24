@@ -15,6 +15,9 @@ namespace BUS
         {
             return PKQDAO.insertPKQ(phieukq);   
         }
-        
+        public DataTable GetBill(string sophieu)
+        {
+            return PKQDAO.GetBill(sophieu);
+        }
     }
 }

@@ -414,7 +414,6 @@
             this.listDVChooseRusuft.BackgroundColor = System.Drawing.Color.White;
             this.listDVChooseRusuft.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listDVChooseRusuft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listDVChooseRusuft.Enabled = false;
             this.listDVChooseRusuft.Location = new System.Drawing.Point(3, 18);
             this.listDVChooseRusuft.MultiSelect = false;
             this.listDVChooseRusuft.Name = "listDVChooseRusuft";

@@ -119,5 +119,14 @@ namespace QuanLiPhongKhamNhaKhoa_New
             quanLiDichVu.BringToFront();
             quanLiDichVu.Show();
         }
+
+        private void toolStripPay_Click(object sender, EventArgs e)
+        {
+            PayBill pay=new PayBill();
+            pay.TopLevel = false;
+            Home_Origin.tabPageLeTan.Controls.Add(pay);
+            pay.BringToFront();
+            pay.Show();
+        }
     }
 }

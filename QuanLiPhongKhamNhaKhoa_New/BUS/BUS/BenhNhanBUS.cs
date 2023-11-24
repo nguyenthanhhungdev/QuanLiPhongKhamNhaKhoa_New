@@ -25,5 +25,9 @@ namespace BUS
         {
             return BNDAO.UpdateBN(BNnew);
         }
+        public DataTable GetListMaBN(string mabn)
+        {
+            return BNDAO.GetListMaBN(mabn);
+        }
     }
 }

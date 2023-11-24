@@ -415,9 +415,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 string[] nameAndNumber = fileName.Split(',');
 
                 // Lấy phần "name" (phần tử đầu tiên trong mảng)
-                string name = nameAndNumber[0];
+                string name = nameAndNumber[1];
                 string sophieukqnew = PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString();
-
+                //MessageBox.Show("Tên:"+name.Trim() + "/"+ txtTen.Text.Trim());
                 if (name.Trim().Equals(txtTen.Text.Trim()))
                 {
                     //MessageBox.Show("Tên giống nhau");
@@ -425,7 +425,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     {
                         // Bỏ đi chuỗi "Số Phiếu Kết Quả:" và lấy giá trị còn lại
                         maphieukq = firstLine.Replace("Số Phiếu Kết Quả:", "").Trim();
-                        MessageBox.Show("Mã PKQ: "+sophieukqnew+"="+maphieukq);
+                        //MessageBox.Show("Mã PKQ: "+sophieukqnew+"="+maphieukq);
                         if (maphieukq.Equals(sophieukqnew))
                         {
 
@@ -467,6 +467,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                                 pdfData.Rows.Add(newRow);
                             }
                             isPDFFormVisible = true;
+                            MessageBox.Show("Chọn Thành Công!");
                         }
                         else
                         {
