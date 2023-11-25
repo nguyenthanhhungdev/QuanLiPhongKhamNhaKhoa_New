@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -25,11 +27,26 @@ namespace BUS
         {
             return TDDAO.LayDSTiepDon();
         }
-
-        //Thêm tiếp đón
-        public void ThemTiepDon(string maNV, string maBN, string maP, string ngay, string tinhTrang)
+        public DataTable LayDSTiepDon(string mabn)
         {
-            TDDAO.ThemTiepDon(maNV, maBN, maP, ngay, tinhTrang);
+            return TDDAO.LayDSTiepDon(mabn);
         }
+        //Thêm tiếp đón
+        public bool ThemTiepDon(string maNV, string maBN, string maP, string ngay, string tinhTrang)
+        {
+            DataTable dstd = LayDSTiepDon(maBN);
+            //System.Windows.MessageBox.Show(dstd.Rows.Count.ToString());
+            if (dstd.Rows.Count == 0)
+            {
+                TDDAO.ThemTiepDon(maNV, maBN, maP, ngay, tinhTrang);
+                return true;
+            } else
+            {
+                return false;
+            }
+            
+            
+        }
+        
     }
 }

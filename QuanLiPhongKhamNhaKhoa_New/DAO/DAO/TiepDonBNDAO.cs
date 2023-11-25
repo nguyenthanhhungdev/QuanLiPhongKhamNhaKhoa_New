@@ -67,7 +67,21 @@ namespace DAO
         //Lấy danh sách tiếp đón
         public DataTable LayDSTiepDon()
         {
-            string sql = "SELECT TenPhong, TenBN, NgayKham, TinhTrang\r\nFROM ((BENHNHAN A join TIEPDONBN B on A.MaBN = B.MaBN) join PHONGKHAM C on B.MaPhong = C.MaPhong) left join PHIEUDICHVU D on A.MaBN = D.MaBN WHERE DAY(NgayKham) = DAY(GETDATE())";
+            string sql = "SELECT TenPhong, TenBN, NgayKham, B.TinhTrang " +
+                "FROM ((BENHNHAN A join TIEPDONBN B on A.MaBN = B.MaBN) join PHONGKHAM C on B.MaPhong = C.MaPhong) " +
+                "WHERE DAY(NgayKham) = DAY(GETDATE())";
+            //MessageBox.Show(sql);
+            DataTable dt = database.Execute(sql);
+            return dt;
+        }
+
+        public DataTable LayDSTiepDon(string maBN)
+        {
+            string sql = "SELECT TenPhong, TenBN, NgayKham, B.TinhTrang " +
+                "FROM ((BENHNHAN A join TIEPDONBN B on A.MaBN = B.MaBN) join PHONGKHAM C on B.MaPhong = C.MaPhong) " +
+                "WHERE DAY(NgayKham) = DAY(GETDATE())" +
+                " AND B.MaBN ='" + maBN + "'";
+            MessageBox.Show(sql);
             DataTable dt = database.Execute(sql);
             return dt;
         }
@@ -75,6 +89,7 @@ namespace DAO
         //Thêm tiếp đón
         public void ThemTiepDon(string maNV, string maBN, string maP, string ngayKham, string tinhTrang)
         {
+            //MessageBox.Show("thông tin tiếp đoán: ");
             string sql = string.Format("INSERT INTO TIEPDONBN VALUES('{0}', '{1}', '{2}', '{3}', N'{4}')", maNV, maBN, maP, ngayKham, tinhTrang);
             database.ExecuteNonQuery(sql);
         }

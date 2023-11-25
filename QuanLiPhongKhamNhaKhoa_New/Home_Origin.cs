@@ -125,8 +125,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             PayBill pay=new PayBill();
             pay.TopLevel = false;
-            Home_Origin.tabPageLeTan.Controls.Add(pay);
+            tabPageLeTan.Controls.Add(pay);
             pay.BringToFront();
+            pay.Dock = DockStyle.Fill;
             pay.Show();
         }
 
@@ -138,6 +139,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
             home.BringToFront();
             home.Dock = DockStyle.Fill;
             home.Show();
+        }
+
+        private void toolStripLabelThemBN_Click(object sender, EventArgs e)
+        {
+            HomeThemBN addhome = new HomeThemBN();
+            addhome.TopLevel = false;
+            tabPageLeTan.Controls.Add(addhome);
+            addhome.BringToFront();
+            addhome.Dock = DockStyle.Fill;
+            addhome.Show();
         }
     }
 }

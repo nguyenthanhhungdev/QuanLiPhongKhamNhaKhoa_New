@@ -482,11 +482,14 @@
             // 
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(-4, 5);
+            this.btnThem.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_add_30;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(100, 5);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(351, 31);
+            this.btnThem.Size = new System.Drawing.Size(247, 31);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm vào danh sách tiếp đón";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -671,11 +674,14 @@
             // 
             this.btnLammoi.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLammoi.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_rotate_right_26;
+            this.btnLammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLammoi.Location = new System.Drawing.Point(945, 0);
             this.btnLammoi.Name = "btnLammoi";
             this.btnLammoi.Size = new System.Drawing.Size(116, 36);
             this.btnLammoi.TabIndex = 1;
             this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLammoi.UseVisualStyleBackColor = true;
             this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 

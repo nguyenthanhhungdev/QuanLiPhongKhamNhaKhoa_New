@@ -18,7 +18,8 @@ namespace DAO
             string ketluan = row["KetLuan"].ToString();
             string Sophieu = row["SoPhieuKQ"].ToString();
             string MaTK = row["MaTK"].ToString();
-            string query = $"INSERT INTO PHIEUKETQUA VALUES('{Sophieu}','{ketluan}',NULLIF('{MaTK}', ''))";
+            bool tinhtrang = Convert.ToBoolean(row["TinhTrang"].ToString());
+            string query = $"INSERT INTO PHIEUKETQUA VALUES('{Sophieu}','{ketluan}',NULLIF('{MaTK}', ''),'{tinhtrang}')";
             int rowsAffected = database.ExecuteNonQueryInt(query);
             if (rowsAffected > 0)
             {

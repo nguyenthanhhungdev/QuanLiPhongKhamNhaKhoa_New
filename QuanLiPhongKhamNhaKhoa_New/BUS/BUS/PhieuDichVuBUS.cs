@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows;
 
 namespace BUS
 {
@@ -28,7 +29,7 @@ namespace BUS
             return PDVDAO.getTenBS(maphieu);
         }
 
-        public string LayMaTK(string maBN)
+        public DataTable LayMaTK(string maBN)
         {
             return PDVDAO.LayMaTK(maBN);
         }

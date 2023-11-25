@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DocumentFormat.OpenXml.Spreadsheet;
 using QuanLiPhongKhamNhaKhoa_New.BUS.BUS;
 using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 using System;
@@ -16,6 +17,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
     public partial class HomeTraCuuBN : Form
     {
         BenhNhanBUS bn = new BenhNhanBUS();
+        PhieuDichVuBUS phdv = new PhieuDichVuBUS();
         public HomeTraCuuBN()
         {
             InitializeComponent();
@@ -67,7 +69,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 HienThiDSBenhNhan(txtMaBN.Text, txtTenBN.Text, txtCMND.Text, txtSDT.Text);
                 if (dataGridView1.Rows.Count == 0)
                 {
-                    DialogResult dr = MessageBox.Show("Không có thông tin bệnh nhân bạn muốn tìm", "Bạn có muốn thêm mới bệnh nhân không?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DialogResult dr = MessageBox.Show("Không tìm thấy bệnh nhân", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.Yes)
                     {
                         HienThiDSBenhNhan();
@@ -90,21 +92,78 @@ namespace QuanLiPhongKhamNhaKhoa_New
         {
             if (dataGridView1.SelectedRows != null && dataGridView1.SelectedRows.Count > 0)
             {
+
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
-                HomeThemBN formThemBN = new HomeThemBN(row.Cells["MaBN"].Value.ToString(),
+                string tinhTrang = "";
+                
+                try
+                {
+                    DataTable tt = phdv.LayMaTK(row.Cells["MaBN"].Value.ToString());
+                    if (tt.Rows.Count == 0)
+                    {
+                        tinhTrang = "Khám";
+                        HomeThemBN formThemBN = new HomeThemBN(row.Cells["MaBN"].Value.ToString(),
                         row.Cells["TenBN"].Value.ToString(),
                         row.Cells["CMND"].Value.ToString(),
                         row.Cells["DiaChi"].Value.ToString(),
                         row.Cells["NgSinh"].Value.ToString(),
                         row.Cells["SDT"].Value.ToString(),
                         row.Cells["BenhLy"].Value.ToString(),
-                        row.Cells["GioiTinh"].Value.ToString());
+                        row.Cells["GioiTinh"].Value.ToString(), tinhTrang);
 
-                formThemBN.TopLevel = false;
-                Home_Origin.tabPageLeTan.Controls.Add(formThemBN);
-                formThemBN.Dock = DockStyle.Fill;
-                formThemBN.Show();
-                formThemBN.BringToFront();
+                        formThemBN.TopLevel = false;
+                        Home_Origin.tabPageLeTan.Controls.Add(formThemBN);
+                        formThemBN.Dock = DockStyle.Fill;
+                        formThemBN.Show();
+                        formThemBN.BringToFront();
+                    }
+                    else
+                    {
+                        DateTime date = DateTime.Now;
+                        string formattedDateNow = date.ToString("yyyyMMdd");
+                        DateTime ngaytk = Convert.ToDateTime(tt.Rows[0]["NgayTK"]);
+
+                        string formattedDateTK = ngaytk.ToString("yyyyMMdd");
+
+
+                        if (int.Parse(formattedDateTK) > int.Parse(formattedDateNow))
+                        {
+                            MessageBox.Show("Bệnh Nhân Đến Tái Khám Sớm!");
+                            return;
+                        }
+                        else if (int.Parse(formattedDateTK) < int.Parse(formattedDateNow))
+                        {
+                            MessageBox.Show("Bệnh Nhân Quá Hạn Tái Khám!");
+                            return;
+                        }
+                        else
+                        {
+                            tinhTrang = "Tái Khám";
+                            HomeThemBN formThemBN = new HomeThemBN(row.Cells["MaBN"].Value.ToString(),
+                            row.Cells["TenBN"].Value.ToString(),
+                            row.Cells["CMND"].Value.ToString(),
+                            row.Cells["DiaChi"].Value.ToString(),
+                            row.Cells["NgSinh"].Value.ToString(),
+                            row.Cells["SDT"].Value.ToString(),
+                            row.Cells["BenhLy"].Value.ToString(),
+                            row.Cells["GioiTinh"].Value.ToString(), tinhTrang);
+
+                            formThemBN.TopLevel = false;
+                            Home_Origin.tabPageLeTan.Controls.Add(formThemBN);
+                            formThemBN.Dock = DockStyle.Fill;
+                            formThemBN.Show();
+                            formThemBN.BringToFront();
+                        }
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex + "");
+                }
+
+                
             }
         }
 
@@ -130,5 +189,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             txtSDT.Text = "";
             HienThiDSBenhNhan();
         }
+
+        
     }
 }

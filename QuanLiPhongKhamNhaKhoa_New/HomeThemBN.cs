@@ -21,6 +21,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
         public HomeThemBN()
         {
             InitializeComponent();
+            HienThiDSTiepDon();
         }
         private bool IsCurrentTimeAM()
         {
@@ -33,10 +34,10 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
             return currentTime.Hour > 15 && currentTime.Hour < 23;
         }
 
-        public HomeThemBN(string maBN, string tenBN, string cmnd, string diachi, string ngaysinh, string sdt, string benhLy, string gioiTinh)
+        public HomeThemBN(string maBN, string tenBN, string cmnd, string diachi, string ngaysinh, string sdt, string benhLy, string gioiTinh, string tinhTrang)
         {
             InitializeComponent();
-
+            
             // Kiểm tra null trước khi gán giá trị cho TextBox
             txtMaBN.Text = maBN ?? string.Empty;
             txtTenBN.Text = tenBN ?? string.Empty;
@@ -60,26 +61,12 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
                 rdNu.Checked = true;
                 rdNam.Checked = false;
             }
-
-            try
-            {
-                string tt = phdv.LayMaTK(maBN);
-                if (tt != "")
-                {
-                    txtTinhTrang.Text = "Tái Khám";
-                }
-                else
-                {
-                    txtTinhTrang.Text = "Khám";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "");
-            }
-
+            txtTinhTrang.Text = tinhTrang;
             HienThiDSTiepDon();
             HienThiPhongKham();
+
+
+
         }
 
         void HienThiDSTiepDon()
@@ -98,29 +85,65 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
             {
                 caLam = "Tối";
             }
+            
             cboPhong.DataSource = ph.LayDSPhong(caLam);
             cboPhong.DisplayMember = "TenPhong";
             cboPhong.ValueMember = "MaPhong";
+            
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
+            txtMaBN.Text = "";
             txtTenBN.Text = "";
             txtCMND.Text = "";
             txtDiaChi.Text = "";
+            txtBenhLy.Text = "";
             dtpNgaySinh.Value = DateTime.Now;
             txtSDT.Text = "";
+            txtTinhTrang.Text = "";
             dataGridView1.ClearSelection();
             ActiveControl = null;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string ngay = String.Format("{0:MM/dd/yyyy}", DateTime.Now);
-            td.ThemTiepDon(txtMaNV.Text, txtMaBN.Text, cboPhong.SelectedValue.ToString(), ngay, txtTinhTrang.Text);
-            MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HienThiDSTiepDon();
-            HienThiPhongKham();
+            if (!txtMaBN.Text.Trim().Equals("") &&  !txtMaNV.Text.ToString().Trim().Equals(""))
+            {
+                string ngay = String.Format("{0:MM/dd/yyyy}", DateTime.Now);
+                if (!string.IsNullOrEmpty(cboPhong.SelectedValue?.ToString()))
+                {
+                    if (td.ThemTiepDon(txtMaNV.Text, txtMaBN.Text, cboPhong.SelectedValue.ToString(), ngay, txtTinhTrang.Text))
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo");
+                        txtMaBN.Text = "";
+                        txtTenBN.Text = "";
+                        txtCMND.Text = "";
+                        txtDiaChi.Text = "";
+                        txtBenhLy.Text = "";
+                        dtpNgaySinh.Value = DateTime.Now;
+                        txtSDT.Text = "";
+                        txtTinhTrang.Text = "";
+                        dataGridView1.ClearSelection();
+                        ActiveControl = null;
+                        HienThiDSTiepDon();
+                        HienThiPhongKham();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bệnh nhân đã được tiếp đón", "Thông báo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có phòng trống!");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Phải thực hiện tra cứu bệnh nhân!");
+            }    
         }
     }
 }

@@ -405,6 +405,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
                 // Gọi hàm để đọc văn bản từ tệp PDF
                 string result = ReadTextAfterKeyword(selectedFilePath, "Số Phiếu Kết Quả:");
+                //MessageBox.Show(result);
                 string[] lines = result.Trim().Split('\n');
                 madv = new String[lines.Length-1];
                 sldv = new String[lines.Length-1];
@@ -415,7 +416,8 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 string[] nameAndNumber = fileName.Split(',');
 
                 // Lấy phần "name" (phần tử đầu tiên trong mảng)
-                string name = nameAndNumber[1];
+                string name = nameAndNumber[2].Replace(".pdf","");
+                MessageBox.Show(PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString());
                 string sophieukqnew = PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString();
                 //MessageBox.Show("Tên:"+name.Trim() + "/"+ txtTen.Text.Trim());
                 if (name.Trim().Equals(txtTen.Text.Trim()))
@@ -479,7 +481,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                 }
                 else
                 {
-                    MessageBox.Show("Chọn Đúng Tên Bệnh Nhân!");
+                    MessageBox.Show("Chọn Sai Tên Bệnh Nhân!");
                     return;
                 }
 

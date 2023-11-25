@@ -52,6 +52,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             PKQTbl.Columns.Add("SoPhieuKQ", typeof(String));
             PKQTbl.Columns.Add("KetLuan", typeof(String));
             PKQTbl.Columns.Add("MaTK", typeof(String));
+            PKQTbl.Columns.Add("TinhTrang", typeof(bool));
             PDVTbl.Columns.Add("SoPhieuDV", typeof(String));
             PDVTbl.Columns.Add("ThanhTien", typeof(String));
             PDVTbl.Columns.Add("MaBS", typeof(string));

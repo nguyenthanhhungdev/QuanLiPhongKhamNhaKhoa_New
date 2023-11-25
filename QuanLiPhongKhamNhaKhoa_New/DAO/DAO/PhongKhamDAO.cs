@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DAO
 {
@@ -50,7 +52,14 @@ namespace DAO
         //Lấy danh sách phòng trống
         public DataTable LayDSPhongTrong(string caLam)
         {
-            string sql = "SELECT PHONGKHAM.MaPhong, TenPhong, MaBS FROM BACSI  JOIN PHONGKHAM ON  BACSI.MaPhong = PHONGKHAM.MaPhong \r\nWHERE CaLam = N'" + caLam + "' AND TenPhong NOT IN\r\n(SELECT DISTINCT TenPhong AS SoLuongBN FROM PHONGKHAM LEFT JOIN TIEPDONBN \r\nON PHONGKHAM.MaPhong = TIEPDONBN.MaPhong\r\nWHERE DAY(NgayKham) = DAY(GETDATE()) AND (TinhTrang = N'Tái Khám' OR TinhTrang = N'Khám') \r\nGROUP BY TenPhong, NgayKham\r\nHAVING COUNT(MaBN) != 0)";
+            string sql = "SELECT PHONGKHAM.MaPhong, TenPhong, MaBS FROM BACSI  JOIN PHONGKHAM ON  BACSI.MaPhong = PHONGKHAM.MaPhong " +
+                " WHERE CaLam = N'" + caLam + "' AND TenPhong NOT IN " +
+                " (SELECT DISTINCT TenPhong AS SoLuongBN FROM PHONGKHAM LEFT JOIN TIEPDONBN " +
+                " ON PHONGKHAM.MaPhong = TIEPDONBN.MaPhong " +
+                " WHERE DAY(NgayKham) = DAY(GETDATE()) AND (TinhTrang = N'Tái Khám' OR TinhTrang = N'Khám') " +
+                " GROUP BY TenPhong, NgayKham " +
+                " HAVING COUNT(MaBN) >= 4)";
+            //MessageBox.Show(sql);
             DataTable dt = database.Execute(sql);
             return dt;
         }

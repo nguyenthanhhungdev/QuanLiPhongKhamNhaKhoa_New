@@ -817,12 +817,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-choose-24.png" />
+    <None Include="Resources\icons8-add-30.png" />
+    <None Include="Resources\icons8-edit.gif" />
+    <None Include="Resources\icons8-exit-64.png" />
     <Content Include="Resources\icons8-medical-48-_1_.ico" />
     <Content Include="Resources\icons8-medical-48.ico" />
     <None Include="Resources\icons8-show-property-50.png" />
     <None Include="Resources\icons8-pay-64.png" />
     <None Include="Resources\icons8-salary-male-50.png" />
     <None Include="Resources\icons8-paycheque-50.png" />
+    <None Include="Resources\icons8-refresh-48.png" />
+    <None Include="Resources\icons8-rotate-right-26.png" />
+    <None Include="Resources\icons8-search-16.png" />
+    <None Include="Resources\icons8-refresh-64.png" />
+    <None Include="Resources\icons8-send-file-64.png" />
     <Content Include="Resources\icons8-ticket-64.png" />
     <Content Include="Resources\icons8-tooth-100-_1_.ico" />
     <Content Include="Resources\icons8-tooth-100.ico" />

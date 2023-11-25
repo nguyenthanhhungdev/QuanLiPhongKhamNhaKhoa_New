@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listPhieuKQ)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -77,6 +78,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox2.Controls.Add(this.txtTenBS);
             this.groupBox2.Controls.Add(this.label9);
@@ -121,9 +124,9 @@
             // 
             // txtTT
             // 
+            this.txtTT.Enabled = false;
             this.txtTT.Location = new System.Drawing.Point(814, 112);
             this.txtTT.Name = "txtTT";
-            this.txtTT.ReadOnly = true;
             this.txtTT.Size = new System.Drawing.Size(164, 22);
             this.txtTT.TabIndex = 13;
             // 
@@ -268,7 +271,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnPay);
             this.groupBox1.Controls.Add(this.txtFind);
             this.groupBox1.Controls.Add(this.label1);
@@ -279,14 +285,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thao Tác";
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_refresh_64;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(676, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 53);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Load";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnPay
             // 
+            this.btnPay.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_paycheque_50;
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(815, 21);
+            this.btnPay.Location = new System.Drawing.Point(839, 18);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(163, 47);
+            this.btnPay.Size = new System.Drawing.Size(163, 53);
             this.btnPay.TabIndex = 2;
             this.btnPay.Text = "Thanh Toán";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -297,6 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1029, 630);
             this.ControlBox = false;
@@ -339,5 +361,6 @@
         private System.Windows.Forms.TextBox txtTenBS;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using QuanLiPhongKhamNhaKhoa_New.DAO.DAO;
 
 namespace DAO
@@ -55,10 +56,14 @@ namespace DAO
         }
 
         //Lấy mã tái khám
-        public string LayMaTK(string maBN)
+        public DataTable LayMaTK(string maBN)
         {
-            string sql = "SELECT TOP 1 MaTK\r\nFROM PHIEUDICHVU A, PHIEUKETQUA B, TIEPDONBN C\r\nWHERE A.SoPhieuKQ = B.SoPhieuKQ AND A.MaBN = C.MaBN AND C.MaBN = '" + maBN + "'\r\nORDER BY NgayKham DESC";
-            return database.ExecuteScalarStr(sql);
+            string sql = $@"SELECT TOP 1 D.MaTK, NgayTK
+                FROM PHIEUDICHVU A, PHIEUKETQUA B, TIEPDONBN C, TAIKHAM D
+                WHERE A.SoPhieuKQ = B.SoPhieuKQ AND A.MaBN = C.MaBN AND B.MaTK = D.MaTK AND C.MaBN = '{maBN}' 
+                ORDER BY NgayKham DESC ";
+            //MessageBox.Show(sql);
+            return database.Execute(sql);
         }
     }
 }

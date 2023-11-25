@@ -41,7 +41,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 // Ngược lại, truyền giá trị từ TextBox vào GetBill
                 pkqTbl = PKQBUS.GetBill(txtFind.Text.Trim());
             }
-            if (pkqTbl.Rows.Count == 0)
+            /*if (pkqTbl.Rows.Count == 0)
             {
                 // Nếu rỗng, thêm một dòng thông báo vào DataTable
                 DataRow newRow = pkqTbl.NewRow();
@@ -49,7 +49,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 newRow["TenBN"] = DBNull.Value;
                 newRow["ThanhTien"] = DBNull.Value;
                 pkqTbl.Rows.Add(newRow);
-            }
+            }*/
             listPhieuKQ.DataSource = pkqTbl;
         }
         private void TextBox1_Enter(object sender, EventArgs e)
@@ -95,6 +95,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 xacNhanPay.txtGive.Text = "0";
                 xnPay.StartPosition = FormStartPosition.CenterScreen;
                 xnPay.ShowDialog();
+
             }
             else
             {
@@ -133,6 +134,19 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 txtSdt.Text = "";
                 txtCmnd.Text = "";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showTableKQ();
+            txtSoPhieu.Text = "";
+            txtTenBS.Text = "";
+            txtMaBN.Text = "";
+            txtTT.Text = "";
+            txtTenBN.Text = "";
+            txtNgS.Text = "";
+            txtSdt.Text = "";
+            txtCmnd.Text = "";
         }
     }
 }

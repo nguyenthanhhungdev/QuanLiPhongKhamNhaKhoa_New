@@ -196,5 +196,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Lỗi xuất Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

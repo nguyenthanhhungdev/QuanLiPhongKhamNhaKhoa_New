@@ -14,9 +14,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
     public partial class XacNhanPay : UserControl
     {
         private readonly PhieuKetQuaBUS PKQBUS = new PhieuKetQuaBUS();
+        public static bool isCheckclick;
         public XacNhanPay()
         {
-            InitializeComponent();
+            InitializeComponent(); ;
+            isCheckclick = false;
         }
 
         private void txtGive_TextChanged(object sender, EventArgs e)
@@ -67,13 +69,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
                         MessageBox.Show("Tiền thối: " + txtGive.Text);
                     }
                     MessageBox.Show("Thanh toán thành công!");
-                    this.Dispose();
-                } else
+                    isCheckclick = true;
+                } 
+                else
                 {
                     MessageBox.Show("Thanh toán thất bại!");
                 }
                 
-            } else
+            } 
+            else
             {
                 MessageBox.Show("Phải thanh toán đủ tiền");
             }

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QuanLiPhongKhamNhaKhoa_New",
+    "\\QuanLiPhongKhamNhaKhoa_New\\DAO",
+    "\\QuanLiPhongKhamNhaKhoa_New\\DAO\\DAO"
   ],
-  "SelectedNode": "\\QuanLiPhongKhamNhaKhoa_New.sln",
+  "SelectedNode": "\\QuanLiPhongKhamNhaKhoa_New\\HomeThemBN.cs",
   "PreviewInSolutionExplorer": false
 }
