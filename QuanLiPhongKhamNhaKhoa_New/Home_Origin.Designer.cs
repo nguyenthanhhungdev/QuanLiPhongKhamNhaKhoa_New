@@ -1,4 +1,6 @@
-﻿namespace QuanLiPhongKhamNhaKhoa_New
+﻿using System;
+
+namespace QuanLiPhongKhamNhaKhoa_New
 {
     partial class Home_Origin
     {
@@ -399,7 +401,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-
+            this.Load += new EventHandler(loading_Home);
         }
 
         #endregion

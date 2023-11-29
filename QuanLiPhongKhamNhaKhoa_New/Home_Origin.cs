@@ -150,5 +150,30 @@ namespace QuanLiPhongKhamNhaKhoa_New
             addhome.Dock = DockStyle.Fill;
             addhome.Show();
         }
+
+        private void loading_Home(object sender, EventArgs e)
+        {
+            if (Login.hasLogin)
+            {
+                if (Login.isAdmin && Login.isBs)
+                {
+                    tabControl1.TabPages[1].Hide();
+                }
+
+                if (Login.isBs && !Login.isAdmin)
+                {
+                    tabControl1.TabPages[1].Hide();
+                    tabControl1.TabPages[2].Hide();
+                    tabControl1.TabPages[4].Hide();
+                }
+
+                if (!Login.isBs && !Login.isAdmin)
+                {
+                    tabControl1.TabPages[0].Hide();
+                    tabControl1.TabPages[2].Hide();
+                    tabControl1.TabPages[4].Hide();
+                }
+            }
+        }
     }
 }
