@@ -102,7 +102,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                   bacSiDto.DiaChi = row.Field<string>("DiaChi");
                   bacSiDto.NgSinh = row.Field<DateTime>("NgSinh");
                   bacSiDto.Sdt = row.Field<string>("SDT");
-                  bacSiDto.Email = row.Field<string>("SDT");
+                  bacSiDto.Email = row.Field<string>("Email");
                   bacSiDto.GioiTinh = row.Field<string>("GioiTinh");
                   bacSiDto.CaLam = row.Field<string>("CaLam");
                   bacSiDto.MatKhau = row.Field<string>("MatKhau");
@@ -125,12 +125,12 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                   DataRow row = (DataRow) enumerator.Current;
                   NhanVienDTO nhanVienDto = new NhanVienDTO();
-                  nhanVienDto.Ma = row.Field<string>("MaBS");
-                  nhanVienDto.Ten = row.Field<string>("TenBS");
+                  nhanVienDto.Ma = row.Field<string>("MaNV");
+                  nhanVienDto.Ten = row.Field<string>("TenNV");
                   nhanVienDto.DiaChi = row.Field<string>("DiaChi");
                   nhanVienDto.NgSinh = row.Field<DateTime>("NgSinh");
                   nhanVienDto.Sdt = row.Field<string>("SDT");
-                  nhanVienDto.Email = row.Field<string>("SDT");
+                  nhanVienDto.Email = row.Field<string>("Email");
                   nhanVienDto.GioiTinh = row.Field<string>("GioiTinh");
                   nhanVienDto.CaLam = row.Field<string>("CaLam");
                   nhanVienDto.MatKhau = row.Field<string>("MatKhau");
