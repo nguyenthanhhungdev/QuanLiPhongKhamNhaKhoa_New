@@ -261,6 +261,8 @@
     <Compile Include="BUS\BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\BUS\PhieuKetQuaBUS.cs" />
     <Compile Include="BUS\BUS\PhongKhamBUS.cs" />
+    <Compile Include="BUS\BUS\ThongKeBUS.cs" />
+    <Compile Include="DAO\DAO\ThongKeDAO.cs" />
     <Compile Include="SuaBN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -509,6 +511,12 @@
     </Compile>
     <Compile Include="ThemPhongKham.Designer.cs">
       <DependentUpon>ThemPhongKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="TraCuuBenhNhan.cs">
       <SubType>Form</SubType>
