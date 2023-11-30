@@ -13,9 +13,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class Login : Form
     {
-        public static bool isBs = false;
-        public static bool hasLogin = false;
-        public static bool isAdmin = false;
+        public static bool isBs;
+        public static bool hasLogin;
+        public static bool isAdmin;
         public static UserDTO dto;
         public Login()
         {
@@ -143,10 +143,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                   disposable.Dispose();
               }
             }
+
             int num2_1 = (int) MessageBox.Show("ĐĂNG NHẬP THÀNH CÔNG");
+            hasLogin = true;
             this.Hide();
             new Home_Origin().Show();
-            Login.hasLogin = true;
             this.write();
           }
         }

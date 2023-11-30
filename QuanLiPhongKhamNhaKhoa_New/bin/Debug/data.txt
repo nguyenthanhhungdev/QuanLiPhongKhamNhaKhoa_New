@@ -1,6 +1,6 @@
 ﻿true
-BS01
-123
-uocthuan2003
+BS02
+taibui
+thuan2003
 
            
