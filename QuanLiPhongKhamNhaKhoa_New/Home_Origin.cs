@@ -40,7 +40,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             panel1.Controls.Add(quanLiBacSi);
             quanLiBacSi.BringToFront();
             quanLiBacSi.Show();
-
         }
 
         private void toolStripLabelQLNV_Click(object sender, EventArgs e)
@@ -90,7 +89,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
             serviceform.Show();
         }
 
-        
 
         private void toolStripResuft_Click(object sender, EventArgs e)
         {
@@ -123,7 +121,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void toolStripPay_Click(object sender, EventArgs e)
         {
-            PayBill pay=new PayBill();
+            PayBill pay = new PayBill();
             pay.TopLevel = false;
             tabPageLeTan.Controls.Add(pay);
             pay.BringToFront();
@@ -157,21 +155,21 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 if (Login.isAdmin && Login.isBs)
                 {
-                    tabControl1.TabPages[1].Hide();
+                    tabControl1.TabPages.Remove(tabPageLeTan);
                 }
 
                 if (Login.isBs && !Login.isAdmin)
                 {
-                    tabControl1.TabPages[1].Hide();
-                    tabControl1.TabPages[2].Hide();
-                    tabControl1.TabPages[4].Hide();
+                    tabControl1.TabPages.Remove(tabPageLeTan);
+                    tabControl1.TabPages.Remove(tabPageQuanLi);
+                    tabControl1.TabPages.Remove(tabPageThongKe);
                 }
 
                 if (!Login.isBs && !Login.isAdmin)
                 {
-                    tabControl1.TabPages[0].Hide();
-                    tabControl1.TabPages[2].Hide();
-                    tabControl1.TabPages[4].Hide();
+                    tabControl1.TabPages.Remove(tabBacSi);
+                    tabControl1.TabPages.Remove(tabPageQuanLi);
+                    tabControl1.TabPages.Remove(tabPageThongKe);
                 }
             }
         }
