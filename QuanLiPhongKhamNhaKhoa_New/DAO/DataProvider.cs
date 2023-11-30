@@ -17,7 +17,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO
             try
             {
                 connection = new SqlConnection(
-                    @"Data Source=DESKTOP-CQKNKFS\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;Persist Security Info=True;User ID=sa;Password=1405hung");
+                    @"Data Source=LAPTOP-91RK5R5L\SQLEXPRESS;Initial Catalog=PhongKhamNhaKhoa;Persist Security Info=True;User ID=sa;Password=123456");
             }
             catch (SqlException e)
             {

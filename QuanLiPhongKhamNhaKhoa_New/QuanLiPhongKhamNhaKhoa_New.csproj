@@ -263,6 +263,12 @@
     <Compile Include="BUS\BUS\PhongKhamBUS.cs" />
     <Compile Include="BUS\BUS\ThongKeBUS.cs" />
     <Compile Include="DAO\DAO\ThongKeDAO.cs" />
+    <Compile Include="PhongKhamNhaKhoaDataSet.cs">
+      <DependentUpon>PhongKhamNhaKhoaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhaKhoaDataSet.cs">
+      <DependentUpon>QuanLyNhaKhoaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SuaBN.cs">
       <SubType>Form</SubType>
     </Compile>

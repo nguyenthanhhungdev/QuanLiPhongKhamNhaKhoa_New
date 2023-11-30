@@ -14,7 +14,7 @@ namespace ThongKe
     {
         public DataTable getLoaiDichVu(string fDay, string lDay, string tenDV)
         {
-            string query = "select LEFT(pdv.SoPhieuDV,6) AS [Ngày lập]   , TenDV AS [Tên dịch vụ] , TenBN AS [Tên bệnh nhân] , SoLuong AS [Số lượng], Gia AS [Giá], (Gia * SoLuong) as ThanhTien\r\nfrom ((PHIEUDICHVU as pdv join CT_DICHVU as ct on pdv.SoPhieuDV = ct.SoPhieuDV)join DICHVU as dv on dv.MaDV = ct.MaDV) join BENHNHAN as bn on bn.MaBN = pdv.MaBN\r\nwhere CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) >= '" + fDay + "' and  CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) <= '" + lDay + "' and dv.TenDV = '" + tenDV + "'";
+            string query = "select LEFT(pdv.SoPhieuDV,6) AS [Ngày lập]   , TenDV AS [Tên dịch vụ] , TenBN AS [Tên bệnh nhân] , SoLuong AS [Số lượng], Gia AS [Giá], (Gia * SoLuong) as ThanhTien\r\nfrom ((PHIEUDICHVU as pdv join CT_DICHVU as ct on pdv.SoPhieuDV = ct.SoPhieuDV)join DICHVU as dv on dv.MaDV = ct.MaDV) join BENHNHAN as bn on bn.MaBN = pdv.MaBN\r\nwhere CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) >= '" + fDay + "' and  CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) <= '" + lDay + "' and dv.TenDV = N'" + tenDV + "'";
             return DataProvider.ExecuteQuery(query);
         }
         public DataTable getAll(string fDay, string lDay)
@@ -33,7 +33,7 @@ namespace ThongKe
 
         public DataTable getTongTienTungDV(string fDay, string lDay, string tenDV)
         {
-            string query = "select SUM(SoLuong*Gia) as ThanhTien\r\nfrom ((PHIEUDICHVU as pdv join CT_DICHVU as ct on pdv.SoPhieuDV = ct.SoPhieuDV)join DICHVU as dv on dv.MaDV = ct.MaDV) join BENHNHAN as bn on bn.MaBN = pdv.MaBN\r\nwhere CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) >= '" + fDay + "' and  CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) <= '" + lDay + "' and dv.TenDV = '" + tenDV + "'\r\ngroup by TenDV";
+            string query = "select SUM(SoLuong*Gia) as ThanhTien\r\nfrom ((PHIEUDICHVU as pdv join CT_DICHVU as ct on pdv.SoPhieuDV = ct.SoPhieuDV)join DICHVU as dv on dv.MaDV = ct.MaDV) join BENHNHAN as bn on bn.MaBN = pdv.MaBN\r\nwhere CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) >= '" + fDay + "' and  CONVERT(DATE,CONVERT(varchar(10),CONCAT(SUBSTRING(pdv.SoPhieuDV,5,2),SUBSTRING(pdv.SoPhieuDV,3,2),SUBSTRING(pdv.SoPhieuDV,1,2)))) <= '" + lDay + "' and dv.TenDV = N'" + tenDV + "'\r\ngroup by TenDV";
             return DataProvider.ExecuteQuery(query);
         }
 

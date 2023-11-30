@@ -175,7 +175,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             addhome.Show();
         }
 
-<<<<<<< HEAD
+
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
             ThongKe tk = new ThongKe();
@@ -199,38 +199,13 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void toolStripLabelTDMK_Click(object sender, EventArgs e)
         {
-            ThayDoiMatKhau tdmk=new ThayDoiMatKhau();
+            ThayDoiMatKhau tdmk = new ThayDoiMatKhau();
             //tabPageCaNhan.Controls.Clear();
             tdmk.TopLevel = false;
             tabPageCaNhan.Controls.Add(tdmk);
             tdmk.BringToFront();
             //tdmk.Dock = DockStyle.Left;
             tdmk.Show();
-=======
-        private void loading_Home(object sender, EventArgs e)
-        {
-            if (Login.hasLogin)
-            {
-                if (Login.isAdmin && Login.isBs)
-                {
-                    tabControl1.TabPages.Remove(tabPageLeTan);
-                }
-
-                if (Login.isBs && !Login.isAdmin)
-                {
-                    tabControl1.TabPages.Remove(tabPageLeTan);
-                    tabControl1.TabPages.Remove(tabPageQuanLi);
-                    tabControl1.TabPages.Remove(tabPageThongKe);
-                }
-
-                if (!Login.isBs && !Login.isAdmin)
-                {
-                    tabControl1.TabPages.Remove(tabBacSi);
-                    tabControl1.TabPages.Remove(tabPageQuanLi);
-                    tabControl1.TabPages.Remove(tabPageThongKe);
-                }
-            }
->>>>>>> a3d367b7cdb7a0691aa4e212a1a5b1fdbaf7b04b
         }
     }
 }
