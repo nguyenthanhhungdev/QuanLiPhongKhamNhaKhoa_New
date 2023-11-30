@@ -15,7 +15,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class SuaNhanVien : Form
     {
-        public SuaNhanVien(string maNV, string tenNV, string diaChi, DateTime ngaySinh, string sdt, string email, string gioiTinh, string calam, string matKhau)
+        public SuaNhanVien(string maNV, string tenNV, string diaChi, DateTime ngaySinh, string sdt, string email, string gioiTinh, string calam, string matKhau,string tinhtrang)
         {
             InitializeComponent();
 
@@ -26,7 +26,14 @@ namespace QuanLiPhongKhamNhaKhoa_New
             dateTimePicker1.Value = ngaySinh;
             maskedTextBox1.Text = sdt;
             textBox4.Text = email;
-
+            if (tinhtrang.Trim().Equals("True"))
+            {
+                cbxTT.Checked = true;
+            }
+            else
+            {
+                cbxTT.Checked = false;
+            }
             if (gioiTinh == "Nam")
             {
                 NamRadioButton.Checked = true;
@@ -59,6 +66,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void button1_Click_1(object sender, EventArgs e)
         {
             // Lấy thông tin từ các điều khiển trên form
+            string tinhtrang;
+            if (cbxTT.Checked)
+            {
+                tinhtrang = "True";
+            }
+            else
+            {
+                tinhtrang = "False";
+            }
             string maNV = textBox1.Text;
             string tenNV = textBox6.Text;
             string diaChi = textBox5.Text;
@@ -106,6 +122,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Số điện thoại không hợp lệ!" + sdt);
                 return;
             }
+            if (!IsValidName(tenNV))
+            {
+                MessageBox.Show("Tên Không Hợp Lệ!");
+                return;
+            }
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Địa chỉ email không hợp lệ!");
@@ -113,7 +134,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             }
             string ngay = String.Format("{0:MM/dd/yyyy}", ngaySinh);
             NhanVienBUS nhanVienBUS = new NhanVienBUS();
-            nhanVienBUS.SuaNhanVien(maNV, tenNV, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau);
+            nhanVienBUS.SuaNhanVien(maNV, tenNV, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau, tinhtrang);
 
             DialogResult dr = MessageBox.Show("Sửa thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -122,7 +143,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 Close();
             }
         }
-
+        private bool IsValidName(string name)
+        {
+            // Kiểm tra xem tên có chứa ký tự đặc biệt và số hay không
+            return !Regex.IsMatch(name, @"\d");
+        }
 
     }
 }

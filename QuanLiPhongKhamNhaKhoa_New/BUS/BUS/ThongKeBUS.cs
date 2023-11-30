@@ -14,7 +14,6 @@ namespace ThongKe
         {
             ThongKeDAO tk = new ThongKeDAO();
             dgv.DataSource = tk.getAll(fDay, lDay);
- 
             DataTable dt = tk.getTongTienAll(fDay, lDay);
             foreach (DataRow row in dt.Rows)
             {
@@ -53,7 +52,10 @@ namespace ThongKe
             ThongKeDAO tk = new ThongKeDAO();
             return tk.getLoaiDichVu(fDay, lDay, tenDV).Rows.Count;
         }
-
-
+        public void LoadTongThongKeTungDV(DataGridView dgv, string fDay, string lDay)
+        {
+            ThongKeDAO tk = new ThongKeDAO();
+            dgv.DataSource = tk.getTungDV(fDay, lDay);
+        }
     }
 }

@@ -518,6 +518,12 @@
     <Compile Include="ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TraCuuBenhNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -637,6 +643,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhongKham.resx">
       <DependentUpon>ThemPhongKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuBenhNhan.resx">
       <DependentUpon>TraCuuBenhNhan.cs</DependentUpon>
@@ -824,10 +836,15 @@
     <None Include="Resources\icons8-body-29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user.png" />
+    <None Include="Resources\nen_thong_tin_ca_nhan.png" />
+    <None Include="Resources\lovepik-icons-for-staff-file-information-png-image_400951403_wh1200.png" />
     <None Include="Resources\icons8-choose-24.png" />
     <None Include="Resources\icons8-add-30.png" />
     <None Include="Resources\icons8-edit.gif" />
     <None Include="Resources\icons8-exit-64.png" />
+    <None Include="Resources\icons8-analytics-48.png" />
+    <None Include="Resources\icons8-change-password-64.png" />
     <Content Include="Resources\icons8-medical-48-_1_.ico" />
     <Content Include="Resources\icons8-medical-48.ico" />
     <None Include="Resources\icons8-show-property-50.png" />

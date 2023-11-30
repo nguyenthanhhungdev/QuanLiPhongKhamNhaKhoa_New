@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DevExpress.Data.Filtering;
+using DevExpress.XtraWaitForm;
 using DTO;
 using GUI;
 using QuanLiPhongKhamNhaKhoa_New;
@@ -252,6 +253,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void listWaiting_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            Home_Origin.panelDoctor.Controls.Clear();
+            waitingRoom wtr = new waitingRoom();
+            wtr.TopLevel = false;
+            Home_Origin.panelDoctor.Controls.Add(wtr);
+            wtr.Show();
         }
     }
 }

@@ -130,7 +130,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     saveFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
                     saveFileDialog.Title = "Save Excel File";
                     saveFileDialog.FileName = "DanhSachBenhNhan.xlsx";
-
+                    saveFileDialog.InitialDirectory = @"C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\Excel";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(saveFileDialog.FileName))
                     {
                         workbook.SaveAs(saveFileDialog.FileName);

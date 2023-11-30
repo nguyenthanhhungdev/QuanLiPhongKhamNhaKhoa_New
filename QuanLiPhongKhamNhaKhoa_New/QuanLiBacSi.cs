@@ -95,6 +95,16 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                     caLamCheckBox.Checked = false;
                 }
+                string tinhtrang = row.Cells["TinhTrang"].Value.ToString();
+                if (tinhtrang.Trim().Equals("True"))
+                {
+                    cbxTT.Checked = true;
+                }
+                else
+                {
+                    cbxTT.Checked = false;
+                }
+                //MessageBox.Show("tinh trang: "+ tinhtrang);
                 textBox2.Text = row.Cells["MatKhau"].Value.ToString();
                 textBox3.Text = row.Cells["TenPhong"].Value.ToString();
 
@@ -134,9 +144,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 string calam = selectedRow.Cells["CaLam"].Value.ToString();
                 string matKhau = selectedRow.Cells["MatKhau"].Value.ToString();
                 string tenPhong = selectedRow.Cells["TenPhong"].Value.ToString();
-
+                string tinhtrang= selectedRow.Cells["TinhTrang"].Value.ToString();
                 // Chuyển sang form sửa thông tin
-                SuaBacSi suaForm = new SuaBacSi(maBS, tenBS, diaChi, ngaySinh, sdt, email, gioiTinh, calam, matKhau, tenPhong);
+                SuaBacSi suaForm = new SuaBacSi(maBS, tenBS, diaChi, ngaySinh, sdt, email, gioiTinh, calam, matKhau, tenPhong,tinhtrang);
                 suaForm.ShowDialog();
             }
             else
@@ -245,7 +255,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     saveFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
                     saveFileDialog.Title = "Save Excel File";
                     saveFileDialog.FileName = "DanhSachBacSi.xlsx";
-
+                    saveFileDialog.InitialDirectory = @"C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\Excel";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(saveFileDialog.FileName))
                     {
                         workbook.SaveAs(saveFileDialog.FileName);

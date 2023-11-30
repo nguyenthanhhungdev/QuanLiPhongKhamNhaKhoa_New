@@ -38,6 +38,7 @@
             this.rdoTaiKham = new System.Windows.Forms.RadioButton();
             this.grpboxListWaiting = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listWaiting)).BeginInit();
             this.grpboxListWaiting.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +156,19 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnLoad.FlatAppearance.BorderSize = 0;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_refresh_481;
+            this.btnLoad.Location = new System.Drawing.Point(730, 9);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(59, 56);
+            this.btnLoad.TabIndex = 10;
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // waitingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -164,6 +178,7 @@
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(877, 564);
             this.ControlBox = false;
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grpboxListWaiting);
             this.Controls.Add(this.rdoTaiKham);
@@ -192,5 +207,6 @@
         private System.Windows.Forms.RadioButton rdoTaiKham;
         private System.Windows.Forms.GroupBox grpboxListWaiting;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLoad;
     }
 }

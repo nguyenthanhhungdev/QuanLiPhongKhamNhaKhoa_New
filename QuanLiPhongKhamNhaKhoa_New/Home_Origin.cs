@@ -20,8 +20,34 @@ namespace QuanLiPhongKhamNhaKhoa_New
         public Home_Origin()
         {
             InitializeComponent();
+            this.Shown += new EventHandler(loading_Home);
         }
+        private void loading_Home(object sender, EventArgs e)
+        {
+            if (Login.hasLogin)
+            {
+                //MessageBox.Show("đúng");
+                if (Login.isAdmin && Login.isBs)
+                {
+                    tabControl1.TabPages.Remove(tabPageLeTan);
+                }
 
+                if (Login.isBs && !Login.isAdmin)
+                {
+                    //MessageBox.Show("bác sĩ dõm");
+                    tabControl1.TabPages.Remove(tabPageLeTan);
+                    tabControl1.TabPages.Remove(tabPageQuanLi);
+                    tabControl1.TabPages.Remove(tabPageThongKe);
+                }
+
+                if (!Login.isBs && !Login.isAdmin)
+                {
+                    tabControl1.TabPages.Remove(tabBacSi);
+                    tabControl1.TabPages.Remove(tabPageQuanLi);
+                    tabControl1.TabPages.Remove(tabPageThongKe);
+                }
+            }
+        }
         private void toolStripLabelQLBN_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -149,6 +175,38 @@ namespace QuanLiPhongKhamNhaKhoa_New
             addhome.BringToFront();
             addhome.Dock = DockStyle.Fill;
             addhome.Show();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            ThongKe tk = new ThongKe();
+            tk.TopLevel = false;
+            tabPageThongKe.Controls.Add(tk);
+            tk.BringToFront();
+            tk.Dock = DockStyle.Left;
+            tk.Show();
+        }
+
+        private void toolStripLabelTTCN_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan ttcn= new ThongTinCaNhan();
+            //tabPageCaNhan.Controls.Clear();
+            ttcn.TopLevel = false;
+            tabPageCaNhan.Controls.Add(ttcn);
+            ttcn.BringToFront();
+            //ttcn.Dock = DockStyle.Left;
+            ttcn.Show();
+        }
+
+        private void toolStripLabelTDMK_Click(object sender, EventArgs e)
+        {
+            ThayDoiMatKhau tdmk=new ThayDoiMatKhau();
+            //tabPageCaNhan.Controls.Clear();
+            tdmk.TopLevel = false;
+            tabPageCaNhan.Controls.Add(tdmk);
+            tdmk.BringToFront();
+            //tdmk.Dock = DockStyle.Left;
+            tdmk.Show();
         }
     }
 }

@@ -81,7 +81,7 @@ namespace DAO
                 "FROM ((BENHNHAN A join TIEPDONBN B on A.MaBN = B.MaBN) join PHONGKHAM C on B.MaPhong = C.MaPhong) " +
                 "WHERE DAY(NgayKham) = DAY(GETDATE())" +
                 " AND B.MaBN ='" + maBN + "'";
-            MessageBox.Show(sql);
+            //MessageBox.Show(sql);
             DataTable dt = database.Execute(sql);
             return dt;
         }

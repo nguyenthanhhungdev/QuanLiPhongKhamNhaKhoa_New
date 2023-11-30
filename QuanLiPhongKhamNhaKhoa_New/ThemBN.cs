@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,14 +53,20 @@ namespace QuanLiPhongKhamNhaKhoa_New.BUS.BUS
                 MessageBox.Show("Vui lòng nhập chứng minh nhân dân đủ 12 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtSDT.Text.Length != 10)
+            if (!IsPhoneNumberValid(txtSDT.Text.Trim()))
             {
-                MessageBox.Show("Vui lòng nhập số điện thoại đủ 10 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng định dạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (!radioNam.Checked && !radioNu.Checked)
             {
                 MessageBox.Show("Vui lòng chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            if (!IsValidName(txtTenBN.Text.Trim()))
+            {
+                MessageBox.Show("Tên Chưa Đúng Định Dạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string gt = "";
@@ -76,7 +83,20 @@ namespace QuanLiPhongKhamNhaKhoa_New.BUS.BUS
             MessageBox.Show("Thêm thành công bệnh nhân", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+        private bool IsValidName(string name)
+        {
+            // Kiểm tra xem tên có chứa ký tự đặc biệt và số hay không
+            return !Regex.IsMatch(name, @"\d");
+        }
+        private bool IsPhoneNumberValid(string phoneNumber)
+        {
+            // Sử dụng biểu thức chính quy (Regular Expression) để kiểm tra số điện thoại
+            string pattern = @"^0\d{9}$";
+            Regex regex = new Regex(pattern);
 
+            // Kiểm tra sự khớp của số điện thoại với biểu thức chính quy
+            return regex.IsMatch(phoneNumber);
+        }
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);

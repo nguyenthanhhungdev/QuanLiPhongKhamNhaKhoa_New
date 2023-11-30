@@ -53,7 +53,7 @@ namespace DAO
         public DataTable LayDSPhongTrong(string caLam)
         {
             string sql = "SELECT PHONGKHAM.MaPhong, TenPhong, MaBS FROM BACSI  JOIN PHONGKHAM ON  BACSI.MaPhong = PHONGKHAM.MaPhong " +
-                " WHERE CaLam = N'" + caLam + "' AND TenPhong NOT IN " +
+                " WHERE CaLam = N'"+caLam+"' AND TenPhong NOT IN " +
                 " (SELECT DISTINCT TenPhong AS SoLuongBN FROM PHONGKHAM LEFT JOIN TIEPDONBN " +
                 " ON PHONGKHAM.MaPhong = TIEPDONBN.MaPhong " +
                 " WHERE DAY(NgayKham) = DAY(GETDATE()) AND (TinhTrang = N'Tái Khám' OR TinhTrang = N'Khám') " +

@@ -356,7 +356,6 @@
             this.btnPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Visible = false;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // addService
             // 

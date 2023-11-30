@@ -19,6 +19,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         private readonly LoaiDichVuBUS LDVBUS = new LoaiDichVuBUS();
         private readonly DichVuBUS DVBUS = new DichVuBUS();
         private readonly PhieuDichVuBUS PDVBUS= new PhieuDichVuBUS();
+        private readonly CT_DichVuBUS CTDVBUS = new CT_DichVuBUS();
         private DataTable loaidvlist;
         private DataTable dvlist;
         private DataTable pdfData;
@@ -268,15 +269,9 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             }
             if(txtLK.Text.Trim().Equals("Tái Khám"))
             {
-                if (isPDFFormVisible == false)
-                {
-                    MessageBox.Show("Phải Chọn Hóa Đơn!");
-                    return;
-                }
-                else
-                {
-                    ShowPKQ();
-                }     
+                
+                ShowPKQ();
+                   
             }
             else if (txtLK.Text.Trim().Equals("Khám"))
             {
@@ -389,10 +384,12 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
             }
         }
+        /*
         private String maphieukq = "";
         private String[] madv;
         private String[] sldv;
-        public bool isPDFFormVisible = false;
+        //public bool isPDFFormVisible = false;
+        
         private void btnPDF_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -417,7 +414,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
                 // Lấy phần "name" (phần tử đầu tiên trong mảng)
                 string name = nameAndNumber[2].Replace(".pdf","");
-                MessageBox.Show(PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString());
+                //MessageBox.Show(PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString());
                 string sophieukqnew = PDVBUS.GetSoPhieu(txtMaBN.Text.Trim()).Rows[0][0].ToString();
                 //MessageBox.Show("Tên:"+name.Trim() + "/"+ txtTen.Text.Trim());
                 if (name.Trim().Equals(txtTen.Text.Trim()))
@@ -487,7 +484,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
             }
         }
-        
+        */
         private string ReadTextAfterKeyword(string pdfFilePath, string keyword)
         {
             try
@@ -528,9 +525,35 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         {
             if (serviceTicketForm != null && !serviceTicketForm.IsDisposed)
             {
-                serviceTicketForm.listDVTKChoose.DataSource = pdfData;
-                serviceTicketForm.Show();
-                // Gán giá trị mới cho serviceTicketForm
+               // MessageBox.Show("Đúng");
+                DataTable tblsophieu = PDVBUS.SoPhieuDVGanNhat(txtMaBN.Text.Trim());
+                // Kiểm tra xem DataTable có dữ liệu hay không
+                if (tblsophieu != null && tblsophieu.Rows.Count > 0)
+                {
+                    String sophieu = tblsophieu.Rows[0][0].ToString().Trim();
+                    //MessageBox.Show("Số Phiếu: "+sophieu);
+                    DataTable ctdv = CTDVBUS.getSl(sophieu);
+                    pdfData = new DataTable();
+                    pdfData = tblChooseDV.Clone();
+
+                    foreach (DataRow ctrow in ctdv.Rows)
+                    {
+                        //MessageBox.Show(ctrow["MaDV"].ToString().Trim());
+                        DataRow newRow = pdfData.NewRow();
+                        // Gán giá trị cho các cột trong newRow dựa trên mảng madv và sldv
+                        newRow["MaDV"] = ctrow["MaDV"].ToString().Trim();
+                        DataTable dvReadPdf = DVBUS.GetListReadPDF(ctrow["MaDV"].ToString().Trim());
+                        newRow["Tên Dịch Vụ"] = dvReadPdf.Rows[0]["TenDV"].ToString();
+                        newRow["Loại Dịch Vụ"] = dvReadPdf.Rows[0]["TenLDV"].ToString();
+                        newRow["Số Lượng"] = ctrow["SoLuong"].ToString().Trim();
+                        float giaDichVu = float.Parse(dvReadPdf.Rows[0]["Gia"].ToString(), CultureInfo.InvariantCulture);
+                        newRow["Đơn Giá"] = giaDichVu.ToString("N0").Replace(",", ".");
+                        newRow["Thành Tiền"] = 0;
+                        pdfData.Rows.Add(newRow);
+                    }
+                    serviceTicketForm.listDVTKChoose.DataSource = pdfData;
+                    serviceTicketForm.Show();
+                }
             }
             else
             {

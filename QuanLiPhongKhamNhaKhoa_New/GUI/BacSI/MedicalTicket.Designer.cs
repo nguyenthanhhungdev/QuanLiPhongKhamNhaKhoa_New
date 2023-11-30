@@ -114,6 +114,7 @@
             // 
             // txtSdt
             // 
+            this.txtSdt.Enabled = false;
             this.txtSdt.Location = new System.Drawing.Point(756, 81);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(130, 22);
@@ -167,6 +168,7 @@
             // 
             // txtDC
             // 
+            this.txtDC.Enabled = false;
             this.txtDC.Location = new System.Drawing.Point(487, 124);
             this.txtDC.Multiline = true;
             this.txtDC.Name = "txtDC";

@@ -128,13 +128,52 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
                         if (int.Parse(formattedDateTK) > int.Parse(formattedDateNow))
                         {
-                            MessageBox.Show("Bệnh Nhân Đến Tái Khám Sớm!");
-                            return;
+                            
+                            DialogResult result = MessageBox.Show("Bệnh Nhân Đến Tái Khám Sớm! Có Muốn Khám Không?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            // Kiểm tra kết quả của hộp thoại
+                            if (result == DialogResult.Yes)
+                            {
+                                tinhTrang = "Khám";
+                                HomeThemBN formThemBN = new HomeThemBN(row.Cells["MaBN"].Value.ToString(),
+                                row.Cells["TenBN"].Value.ToString(),
+                                row.Cells["CMND"].Value.ToString(),
+                                row.Cells["DiaChi"].Value.ToString(),
+                                row.Cells["NgSinh"].Value.ToString(),
+                                row.Cells["SDT"].Value.ToString(),
+                                row.Cells["BenhLy"].Value.ToString(),
+                                row.Cells["GioiTinh"].Value.ToString(), tinhTrang);
+
+                                formThemBN.TopLevel = false;
+                                Home_Origin.tabPageLeTan.Controls.Add(formThemBN);
+                                formThemBN.Dock = DockStyle.Fill;
+                                formThemBN.Show();
+                                formThemBN.BringToFront();
+                            }
                         }
                         else if (int.Parse(formattedDateTK) < int.Parse(formattedDateNow))
                         {
-                            MessageBox.Show("Bệnh Nhân Quá Hạn Tái Khám!");
-                            return;
+                            //MessageBox.Show("");
+                            DialogResult result = MessageBox.Show("Bệnh Nhân Quá Hạn Tái Khám! Có Muốn Khám Không?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            // Kiểm tra kết quả của hộp thoại
+                            if (result == DialogResult.Yes)
+                            {
+                                tinhTrang = "Khám";
+                                HomeThemBN formThemBN = new HomeThemBN(row.Cells["MaBN"].Value.ToString(),
+                                row.Cells["TenBN"].Value.ToString(),
+                                row.Cells["CMND"].Value.ToString(),
+                                row.Cells["DiaChi"].Value.ToString(),
+                                row.Cells["NgSinh"].Value.ToString(),
+                                row.Cells["SDT"].Value.ToString(),
+                                row.Cells["BenhLy"].Value.ToString(),
+                                row.Cells["GioiTinh"].Value.ToString(), tinhTrang);
+
+                                formThemBN.TopLevel = false;
+                                Home_Origin.tabPageLeTan.Controls.Add(formThemBN);
+                                formThemBN.Dock = DockStyle.Fill;
+                                formThemBN.Show();
+                                formThemBN.BringToFront();
+                            }
+                               
                         }
                         else
                         {

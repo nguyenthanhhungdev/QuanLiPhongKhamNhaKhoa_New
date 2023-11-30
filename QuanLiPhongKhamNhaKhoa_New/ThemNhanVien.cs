@@ -55,6 +55,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Tuổi của nhân viên phải lớn hơn 18!");
                 return;
             }
+            if (!IsValidName(tenNV))
+            {
+                MessageBox.Show("Tên Không Hợp Lệ!");
+                return;
+            }
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Địa chỉ email không hợp lệ!");
@@ -90,7 +95,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             }
             string ngay = String.Format("{0:MM/dd/yyyy}", ngaySinh);
             NhanVienBUS nhanVienBUS = new NhanVienBUS();
-            nhanVienBUS.ThemNhanVien(maNV, tenNV, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau);
+            nhanVienBUS.ThemNhanVien(maNV, tenNV, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau,"True");
 
             DialogResult dr = MessageBox.Show("Thêm thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -99,7 +104,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 Close();
             }
         }
-
+        private bool IsValidName(string name)
+        {
+            // Kiểm tra xem tên có chứa ký tự đặc biệt và số hay không
+            return !Regex.IsMatch(name, @"\d");
+        }
         private bool IsValidEmail(string email)
         {
             string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";

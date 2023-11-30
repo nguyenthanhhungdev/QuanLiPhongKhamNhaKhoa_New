@@ -95,7 +95,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 xacNhanPay.txtGive.Text = "0";
                 xnPay.StartPosition = FormStartPosition.CenterScreen;
                 xnPay.ShowDialog();
-
             }
             else
             {
@@ -147,6 +146,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             txtNgS.Text = "";
             txtSdt.Text = "";
             txtCmnd.Text = "";
+            txtFind.Text = "";
         }
     }
 }

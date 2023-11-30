@@ -14,13 +14,17 @@ namespace BUS
         {
             return bacSiDAO.LayDuLieuBacSi();
         }
-        public void ThemBacSi(string maBS, string tenBS, string diaChi, string ngSinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string maPhong)
+        public DataTable laybacsitrongphong(string maphong)
         {
-            bacSiDAO.ThemBacSi( maBS,  tenBS,  diaChi, ngSinh, sdt, email, gioiTinh, caLam, matKhau, maPhong);
+            return bacSiDAO.laybacsitrongphong(maphong);
         }
-        public void SuaBacSi(string maBS, string tenBS, string diaChi, string ngSinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string maPhong)
+        public void ThemBacSi(string maBS, string tenBS, string diaChi, string ngSinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string maPhong,string tinhtrang)
         {
-            bacSiDAO.SuaBacSi(maBS, tenBS, diaChi, ngSinh, sdt, email, gioiTinh, caLam, matKhau, maPhong);
+            bacSiDAO.ThemBacSi( maBS,  tenBS,  diaChi, ngSinh, sdt, email, gioiTinh, caLam, matKhau, maPhong, tinhtrang);
+        }
+        public void SuaBacSi(string maBS, string tenBS, string diaChi, string ngSinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string maPhong, string tinhtrang)
+        {
+            bacSiDAO.SuaBacSi(maBS, tenBS, diaChi, ngSinh, sdt, email, gioiTinh, caLam, matKhau, maPhong,tinhtrang);
         }
         public void XoaBacSi(string maBS)
         {
@@ -29,6 +33,14 @@ namespace BUS
         public int LayTongBS()
         {
             return bacSiDAO.LayTongBS();
+        }
+        public void fixMKbacsi(string mabs, string mk)
+        {
+            bacSiDAO.fixMKbacsi(mabs, mk);
+        }
+        public void fixInforbacsi(string mabs, string tenbs, string diachi, string email, string sdt)
+        {
+            bacSiDAO.fixInforbacsi(mabs,tenbs,diachi,email,sdt);
         }
     }
 }

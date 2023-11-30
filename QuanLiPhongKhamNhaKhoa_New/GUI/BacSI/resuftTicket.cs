@@ -25,11 +25,13 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         private readonly TiepDonBNBUS TDBNBUS = new TiepDonBNBUS();
         private readonly PhieuDichVuBUS PDVBUS = new PhieuDichVuBUS();
         private readonly PhieuKetQuaBUS PKQBUS = new PhieuKetQuaBUS();
+        private readonly CT_DichVuBUS CTDVBUS = new CT_DichVuBUS();
         DataTable TKTbl;
         DataTable TKTbladd;
         DataTable PDVTbl;
         DataTable PKQTbl;
         DataTable TDBNTbl;
+        DataTable ctdvTbl;
         private DataTable tblChooseDVResuft = new DataTable();
         public resuftTicket()
         {
@@ -39,6 +41,12 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
             PDVTbl = new DataTable();
             TDBNTbl=new DataTable();
             TKTbladd = new DataTable();
+            ctdvTbl= new DataTable();
+            //thêm cột cho bảng chi tiết dịch vụ đã chọn
+            ctdvTbl.Columns.Add("SoPhieuDV", typeof(string));
+            ctdvTbl.Columns.Add("MaDV", typeof(string));
+            ctdvTbl.Columns.Add("SoLuong", typeof(string));
+
             TKTbladd = TKTbl.Clone();
             //thêm cột cho bảng dịch vụ đã chọn
             tblChooseDVResuft.Columns.Add("MaDV", typeof(string));
@@ -155,7 +163,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     rowtdbn["MaBN"]=txtMaBN.Text;
                     rowtdbn["TinhTrang"] = "Đã Khám";
                     TDBNTbl.Rows.Add(rowtdbn);
-
+                    
                     // Thêm dữ liệu vào bảng PKQTbl
                     DataRow rowkq = PKQTbl.NewRow();
                     rowkq["SoPhieuKQ"] = txtPDV.Text;
@@ -181,6 +189,44 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     PDVTbl.Rows.Add(rowdv);
                     if (PKQBUS.insertPKQ(PKQTbl) && PDVBUS.insertPDV(PDVTbl) && TDBNBUS.UpdateTDBN(TDBNTbl))
                     {
+                        //thêm vào chi tiết dịch vụ
+                        foreach (DataGridViewRow row in listDVChooseRusuft.Rows)
+                        {
+                            string thanhtienConvert = Convert.ToString(row.Cells["Thành Tiền"].Value);
+                            if (!thanhtienConvert.Equals("0"))
+                            {
+                                DataRow rowctdv = ctdvTbl.NewRow();
+                                // Lấy giá trị của cột "MaDV" từ mỗi dòng
+                                string maDVValue = Convert.ToString(row.Cells["MaDV"].Value);
+                                rowctdv["SoPhieuDV"] = txtPDV.Text.Trim();
+                                rowctdv["MaDV"] = maDVValue;
+                                rowctdv["SoLuong"] = Convert.ToString(row.Cells["Số Lượng"].Value);
+                                ctdvTbl.Rows.Add(rowctdv);
+                            }
+                        }
+                        if (ctdvTbl.Rows.Count > 0)
+                        {
+                            DataRow lastRow = ctdvTbl.Rows[ctdvTbl.Rows.Count - 1];
+                            if (lastRow["MaDV"] == DBNull.Value || string.IsNullOrWhiteSpace(Convert.ToString(lastRow["MaDV"])))
+                            {
+                                ctdvTbl.Rows.Remove(lastRow);
+                            }
+
+                            foreach (DataRow rowctdv in ctdvTbl.Rows)
+                            {
+                                DataTable dt = new DataTable();
+                                dt.Columns.Add("SoPhieuDV", typeof(string));
+                                dt.Columns.Add("MaDV", typeof(string));
+                                dt.Columns.Add("SoLuong", typeof(string));
+                                DataRow newRow = dt.NewRow();
+                                newRow["SoPhieuDV"] = txtPDV.Text.Trim();
+                                newRow["MaDV"] = rowctdv["MaDV"].ToString().Trim();
+                                newRow["SoLuong"] = rowctdv["SoLuong"].ToString().Trim();
+                                dt.Rows.Add(newRow);
+                                //MessageBox.Show("MaDV: " + newRow["MaDV"].ToString());
+                                CTDVBUS.addCTDV(dt);
+                            }
+                        }
                         isActionPerformed = true;
                         MessageBox.Show("Cập nhật thành công");
                     }
@@ -229,6 +275,46 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                         {
                             if (PKQBUS.insertPKQ(PKQTbl) && PDVBUS.insertPDV(PDVTbl)&& TDBNBUS.UpdateTDBN(TDBNTbl))
                             {
+                                
+
+                                //thêm vào chi tiết dịch vụ
+                                foreach (DataGridViewRow row in listDVChooseRusuft.Rows)
+                                {
+                                    string thanhtienConvert = Convert.ToString(row.Cells["Thành Tiền"].Value);
+                                    if (!thanhtienConvert.Equals("0"))
+                                    {
+                                        DataRow rowctdv = ctdvTbl.NewRow();
+                                        // Lấy giá trị của cột "MaDV" từ mỗi dòng
+                                        string maDVValue = Convert.ToString(row.Cells["MaDV"].Value);
+                                        rowctdv["SoPhieuDV"] = txtPDV.Text.Trim();
+                                        rowctdv["MaDV"] = maDVValue;
+                                        rowctdv["SoLuong"] = Convert.ToString(row.Cells["Số Lượng"].Value);
+                                        ctdvTbl.Rows.Add(rowctdv);
+                                    }
+                                }
+                                if (ctdvTbl.Rows.Count > 0)
+                                {
+                                    DataRow lastRow = ctdvTbl.Rows[ctdvTbl.Rows.Count - 1];
+                                    if (lastRow["MaDV"] == DBNull.Value || string.IsNullOrWhiteSpace(Convert.ToString(lastRow["MaDV"])))
+                                    {
+                                        ctdvTbl.Rows.Remove(lastRow);
+                                    }
+
+                                    foreach (DataRow rowctdv in ctdvTbl.Rows)
+                                    {
+                                        DataTable dt = new DataTable();
+                                        dt.Columns.Add("SoPhieuDV", typeof(string));
+                                        dt.Columns.Add("MaDV", typeof(string));
+                                        dt.Columns.Add("SoLuong", typeof(string));
+                                        DataRow newRow = dt.NewRow();
+                                        newRow["SoPhieuDV"] = txtPDV.Text.Trim();
+                                        newRow["MaDV"] = rowctdv["MaDV"].ToString().Trim();
+                                        newRow["SoLuong"] = rowctdv["SoLuong"].ToString().Trim();
+                                        dt.Rows.Add(newRow);
+                                        //MessageBox.Show("MaDV: " + newRow["MaDV"].ToString());
+                                        CTDVBUS.addCTDV(dt);
+                                    }
+                                }
                                 isActionPerformed = true;
                                 MessageBox.Show("Cập nhật thành công");
                             }

@@ -64,8 +64,8 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
     {
-      string sqlBS = string.Format("SELECT * FROM BACSI WHERE MaBS = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
-      string sqlNV = string.Format("SELECT * FROM NHANVIEN WHERE MaNV = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
+      string sqlBS = string.Format("SELECT * FROM BACSI WHERE TinhTrang = 'True' AND MaBS = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
+      string sqlNV = string.Format("SELECT * FROM NHANVIEN WHERE TinhTrang = 'True' AND MaNV = '{0}' AND MatKhau = '{1}'", (object) this.textBoxMa.Text, (object) this.maskedTextBoxMatKhau.Text);
       string sql = textBoxMa.Text.Contains("BS") ? sqlBS : sqlNV;
       Login.isAdmin = this.textBoxMa.Text.Contains("BS01");
       Login.isBs = this.textBoxMa.Text.Contains("BS");
@@ -102,7 +102,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                   bacSiDto.DiaChi = row.Field<string>("DiaChi");
                   bacSiDto.NgSinh = row.Field<DateTime>("NgSinh");
                   bacSiDto.Sdt = row.Field<string>("SDT");
-                  bacSiDto.Email = row.Field<string>("SDT");
+                  bacSiDto.Email = row.Field<string>("Email");
                   bacSiDto.GioiTinh = row.Field<string>("GioiTinh");
                   bacSiDto.CaLam = row.Field<string>("CaLam");
                   bacSiDto.MatKhau = row.Field<string>("MatKhau");
@@ -125,12 +125,12 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                   DataRow row = (DataRow) enumerator.Current;
                   NhanVienDTO nhanVienDto = new NhanVienDTO();
-                  nhanVienDto.Ma = row.Field<string>("MaBS");
-                  nhanVienDto.Ten = row.Field<string>("TenBS");
+                  nhanVienDto.Ma = row.Field<string>("MaNV");
+                  nhanVienDto.Ten = row.Field<string>("TenNV");
                   nhanVienDto.DiaChi = row.Field<string>("DiaChi");
                   nhanVienDto.NgSinh = row.Field<DateTime>("NgSinh");
                   nhanVienDto.Sdt = row.Field<string>("SDT");
-                  nhanVienDto.Email = row.Field<string>("SDT");
+                  nhanVienDto.Email = row.Field<string>("Email");
                   nhanVienDto.GioiTinh = row.Field<string>("GioiTinh");
                   nhanVienDto.CaLam = row.Field<string>("CaLam");
                   nhanVienDto.MatKhau = row.Field<string>("MatKhau");

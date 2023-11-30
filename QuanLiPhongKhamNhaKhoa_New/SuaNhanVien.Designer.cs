@@ -37,6 +37,7 @@
             System.Windows.Forms.Label gioiTinhLabel;
             System.Windows.Forms.Label caLamLabel;
             System.Windows.Forms.Label matKhauLabel;
+            System.Windows.Forms.Label label1;
             this.NamRadioButton = new System.Windows.Forms.RadioButton();
             this.NuRadioButton = new System.Windows.Forms.RadioButton();
             this.toiRadioButton = new System.Windows.Forms.RadioButton();
@@ -50,6 +51,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxTT = new System.Windows.Forms.CheckBox();
             maBSLabel = new System.Windows.Forms.Label();
             tenBSLabel = new System.Windows.Forms.Label();
             diaChiLabel = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             gioiTinhLabel = new System.Windows.Forms.Label();
             caLamLabel = new System.Windows.Forms.Label();
             matKhauLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +69,7 @@
             // 
             maBSLabel.AutoSize = true;
             maBSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maBSLabel.Location = new System.Drawing.Point(4, 26);
+            maBSLabel.Location = new System.Drawing.Point(26, 29);
             maBSLabel.Name = "maBSLabel";
             maBSLabel.Size = new System.Drawing.Size(65, 20);
             maBSLabel.TabIndex = 81;
@@ -76,7 +79,7 @@
             // 
             tenBSLabel.AutoSize = true;
             tenBSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tenBSLabel.Location = new System.Drawing.Point(6, 60);
+            tenBSLabel.Location = new System.Drawing.Point(28, 63);
             tenBSLabel.Name = "tenBSLabel";
             tenBSLabel.Size = new System.Drawing.Size(70, 20);
             tenBSLabel.TabIndex = 82;
@@ -86,7 +89,7 @@
             // 
             diaChiLabel.AutoSize = true;
             diaChiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            diaChiLabel.Location = new System.Drawing.Point(4, 93);
+            diaChiLabel.Location = new System.Drawing.Point(26, 96);
             diaChiLabel.Name = "diaChiLabel";
             diaChiLabel.Size = new System.Drawing.Size(70, 20);
             diaChiLabel.TabIndex = 83;
@@ -96,7 +99,7 @@
             // 
             ngSinhLabel.AutoSize = true;
             ngSinhLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngSinhLabel.Location = new System.Drawing.Point(6, 124);
+            ngSinhLabel.Location = new System.Drawing.Point(28, 127);
             ngSinhLabel.Name = "ngSinhLabel";
             ngSinhLabel.Size = new System.Drawing.Size(73, 20);
             ngSinhLabel.TabIndex = 84;
@@ -106,7 +109,7 @@
             // 
             sDTLabel.AutoSize = true;
             sDTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sDTLabel.Location = new System.Drawing.Point(6, 155);
+            sDTLabel.Location = new System.Drawing.Point(28, 158);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(48, 20);
             sDTLabel.TabIndex = 85;
@@ -116,7 +119,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(6, 188);
+            emailLabel.Location = new System.Drawing.Point(28, 191);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(56, 20);
             emailLabel.TabIndex = 86;
@@ -126,7 +129,7 @@
             // 
             gioiTinhLabel.AutoSize = true;
             gioiTinhLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gioiTinhLabel.Location = new System.Drawing.Point(6, 217);
+            gioiTinhLabel.Location = new System.Drawing.Point(28, 225);
             gioiTinhLabel.Name = "gioiTinhLabel";
             gioiTinhLabel.Size = new System.Drawing.Size(81, 20);
             gioiTinhLabel.TabIndex = 87;
@@ -136,7 +139,7 @@
             // 
             caLamLabel.AutoSize = true;
             caLamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            caLamLabel.Location = new System.Drawing.Point(6, 254);
+            caLamLabel.Location = new System.Drawing.Point(26, 288);
             caLamLabel.Name = "caLamLabel";
             caLamLabel.Size = new System.Drawing.Size(73, 20);
             caLamLabel.TabIndex = 88;
@@ -146,7 +149,7 @@
             // 
             matKhauLabel.AutoSize = true;
             matKhauLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            matKhauLabel.Location = new System.Drawing.Point(4, 288);
+            matKhauLabel.Location = new System.Drawing.Point(26, 322);
             matKhauLabel.Name = "matKhauLabel";
             matKhauLabel.Size = new System.Drawing.Size(85, 20);
             matKhauLabel.TabIndex = 89;
@@ -154,7 +157,7 @@
             // 
             // NamRadioButton
             // 
-            this.NamRadioButton.Location = new System.Drawing.Point(1, 3);
+            this.NamRadioButton.Location = new System.Drawing.Point(0, -1);
             this.NamRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NamRadioButton.Name = "NamRadioButton";
             this.NamRadioButton.Size = new System.Drawing.Size(82, 27);
@@ -164,7 +167,7 @@
             // 
             // NuRadioButton
             // 
-            this.NuRadioButton.Location = new System.Drawing.Point(116, 3);
+            this.NuRadioButton.Location = new System.Drawing.Point(115, -1);
             this.NuRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NuRadioButton.Name = "NuRadioButton";
             this.NuRadioButton.Size = new System.Drawing.Size(133, 27);
@@ -175,7 +178,7 @@
             // toiRadioButton
             // 
             this.toiRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toiRadioButton.Location = new System.Drawing.Point(213, 254);
+            this.toiRadioButton.Location = new System.Drawing.Point(235, 288);
             this.toiRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toiRadioButton.Name = "toiRadioButton";
             this.toiRadioButton.Size = new System.Drawing.Size(133, 24);
@@ -186,7 +189,7 @@
             // sangRadioButton
             // 
             this.sangRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sangRadioButton.Location = new System.Drawing.Point(94, 252);
+            this.sangRadioButton.Location = new System.Drawing.Point(116, 286);
             this.sangRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sangRadioButton.Name = "sangRadioButton";
             this.sangRadioButton.Size = new System.Drawing.Size(102, 28);
@@ -197,7 +200,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(250, 344);
+            this.button1.Location = new System.Drawing.Point(268, 397);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 37);
             this.button1.TabIndex = 98;
@@ -208,7 +211,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(94, 181);
+            this.textBox4.Location = new System.Drawing.Point(116, 184);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(193, 27);
@@ -217,7 +220,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(95, 281);
+            this.textBox2.Location = new System.Drawing.Point(117, 315);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -228,7 +231,7 @@
             // 
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(95, 117);
+            this.dateTimePicker1.Location = new System.Drawing.Point(117, 120);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(192, 27);
@@ -237,7 +240,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(94, 148);
+            this.maskedTextBox1.Location = new System.Drawing.Point(116, 151);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -247,7 +250,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(95, 53);
+            this.textBox6.Location = new System.Drawing.Point(117, 56);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -257,7 +260,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(95, 86);
+            this.textBox5.Location = new System.Drawing.Point(117, 89);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 27);
@@ -266,7 +269,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(95, 19);
+            this.textBox1.Location = new System.Drawing.Point(117, 22);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -279,17 +282,39 @@
             this.groupBox1.Controls.Add(this.NuRadioButton);
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(97, 216);
+            this.groupBox1.Location = new System.Drawing.Point(119, 219);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(190, 31);
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(26, 255);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(94, 20);
+            label1.TabIndex = 102;
+            label1.Text = "Tình Trạng:";
+            // 
+            // cbxTT
+            // 
+            this.cbxTT.AutoSize = true;
+            this.cbxTT.Location = new System.Drawing.Point(135, 257);
+            this.cbxTT.Name = "cbxTT";
+            this.cbxTT.Size = new System.Drawing.Size(93, 20);
+            this.cbxTT.TabIndex = 103;
+            this.cbxTT.Text = "Hoạt Động";
+            this.cbxTT.UseVisualStyleBackColor = true;
+            // 
             // SuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 393);
+            this.ClientSize = new System.Drawing.Size(394, 446);
+            this.Controls.Add(this.cbxTT);
+            this.Controls.Add(label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toiRadioButton);
             this.Controls.Add(this.sangRadioButton);
@@ -334,5 +359,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbxTT;
     }
 }

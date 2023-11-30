@@ -57,7 +57,7 @@
             // 
             tenBSLabel.AutoSize = true;
             tenBSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tenBSLabel.Location = new System.Drawing.Point(12, 42);
+            tenBSLabel.Location = new System.Drawing.Point(12, 53);
             tenBSLabel.Name = "tenBSLabel";
             tenBSLabel.Size = new System.Drawing.Size(71, 20);
             tenBSLabel.TabIndex = 82;
@@ -67,17 +67,17 @@
             // 
             diaChiLabel.AutoSize = true;
             diaChiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            diaChiLabel.Location = new System.Drawing.Point(12, 67);
+            diaChiLabel.Location = new System.Drawing.Point(12, 96);
             diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new System.Drawing.Size(35, 20);
+            diaChiLabel.Size = new System.Drawing.Size(40, 20);
             diaChiLabel.TabIndex = 83;
-            diaChiLabel.Text = "Giá";
+            diaChiLabel.Text = "Giá:";
             // 
             // maPhongLabel
             // 
             maPhongLabel.AutoSize = true;
             maPhongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maPhongLabel.Location = new System.Drawing.Point(12, 103);
+            maPhongLabel.Location = new System.Drawing.Point(12, 137);
             maPhongLabel.Name = "maPhongLabel";
             maPhongLabel.Size = new System.Drawing.Size(73, 20);
             maPhongLabel.TabIndex = 84;
@@ -87,7 +87,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 95);
+            this.comboBox1.Location = new System.Drawing.Point(96, 134);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(189, 28);
             this.comboBox1.TabIndex = 89;
@@ -106,7 +106,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(93, 35);
+            this.textBox2.Location = new System.Drawing.Point(96, 53);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 27);
@@ -115,7 +115,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(93, 60);
+            this.textBox3.Location = new System.Drawing.Point(96, 93);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(192, 27);
@@ -124,7 +124,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(93, 9);
+            this.textBox1.Location = new System.Drawing.Point(96, 9);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;

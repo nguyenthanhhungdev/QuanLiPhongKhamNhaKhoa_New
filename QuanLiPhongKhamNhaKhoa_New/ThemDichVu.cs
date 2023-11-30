@@ -54,6 +54,12 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Giá phải là số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (giaValue < 0)
+            {
+                MessageBox.Show("Giá phải là số lớn hơn không!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DichVuBUS dichVuBUS = new DichVuBUS();
             dichVuBUS.ThemDichVu(maDV,tenDV,giaValue, tenLDV);
 

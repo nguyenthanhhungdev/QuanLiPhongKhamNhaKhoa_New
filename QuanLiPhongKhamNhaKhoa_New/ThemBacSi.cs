@@ -15,6 +15,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class ThemBacSi : Form
     {
+        private readonly BacSiBUS BSBUS = new BacSiBUS();
 
         public ThemBacSi()
         {
@@ -56,6 +57,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 string.IsNullOrWhiteSpace(sdt) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(tenPhong) || ngaySinh == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!IsValidName(tenBS))
+            {
+                MessageBox.Show("Tên Không Hợp Lệ!");
                 return;
             }
             if (sdt.Length != 10 || !sdt.StartsWith("0") || !sdt.All(char.IsDigit))
@@ -102,8 +108,17 @@ namespace QuanLiPhongKhamNhaKhoa_New
             }
 
             string ngay = String.Format("{0:MM/dd/yyyy}", ngaySinh);
+            DataTable phongbs = BSBUS.laybacsitrongphong(tenPhong);
+            foreach(DataRow row in phongbs.Rows)
+            {
+                if (caLam.ToString().Trim().Equals(row["CaLam"].ToString().Trim()))
+                {
+                    MessageBox.Show("Đã Có Người Trực Ca Này!");
+                    return;
+                }
+            }
             BacSiBUS bacSiBUS = new BacSiBUS();
-            bacSiBUS.ThemBacSi(maBS, tenBS, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau, tenPhong);
+            bacSiBUS.ThemBacSi(maBS, tenBS, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau, tenPhong,"True");
 
             DialogResult dr = MessageBox.Show("Thêm thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -112,7 +127,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 Close();
             }
         }
-
+        private bool IsValidName(string name)
+        {
+            // Kiểm tra xem tên có chứa ký tự đặc biệt và số hay không
+            return !Regex.IsMatch(name, @"\d");
+        }
         private bool IsValidEmail(string email)
         {
             string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";

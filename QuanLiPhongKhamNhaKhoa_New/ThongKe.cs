@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.SqlServer.Server;
 using QuanLiPhongKhamNhaKhoa_New.DAO;
+using QuanLiPhongKhamNhaKhoa_New.BUS;
+using ThongKe;
 
-
-namespace ThongKe
+namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class ThongKe : Form
     {
@@ -40,12 +41,10 @@ namespace ThongKe
             ThongKeBUS tkb = new ThongKeBUS();
             tkb.LoadThongKe(dgv, dtTs, dtDs, text);
             tkb.showcbb(cbb);
+            tkb.LoadTongThongKeTungDV(dgv2, dtTs, dtDs);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void dtTu_ValueChanged(object sender, EventArgs e)
         {
@@ -55,7 +54,7 @@ namespace ThongKe
                 return;
                 } 
         }
-
+        /*
         private void dtTu_Leave(object sender, EventArgs e)
         {
             if (dtTu.Value > dtDen.Value)
@@ -65,7 +64,7 @@ namespace ThongKe
                 return;
             }
         }
-
+        */
         private void dtDen_ValueChanged(object sender, EventArgs e)
         {
             if (dtTu.Value > dtDen.Value)
@@ -75,7 +74,7 @@ namespace ThongKe
                 return;
             }
         }
-
+        /*
         private void dtDen_Leave(object sender, EventArgs e)
         {
             if (dtTu.Value > dtDen.Value)
@@ -85,27 +84,15 @@ namespace ThongKe
                 return;
             }
         }
-
-        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-       
-        
-        
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dtT = dtTu.Value;
             DateTime dtD = dtDen.Value;
-            string dtTs = String.Format("{0:ddMMyy}", dtT);
-            string dtDs = String.Format("{0:ddMMyy}", dtD);
+            string dtTs = String.Format("{0:yyyy-MM-dd}", dtT);
+            string dtDs = String.Format("{0:yyyy-MM-dd}", dtD);
             ThongKeBUS tkb = new ThongKeBUS();
+            tkb.LoadTongThongKeTungDV(dgv2, dtTs, dtDs);
             if (cbb.Text == "Tất cả")
             {
                 tkb.LoadThongKe(dgv, dtTs, dtDs, text);
@@ -124,32 +111,9 @@ namespace ThongKe
             {
                 text.Text = "";
             }
-
-
         }
-        
 
         private void cbb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -75,7 +75,6 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                     MessageBox.Show("Thanh toán thất bại!");
                 }
-                
             } 
             else
             {

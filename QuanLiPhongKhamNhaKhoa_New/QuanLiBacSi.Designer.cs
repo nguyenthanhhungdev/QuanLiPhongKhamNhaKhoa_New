@@ -38,6 +38,7 @@
             System.Windows.Forms.Label caLamLabel;
             System.Windows.Forms.Label matKhauLabel;
             System.Windows.Forms.Label maPhongLabel;
+            System.Windows.Forms.Label label1;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -55,9 +56,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.cbxTT = new System.Windows.Forms.CheckBox();
             maBSLabel = new System.Windows.Forms.Label();
             tenBSLabel = new System.Windows.Forms.Label();
             diaChiLabel = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             caLamLabel = new System.Windows.Forms.Label();
             matKhauLabel = new System.Windows.Forms.Label();
             maPhongLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -196,6 +198,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(label1);
+            this.groupBox1.Controls.Add(this.cbxTT);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -351,7 +355,6 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,21 +410,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_delete;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(401, 50);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 57);
-            this.button3.TabIndex = 73;
-            this.button3.Text = "Xóa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -452,6 +440,27 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(12, 204);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(94, 20);
+            label1.TabIndex = 75;
+            label1.Text = "Tình Trạng:";
+            // 
+            // cbxTT
+            // 
+            this.cbxTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTT.Location = new System.Drawing.Point(134, 202);
+            this.cbxTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxTT.Name = "cbxTT";
+            this.cbxTT.Size = new System.Drawing.Size(193, 24);
+            this.cbxTT.TabIndex = 76;
+            this.cbxTT.Text = "Hoạt Động";
+            this.cbxTT.UseVisualStyleBackColor = true;
+            // 
             // QuanLiBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -479,7 +488,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -496,5 +504,6 @@
         private System.Windows.Forms.RadioButton NamRadioButton;
         private System.Windows.Forms.CheckBox caLamCheckBox;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox cbxTT;
     }
 }

@@ -33,5 +33,9 @@ namespace BUS
         {
             return PDVDAO.LayMaTK(maBN);
         }
+        public DataTable SoPhieuDVGanNhat(string mabn)
+        {
+            return PDVDAO.SoPhieuDVGanNhat(mabn);
+        }
     }
 }

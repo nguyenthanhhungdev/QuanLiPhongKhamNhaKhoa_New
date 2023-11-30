@@ -58,11 +58,18 @@ namespace DAO
         //Lấy mã tái khám
         public DataTable LayMaTK(string maBN)
         {
-            string sql = $@"SELECT TOP 1 D.MaTK, NgayTK
-                FROM PHIEUDICHVU A, PHIEUKETQUA B, TIEPDONBN C, TAIKHAM D
-                WHERE A.SoPhieuKQ = B.SoPhieuKQ AND A.MaBN = C.MaBN AND B.MaTK = D.MaTK AND C.MaBN = '{maBN}' 
-                ORDER BY NgayKham DESC ";
+            string sql = $@"SELECT TOP 1 A.SoPhieuDV, D.MaTK, NgayTK
+                FROM PHIEUDICHVU A, PHIEUKETQUA B, TAIKHAM D
+                WHERE A.SoPhieuKQ = B.SoPhieuKQ  AND B.MaTK = D.MaTK AND A.MaBN = '{maBN}' 
+                ORDER BY A.SoPhieuDV DESC";
             //MessageBox.Show(sql);
+            return database.Execute(sql);
+        }
+        public DataTable SoPhieuDVGanNhat(string mabn)
+        {
+            string sql = $@"SELECT Top 1 A.SoPhieuDV FROM PHIEUDICHVU A
+                    WHERE  A.MaBN = '{mabn}'
+                    ORDER BY SoPhieuDV DESC";
             return database.Execute(sql);
         }
     }

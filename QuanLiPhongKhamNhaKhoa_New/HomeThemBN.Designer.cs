@@ -150,6 +150,7 @@
             // txtTinhTrang
             // 
             this.txtTinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTinhTrang.Enabled = false;
             this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTinhTrang.Location = new System.Drawing.Point(149, 5);
             this.txtTinhTrang.Name = "txtTinhTrang";
@@ -175,6 +176,7 @@
             this.panel8.Controls.Add(this.rdNu);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Enabled = false;
             this.panel8.Location = new System.Drawing.Point(354, 79);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -262,6 +264,7 @@
             // txtSDT
             // 
             this.txtSDT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSDT.Enabled = false;
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(149, 5);
             this.txtSDT.Name = "txtSDT";
@@ -295,6 +298,7 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpNgaySinh.Enabled = false;
             this.dtpNgaySinh.Location = new System.Drawing.Point(149, 5);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(196, 27);
@@ -327,6 +331,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(149, 5);
             this.txtDiaChi.Name = "txtDiaChi";
@@ -360,6 +365,7 @@
             // txtCMND
             // 
             this.txtCMND.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCMND.Enabled = false;
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(149, 5);
             this.txtCMND.Name = "txtCMND";
@@ -393,6 +399,7 @@
             // txtTenBN
             // 
             this.txtTenBN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTenBN.Enabled = false;
             this.txtTenBN.Location = new System.Drawing.Point(149, 5);
             this.txtTenBN.Name = "txtTenBN";
             this.txtTenBN.Size = new System.Drawing.Size(196, 27);
@@ -550,6 +557,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(149, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(198, 27);
@@ -595,6 +603,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Location = new System.Drawing.Point(149, 5);
             this.txtMaNV.Name = "txtMaNV";

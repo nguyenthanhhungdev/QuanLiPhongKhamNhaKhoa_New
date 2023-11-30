@@ -38,6 +38,7 @@
             System.Windows.Forms.Label caLamLabel;
             System.Windows.Forms.Label matKhauLabel;
             System.Windows.Forms.Label maPhongLabel;
+            System.Windows.Forms.Label label1;
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.NamRadioButton = new System.Windows.Forms.RadioButton();
@@ -52,6 +53,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxTT = new System.Windows.Forms.CheckBox();
             maBSLabel = new System.Windows.Forms.Label();
             tenBSLabel = new System.Windows.Forms.Label();
             diaChiLabel = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             caLamLabel = new System.Windows.Forms.Label();
             matKhauLabel = new System.Windows.Forms.Label();
             maPhongLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +72,7 @@
             // 
             maBSLabel.AutoSize = true;
             maBSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maBSLabel.Location = new System.Drawing.Point(-4, 23);
+            maBSLabel.Location = new System.Drawing.Point(12, 22);
             maBSLabel.Name = "maBSLabel";
             maBSLabel.Size = new System.Drawing.Size(65, 20);
             maBSLabel.TabIndex = 59;
@@ -79,7 +82,7 @@
             // 
             tenBSLabel.AutoSize = true;
             tenBSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tenBSLabel.Location = new System.Drawing.Point(-4, 49);
+            tenBSLabel.Location = new System.Drawing.Point(12, 48);
             tenBSLabel.Name = "tenBSLabel";
             tenBSLabel.Size = new System.Drawing.Size(70, 20);
             tenBSLabel.TabIndex = 60;
@@ -89,7 +92,7 @@
             // 
             diaChiLabel.AutoSize = true;
             diaChiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            diaChiLabel.Location = new System.Drawing.Point(-4, 74);
+            diaChiLabel.Location = new System.Drawing.Point(12, 73);
             diaChiLabel.Name = "diaChiLabel";
             diaChiLabel.Size = new System.Drawing.Size(70, 20);
             diaChiLabel.TabIndex = 61;
@@ -99,7 +102,7 @@
             // 
             ngSinhLabel.AutoSize = true;
             ngSinhLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngSinhLabel.Location = new System.Drawing.Point(-4, 100);
+            ngSinhLabel.Location = new System.Drawing.Point(12, 99);
             ngSinhLabel.Name = "ngSinhLabel";
             ngSinhLabel.Size = new System.Drawing.Size(73, 20);
             ngSinhLabel.TabIndex = 62;
@@ -109,7 +112,7 @@
             // 
             sDTLabel.AutoSize = true;
             sDTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sDTLabel.Location = new System.Drawing.Point(-4, 133);
+            sDTLabel.Location = new System.Drawing.Point(12, 132);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(48, 20);
             sDTLabel.TabIndex = 63;
@@ -119,7 +122,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(-4, 159);
+            emailLabel.Location = new System.Drawing.Point(12, 158);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(56, 20);
             emailLabel.TabIndex = 64;
@@ -129,7 +132,7 @@
             // 
             gioiTinhLabel.AutoSize = true;
             gioiTinhLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gioiTinhLabel.Location = new System.Drawing.Point(-4, 189);
+            gioiTinhLabel.Location = new System.Drawing.Point(12, 188);
             gioiTinhLabel.Name = "gioiTinhLabel";
             gioiTinhLabel.Size = new System.Drawing.Size(81, 20);
             gioiTinhLabel.TabIndex = 65;
@@ -139,7 +142,7 @@
             // 
             caLamLabel.AutoSize = true;
             caLamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            caLamLabel.Location = new System.Drawing.Point(-4, 224);
+            caLamLabel.Location = new System.Drawing.Point(12, 223);
             caLamLabel.Name = "caLamLabel";
             caLamLabel.Size = new System.Drawing.Size(73, 20);
             caLamLabel.TabIndex = 66;
@@ -149,7 +152,7 @@
             // 
             matKhauLabel.AutoSize = true;
             matKhauLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            matKhauLabel.Location = new System.Drawing.Point(-4, 264);
+            matKhauLabel.Location = new System.Drawing.Point(12, 301);
             matKhauLabel.Name = "matKhauLabel";
             matKhauLabel.Size = new System.Drawing.Size(85, 20);
             matKhauLabel.TabIndex = 67;
@@ -159,7 +162,7 @@
             // 
             maPhongLabel.AutoSize = true;
             maPhongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maPhongLabel.Location = new System.Drawing.Point(-4, 298);
+            maPhongLabel.Location = new System.Drawing.Point(12, 335);
             maPhongLabel.Name = "maPhongLabel";
             maPhongLabel.Size = new System.Drawing.Size(92, 20);
             maPhongLabel.TabIndex = 68;
@@ -169,7 +172,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 290);
+            this.comboBox1.Location = new System.Drawing.Point(122, 335);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(189, 28);
             this.comboBox1.TabIndex = 80;
@@ -180,7 +183,7 @@
             this.groupBox1.Controls.Add(this.NuRadioButton);
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(108, 182);
+            this.groupBox1.Location = new System.Drawing.Point(124, 181);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(190, 37);
             this.groupBox1.TabIndex = 79;
@@ -211,7 +214,7 @@
             // toiRadioButton
             // 
             this.toiRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toiRadioButton.Location = new System.Drawing.Point(206, 224);
+            this.toiRadioButton.Location = new System.Drawing.Point(222, 223);
             this.toiRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toiRadioButton.Name = "toiRadioButton";
             this.toiRadioButton.Size = new System.Drawing.Size(133, 29);
@@ -222,7 +225,7 @@
             // sangRadioButton
             // 
             this.sangRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sangRadioButton.Location = new System.Drawing.Point(108, 224);
+            this.sangRadioButton.Location = new System.Drawing.Point(124, 223);
             this.sangRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sangRadioButton.Name = "sangRadioButton";
             this.sangRadioButton.Size = new System.Drawing.Size(102, 29);
@@ -234,7 +237,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(250, 344);
+            this.button1.Location = new System.Drawing.Point(272, 397);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 37);
             this.button1.TabIndex = 76;
@@ -245,7 +248,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(107, 152);
+            this.textBox4.Location = new System.Drawing.Point(123, 151);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(193, 27);
@@ -254,7 +257,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(106, 257);
+            this.textBox2.Location = new System.Drawing.Point(119, 303);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -265,7 +268,7 @@
             // 
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 100);
+            this.dateTimePicker1.Location = new System.Drawing.Point(124, 99);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(192, 27);
@@ -274,7 +277,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(108, 126);
+            this.maskedTextBox1.Location = new System.Drawing.Point(124, 125);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -284,7 +287,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(108, 49);
+            this.textBox6.Location = new System.Drawing.Point(124, 48);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -294,7 +297,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(108, 74);
+            this.textBox5.Location = new System.Drawing.Point(124, 73);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 27);
@@ -303,18 +306,40 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(108, 23);
+            this.textBox1.Location = new System.Drawing.Point(124, 22);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(192, 27);
             this.textBox1.TabIndex = 69;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(12, 269);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(94, 20);
+            label1.TabIndex = 81;
+            label1.Text = "Tình Trạng:";
+            // 
+            // cbxTT
+            // 
+            this.cbxTT.AutoSize = true;
+            this.cbxTT.Location = new System.Drawing.Point(131, 269);
+            this.cbxTT.Name = "cbxTT";
+            this.cbxTT.Size = new System.Drawing.Size(93, 20);
+            this.cbxTT.TabIndex = 82;
+            this.cbxTT.Text = "Hoạt Động";
+            this.cbxTT.UseVisualStyleBackColor = true;
+            // 
             // SuaBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 393);
+            this.ClientSize = new System.Drawing.Size(382, 447);
+            this.Controls.Add(this.cbxTT);
+            this.Controls.Add(label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toiRadioButton);
@@ -363,5 +388,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox cbxTT;
     }
 }

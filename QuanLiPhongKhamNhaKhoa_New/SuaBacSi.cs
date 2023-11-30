@@ -14,7 +14,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 {
     public partial class SuaBacSi : Form
     {
-        public SuaBacSi(string maBS, string tenBS, string diaChi, DateTime ngaySinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string tenPhong)
+        public SuaBacSi(string maBS, string tenBS, string diaChi, DateTime ngaySinh, string sdt, string email, string gioiTinh, string caLam, string matKhau, string tenPhong,string tinhtrang)
         {
             InitializeComponent();
             HienThiPhong();
@@ -26,6 +26,14 @@ namespace QuanLiPhongKhamNhaKhoa_New
             maskedTextBox1.Text = sdt;
             textBox4.Text = email;
 
+            if (tinhtrang.Trim().Equals("True"))
+            {
+                cbxTT.Checked = true;
+            }
+            else
+            {
+                cbxTT.Checked = false;
+            }
             if (gioiTinh == "Nam")
             {
                 NamRadioButton.Checked = true;
@@ -58,6 +66,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
         private void button1_Click(object sender, EventArgs e)
         {
             // Lấy thông tin từ các điều khiển trên form
+            string tinhtrang;
+            if (cbxTT.Checked)
+            {
+                tinhtrang = "True";
+            }
+            else
+            {
+                tinhtrang = "False";
+            }
             string maBS = textBox1.Text;
             string tenBS = textBox6.Text;
             string diaChi = textBox5.Text;
@@ -105,14 +122,21 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 MessageBox.Show("Số điện thoại không hợp lệ!" + sdt);
                 return;
             }
+            
+            if (!IsValidName(tenBS))
+            {
+                MessageBox.Show("Tên Không Hợp Lệ!");
+                return;
+            }
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Địa chỉ email không hợp lệ!");
                 return;
             }
+            
             string ngay = String.Format("{0:MM/dd/yyyy}", ngaySinh);
             BacSiBUS bacSiBUS = new BacSiBUS();
-            bacSiBUS.SuaBacSi(maBS, tenBS, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau, tenPhong);
+            bacSiBUS.SuaBacSi(maBS, tenBS, diaChi, ngay, sdt, email, gioiTinh, caLam, matKhau, tenPhong, tinhtrang);
 
             DialogResult dr = MessageBox.Show("Sửa thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -120,6 +144,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 Close();
             }
+        }
+        private bool IsValidName(string name)
+        {
+            // Kiểm tra xem tên có chứa ký tự đặc biệt và số hay không
+            return !Regex.IsMatch(name, @"\d");
         }
         private bool IsValidEmail(string email)
         {

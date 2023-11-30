@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DocumentFormat.OpenXml.InkML;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +23,13 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
         public HomeThemBN()
         {
             InitializeComponent();
+            if (!Login.isBs)
+            {
+                NhanVienDTO NvDto = (NhanVienDTO)Login.dto;
+                string manv = NvDto.Ma; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+                txtMaNV.Text = manv;
+            }
+            HienThiPhongKham();
             HienThiDSTiepDon();
         }
         private bool IsCurrentTimeAM()
@@ -45,7 +54,13 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
             txtDiaChi.Text = diachi ?? string.Empty;
             dtpNgaySinh.Value = DateTime.Parse(ngaysinh);
             txtSDT.Text = sdt ?? string.Empty;
-            txtMaNV.Text = "NV01";
+            if (!Login.isBs)
+            {
+                NhanVienDTO NvDto = (NhanVienDTO)Login.dto;
+                string manv = NvDto.Ma; // Thay mã phòng bằng mã phòng bác sĩ đăng nhập 
+                txtMaNV.Text = manv;
+            }
+
             // Kiểm tra giá trị của benhLy
             txtBenhLy.Text = benhLy ?? string.Empty;
 
@@ -61,6 +76,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
                 rdNu.Checked = true;
                 rdNam.Checked = false;
             }
+
             txtTinhTrang.Text = tinhTrang;
             HienThiDSTiepDon();
             HienThiPhongKham();
@@ -104,6 +120,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.DAO.DAO
             txtTinhTrang.Text = "";
             dataGridView1.ClearSelection();
             ActiveControl = null;
+            HienThiDSTiepDon();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

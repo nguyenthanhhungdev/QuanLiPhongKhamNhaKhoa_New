@@ -69,7 +69,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
 
 
 
-            MessageBox.Show("NgSinh:" + txtNgS.Text.ToString());
+            //MessageBox.Show("NgSinh:" + txtNgS.Text.ToString());
 
             // Gán giá trị cho các cột của dòng mới
             newRow["MaBN"] = txtMaBN.Text.ToString();
@@ -115,7 +115,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
                     svtk.txtBL.Text = BNTblNew.Rows[0]["BenhLy"].ToString();
                     svtk.txtPDV.Text = maphieu;
                     svtk.txtLK.Text = txtLK.Text.ToString();
-                    svtk.btnPDF.Visible = true;
+                    //svtk.btnPDF.Visible = true;
                     svtk.btnShowDV.Visible = true;
                     
 
@@ -140,7 +140,7 @@ namespace QuanLiPhongKhamNhaKhoa_New.GUI.BacSI
         private bool IsPhoneNumberValid(string phoneNumber)
         {
             // Sử dụng biểu thức chính quy (Regular Expression) để kiểm tra số điện thoại
-            string pattern = @"^0[39]\d{8}$";
+            string pattern = @"^0\d{9}$";
             Regex regex = new Regex(pattern);
 
             // Kiểm tra sự khớp của số điện thoại với biểu thức chính quy

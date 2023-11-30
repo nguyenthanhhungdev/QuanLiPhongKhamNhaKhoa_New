@@ -93,6 +93,15 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 {
                     caLamCheckBox.Checked = false;
                 }
+                string tinhtrang = row.Cells["TinhTrang"].Value.ToString();
+                if (tinhtrang.Trim().Equals("True"))
+                {
+                    cbxTT.Checked = true;
+                }
+                else
+                {
+                    cbxTT.Checked = false;
+                }
                 textBox2.Text = row.Cells["MatKhau"].Value.ToString();
             }
         }
@@ -131,8 +140,9 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 string gioiTinh = selectedRow.Cells["GioiTinh"].Value.ToString();
                 string calam = selectedRow.Cells["CaLam"].Value.ToString();
                 string matKhau = selectedRow.Cells["MatKhau"].Value.ToString();
+                string tinhtrang = selectedRow.Cells["TinhTrang"].Value.ToString();
                 // Chuyển sang form sửa thông tin
-                SuaNhanVien suaForm = new SuaNhanVien(maNV, tenNV, diaChi, ngaySinh, sdt, email, gioiTinh, calam, matKhau);
+                SuaNhanVien suaForm = new SuaNhanVien(maNV, tenNV, diaChi, ngaySinh, sdt, email, gioiTinh, calam, matKhau, tinhtrang);
                 suaForm.ShowDialog();
             }
             else
@@ -240,7 +250,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     saveFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
                     saveFileDialog.Title = "Save Excel File";
                     saveFileDialog.FileName = "DanhSachNhanVien.xlsx";
-
+                    saveFileDialog.InitialDirectory = @"C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\Excel";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(saveFileDialog.FileName))
                     {
                         workbook.SaveAs(saveFileDialog.FileName);
@@ -252,6 +262,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
             {
                 MessageBox.Show("Lỗi xuất Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*public void AddRowToDataGridView(string maNV, string tenNV, string diaChi, DateTime ngaySinh, string sdt, string email, string gioiTinh, string calam, string matKhau)
