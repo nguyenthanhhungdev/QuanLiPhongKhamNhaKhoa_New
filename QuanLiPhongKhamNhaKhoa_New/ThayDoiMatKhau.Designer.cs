@@ -91,7 +91,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.buttonThayDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThayDoiMK.Image = global::QuanLiPhongKhamNhaKhoa_New.Properties.Resources.icons8_confirm_30;
             this.buttonThayDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThayDoiMK.Location = new System.Drawing.Point(224, 349);
+            this.buttonThayDoiMK.Location = new System.Drawing.Point(213, 333);
             this.buttonThayDoiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonThayDoiMK.Name = "buttonThayDoiMK";
             this.buttonThayDoiMK.Size = new System.Drawing.Size(239, 45);
@@ -164,7 +164,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(651, 469);
+            this.ClientSize = new System.Drawing.Size(651, 421);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtmkNow);
             this.Controls.Add(this.label6);

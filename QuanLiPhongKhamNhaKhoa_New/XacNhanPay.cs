@@ -70,9 +70,11 @@ namespace QuanLiPhongKhamNhaKhoa_New
                     }
                     MessageBox.Show("Thanh toán thành công!");
                     isCheckclick = true;
-                } 
+                     
+               } 
                 else
                 {
+
                     MessageBox.Show("Thanh toán thất bại!");
                 }
             } 

@@ -40,7 +40,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
                 else
                 {
                     sendEmail(maXacNhan, email);
-                    new ThayDoiMatKhau().Show();
+                    new MAXACNHAN().Show();
                     this.Close();
                 }
             }
@@ -72,7 +72,7 @@ namespace QuanLiPhongKhamNhaKhoa_New
 
                 var smtpClient = new MailKit.Net.Smtp.SmtpClient();
                 smtpClient.Connect("smtp.ethereal.email", 587, SecureSocketOptions.Auto);
-                smtpClient.Authenticate("salvatore59@ethereal.email", "vM9RYByAaG2KhRQgZC");
+                smtpClient.Authenticate("annalise.bauch92@ethereal.email", "PBsRj6rdJWnvKneeBY");
                 smtpClient.Send(message);
                 smtpClient.Disconnect(true);
 

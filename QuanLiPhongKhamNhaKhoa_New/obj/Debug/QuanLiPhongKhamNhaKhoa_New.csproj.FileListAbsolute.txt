@@ -883,7 +883,6 @@ C:\Users\ACER\Desktop\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\
 C:\Users\ACER\Desktop\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.csproj.CopyComplete
 C:\Users\ACER\Desktop\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 C:\Users\ACER\Desktop\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
-
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\QuanLiPhongKhamNhaKhoa_New.exe.config
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\QuanLiPhongKhamNhaKhoa_New.exe
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\bin\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
@@ -1044,7 +1043,6 @@ C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNh
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.pdb
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.ThongTinCaNhan.resources
 C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.ThongKe.resources
-
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.BUS.BUS.SuaBN.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.BUS.BUS.ThemBN.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.DAO.DAO.HomeThemBN.resources
@@ -1053,4 +1051,4 @@ D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhon
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.GUI.BacSI.ServiceTicketTK.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.ThemBNTD.resources
 D:\CodeC#\QuanLiPhongKhamNhaKhoa\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.XacNhanPay.resources
-
+C:\Users\ACER\Desktop\DeAnCuoiKy_C#\QuanLiPhongKhamNhaKhoa_New\QuanLiPhongKhamNhaKhoa_New\obj\Debug\QuanLiPhongKhamNhaKhoa_New.MAXACNHAN.resources
